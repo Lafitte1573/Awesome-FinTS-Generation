@@ -1,3 +1,8 @@
+## 金融时间序列数据生成的最新先进技术综述
+
+> This repository displays a paper collection of the survey of recent financial data-augmentation technologies.
+
+### 文献梳理
 ```mermaid
 graph LR
     A(金融数据生成) --> B([时序数据预测（Forecasting）])
@@ -7,10 +12,10 @@ graph LR
     A --> D([时序数据增强（Augmentation）])
 ```
 
-## 时序数据预测
+### 时序数据预测
 
 
-## 时序数据插补
+### 时序数据插补
 
 
-## 时序数据增强
+### 时序数据增强
