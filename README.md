@@ -22,7 +22,7 @@
 - 金融时序数据补插：
 - 金融时序数据增强：
 
-### 分类许
+### 方法分类
 ```mermaid
 graph LR
     A(金融数据生成（Synthesis）) --> B([金融时序预测（Forecasting）])
