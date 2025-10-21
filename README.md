@@ -29,19 +29,126 @@ graph LR
     B --> B1(GAN_based) --> C1(Wavelet-GAN, TG-3DCNN, ORGAN-FVT, AssetGANs, CT-GAN-NAR-NN, TSS-CGAN)
     B --> B2(LLM_based) --> C2(TimeLLM, Chronos, Time-LLM, LLM4FTS, TimesFM_Financial_Finetuning, StockTime, TimeS, FINMEM)
     B --> B3(Machine_Learning) --> C3(SGP-LSTM, LVQ-CBR, Hierarchical-LSTM, MVO-BiGRU, ALN, 优化不变正则化器（L_OB^e）, PEC-W)
-    A --> C([金融时序数据插补（Imputation）])
+    A --> C([金融时序数据增强（Augmentation）])
     C --> D1(GAN_based) --> E1(Market-GAN, RSQGAN, WGAN-based Market Simulation, , DAT-CGAN, CTS-GAN, Tail-GAN, TCN-GAN, WGAN-BiLSTM, CoMeTS-GAN, , Jinkou, MC-TE-GAN, Generative-CNN, QWGAN-GP)
     C --> D2(Machine_Learning) --> E2(SGP-LSTM, FED2Port, VAE-GRU-MCMC, CFTNet)
     C --> D3(Diffusion_based) --> E3(CoFinDiff, DiGA, Wavelet-Diffusion, TRADES)
-    A --> D([金融时序数据增强（Augmentation）])
-    D --> E(Machine_Learning) --> F1(PPCA-TVP-FAVAR, Kernel Ridge Regression for Swiss Discount Curve, NMTucker)
+    A --> D([金融时序数据插补（Imputation）])
+    D --> E(Machine_Learning) --> F1(RegTensor, NMTucker, Nicolas Camenzind et al., Kuen-Liang Sue et al.)
 ```
 
 ----
 ## 文献列表
 
-
 ### 金融时序预测
+
+#### [FinSrag] Retrieval-augmented Large Language Models for Financial Time Series Forecasting
+- **Authors**: Mengxi Xiao, Zhengyu Chen, Lingfei Qian, Zihao Jiang, Yueru He, Yijing Xu, Yuechen Jiang, Dong Li, Ruey-Ling Weng, Jimin Huang, Min Peng, Sophia Ananiadou, Jian-Yun Nie, Qianqian Xie
+- **Year**: 2024
+- **Task**: 股票价格走势预测
+- **Abstract**: 为解决金融时序数据中传统检索方法难以捕捉复杂时序依赖与隐含市场信号的问题，本文提出FinSrag框架，通过引入基于LLM反馈训练的领域专用检索器FinSeer，从包含28个金融指标的增强数据集中检索最具预测价值的历史序列，并将其注入微调的StockLLM中进行股票涨跌预测，显著提升了预测准确率并超越了现有文本和距离基检索方法。
+
+#### [Wavelet-GAN] A Novel Wavelet based Generative Model for Time Series Prediction
+- **Authors**: Chaofan Dai, Xiaoguang Yuan, Zongkai Tian, Xinyue Hu, Zhen Luan, Youchen Wang
+- **Year**: 2024
+- **Task**: 股票价格预测
+- **Abstract**: 为解决股票市场非线性、非平稳时间序列预测精度低的问题，本文提出一种基于小波变换的生成对抗网络（Wavelet-GAN），通过小波分解将原始股价序列分解为多尺度频域分量，对各分量分别建立ARMA模型预测其系数，再将预测系数输入Wasserstein GAN框架进行生成对抗训练以重建高精度股价序列，实验表明该方法在预测准确率上显著优于GRU、LSTM和传统GAN模型。
+
+#### Large Language Models for Financial Aid in Financial Time-series Forecasting
+- **Authors**: Md Khairul Islam, Ayush Karmacharya, Timothy Sue, Judy Fox
+- **Year**: 2024
+- **Task**: 财政援助资金预测
+- **Abstract**: 为解决金融援助领域因数据稀缺导致传统深度学习模型效果不佳的问题，本文提出利用预训练大语言模型（LLM）作为基础模型，在仅使用少量训练数据（少样本）或完全不微调（零样本）的情况下，对州级财政援助资金进行年度预测，实验表明TimeLLM和PatchTST在少样本场景下表现最优，而GPT4TS在零样本场景下表现相对较好，但整体零样本效果仍有限。
+
+#### [Chronos] LLMs for Time Series: an Application for Single Stocks and Statistical Arbitrage
+- **Authors**: Sebastien Valeyre, Sofiane Aboura
+- **Year**: 2024
+- **Task**: 量化交易策略开发
+- **Abstract**: 为解决金融时间序列预测中传统模型难以识别微弱市场无效性的问题，本文提出使用预训练和微调的LLM模型Chronos对美国个股残差收益进行日度预测，通过零样本和在线微调方式构建多空投资组合，实证表明Chronos能在不依赖金融数据预训练的情况下识别出可盈利的交易信号，实现高达4.21的夏普比率，虽仍低于专用模型但证明了LLM在噪声金融数据中提取Alpha的潜力。
+
+#### [SGP-LSTM] Forecasting stock prices changes using long‑short term memory neural network with symbolic genetic programming
+- **Authors**: Qi Li, Norshaliza Kamaruddin, Siti Sophiayati Yuhaniz, Hamdan Amer Ali Al-Jaif
+- **Year**: 2023
+- **Task**: 股票收益跨截面预测
+- **Abstract**: 为解决中国股票市场跨截面收益预测中特征工程薄弱和传统深度学习模型精度不足的问题，本文提出一种结合符号遗传编程（SGP）与长短期记忆网络（LSTM）的混合模型，通过SGP自动生成并优化融合基本面与技术面指标的非线性特征，再输入LSTM进行时序模式学习，显著提升了预测准确率和风险调整收益，Rank IC和ICIR分别提升1128%和5360%（基本面）及20%和2752%（技术面），年化超额收益超越CSI 300达31.00%
+
+#### [Hierarchical-LSTM] Nonlinear Regression with Hierarchical Recurrent Neural Networks Under Missing Data
+- **Authors**: S. Onur Sahin, Suleyman S. Kozat
+- **Year**: 2023
+- **Task**: 股票价格预测
+- **Abstract**: 为解决序列数据中存在缺失值导致传统神经网络性能下降的问题，本文提出了一种层次化LSTM架构，通过将输入空间根据历史输入的‘存在模式’划分为多个区域，并为每个模式分配独立的LSTM专家网络，仅利用实际存在的输入进行预测，避免数据插补带来的误差累积，从而在金融和真实世界数据集上显著提升了预测精度且计算复杂度与传统LSTM相当。
+
+#### [Time-LLM] Large Language Models for Financial Time Series Forecasting
+- **Authors**: Miguel Noguer i Alonso, Rodolfo Pereira Franklin
+- **Year**: 2025
+- **Task**: 股票价格预测
+- **Abstract**: 为解决传统时间序列模型在金融数据中泛化能力差和依赖大量标注数据的问题，本文评估了包括Time-LLM在内的多种大语言模型（LLM）在股票价格预测中的表现，其基本思路是通过文本重编程（patch reprogramming）和提示引导（Prompt-as-Prefix）将连续时间序列转化为语言模型可处理的离散文本表示，无需微调基础LLM即可实现零样本或小样本预测，实验表明Time-LLM、PatchTST和KAN在稳定与波动市场中均能超越传统模型如NBEATS和NHITS。
+
+#### [ALN] Adversarial Learning Networks for FinTech Applications Using Heterogeneous Data Sources
+- **Authors**: Parus Khuwaja, Sunder Ali Khowaja, Kapal Dev
+- **Year**: 2023
+- **Task**: 股票价格预测
+- **Abstract**: 为解决金融市场上由于数据异构性、缺失值和市场崩盘期间预测性能下降的问题，本文提出一种基于对抗学习网络（ALN）的股票价格预测框架，通过融合股票价格、推文和全球宏观指标构建异构知识库，采用改进的牛顿插值多项式（NDDP）进行缺失值插补，利用LSTM提取时序特征，并设计HDFM Q-learning（批评者）与对抗性Q-learning（参与者）网络进行对抗训练，显著提升了在市场波动和崩盘场景下的预测准确率，相比现有方法在准确率上提升5.58%以上。
+
+#### [LLM4FTS] LLM4FTS: Enhancing Large Language Models for Financial Time Series Prediction
+- **Authors**: Renjun Jia, Zian Liu, Peng Zhu, Dawei Cheng, Yuqi Liang
+- **Year**: 2024
+- **Task**: 股票收益预测
+- **Abstract**: 为解决金融时间序列中低信噪比与多尺度模式难以建模的问题，本文提出LLM4FTS框架，通过基于DTW的K-means++聚类识别尺度不变模式、自适应分段策略保留模式完整性、动态小波卷积模块实现多尺度时频特征提取，结合两阶段预训练与微调，在四个真实金融市场数据集上实现了超越现有SOTA方法的股票收益预测精度与风险调整收益，并成功部署于实盘交易系统获得持续超额收益。
+
+#### [Financial TimesFM] Financial Fine-tuning a Large Time Series Model
+- **Authors**: Xinghong Fu, Masanori Hirano, Kentaro Imajo
+- **Year**: 2024
+- **Task**: 股票价格预测
+- **Abstract**: 为解决金融价格数据的非平稳性和极端波动导致基础时间序列模型TimesFM预测性能差的问题，本文提出对TimesFM进行金融数据持续预训练，通过对价格数据进行对数变换稳定损失函数并优化掩码策略，使模型在多种金融市场中显著提升预测准确率，并在模拟交易中实现优于基准模型的收益、夏普比率和最大回撤表现。
+
+#### Large Scale Financial Time Series Forecasting with Multi-faceted Model
+- **Authors**: Defu Cao, Yixiang Zheng, Parisa Hassanzadeh, Simran Lamba, Xiaomo Liu, Yan Liu
+- **Year**: 2023
+- **Task**: 收入与EBITDA预测
+- **Abstract**: 为解决金融时序预测中因分布偏移导致的模型泛化能力差的问题，本文提出一种基于松弛不变风险最小化的多面统一模型，通过引入优化驱动的正则化项放宽传统IRM的严格约束，在S&P 500多行业数据上联合训练线性/非线性模型，显著提升对已见和零样本行业的预测准确性，EBITDA预测误差平均降低27.87%。
+
+#### [AssetGANs] Distributed Generative Adversarial Networks for Fuzzy Portfolio Optimization
+- **Authors**: Xueying Yang, Chen Li, Zidong Han, Zhonghua Lu
+- **Year**: 2023
+- **Task**: 多步 ahead 股票收益模拟与模糊投资组合优化
+- **Abstract**: 为解决金融时间序列多步预测精度低、训练效率差及模糊投资组合优化计算耗时的问题，本文提出基于WGAN-GP的分布式生成对抗网络AssetGANs，通过卷积神经网络生成器与判别器联合训练模拟未来多日资产收益，并结合模糊模拟与MPI并行化遗传算法优化模糊Mean-CVaR投资组合模型，实现了比LSTM更低的RMSE（0.4615 vs 0.6638）和8 GPU下573倍的训练加速，同时模糊组合优化并行效率达96.3%。
+
+#### [StockTime] StockTime: A Time Series Specialized Large Language Model Architecture for Stock Price Prediction
+- **Authors**: Shengkun Wang, Taoran Ji, Linhan Wang, Yanshen Sun, Shang-Ching Liu, Amit Kumar, Chang-Tien Lu
+- **Year**: 2024
+- **Task**: 股票价格预测
+- **Abstract**: 为解决传统金融大语言模型（FinLLMs）在股票价格预测中忽视时序特征、依赖冗余文本信息且效率低下的问题，本文提出StockTime，一种专门针对股票价格时序数据的LLM架构，通过将股票价格分块为令牌、提取其相关性与统计趋势等文本信息，并与自回归编码器提取的时序特征在嵌入空间融合，利用冻结的LLM进行下一令牌预测，从而在不微调LLM的情况下实现更高精度、更低资源消耗的多周期股票价格预测。
+
+#### A semi-heterogeneous ensemble forecasting method for stock returns based on sentiment analysis
+- **Authors**: Xiao Zhang, Peide Liu, Jing Feng
+- **Year**: 2023
+- **Task**: 股票收益预测
+- **Abstract**: 为解决股票收益预测中传统模型忽视投资者情绪与特征多样性的问题，本文提出一种基于情感分析的半异构集成预测方法，通过监督数据增强构建注意力-PCA情感指数，结合变量扰动生成多样化的基模型（MLR与BPNN），并采用加权集成策略融合异构与同构优势，显著提升了S&P 500收益预测的准确性与泛化能力。
+
+#### [TimeS] Text2TimeSeries: Enhancing Financial Forecasting through Time Series Prediction Updates with Event-Driven Insights from Large Language Models
+- **Authors**: Litton Jose Kurisinkel, Pruthwik Mishra, Yue Zhang
+- **Year**: 2023
+- **Task**: 股票价格预测
+- **Abstract**: 为解决金融时序预测中传统模型忽略事件驱动非数值因素导致预测不准确的问题，本文提出Text2TimeSeries方法，利用大语言模型（LLM）预测事件对股票价格的多步变化趋势（离散标签），并通过门控循环单元计算股票状态，生成价格放大/衰减值，动态更新时间序列模型的预测结果，从而在小盘、中盘和大盘股票上显著降低预测误差（RMSE和MAE）。
+
+#### [GraphSAGE-CTGAN] Graph-Based Inductive Learning for Credit Risk Prediction with Imbalance Mitigation
+- **Authors**: Sogand Pourkhoshgoftar, Asadollah Shahbahrami, Nima Esmi
+- **Year**: 2025
+- **Task**: 信用风险评估
+- **Abstract**: 为解决信用风险预测中极端类别不平衡和非线性借款人关系建模不足的问题，本文提出一种结合条件表格生成对抗网络（CTGAN）与图采样与聚合图神经网络（GraphSAGE）的混合方法，先通过CTGAN生成合成违约样本以平衡数据分布，再构建借款人相似性图并利用GraphSAGE进行归纳式关系学习，最终在GMSC和GC数据集上显著提升了准确率、F1分数和AUC指标，同时通过SHAP增强模型可解释性。
+
+#### [FINMEM] FINMEM: A PERFORMANCE-ENHANCED LLM TRADING AGENT WITH LAYERED MEMORY AND CHARACTER DESIGN
+- **Authors**: Yangyang Vu, Haohang Li, Zhi Chen, Yuechen Jiang, Yang Li, Denghui Zhang, Rong Liu, Jordan W. Suchow, Khaldoun Khashanah
+- **Year**: 2024
+- **Task**: 量化交易策略开发
+- **Abstract**: 为解决传统金融交易代理在处理多源异构金融数据时缺乏可解释性、记忆能力不足和无法自适应市场变化的问题，本文提出FINMEM，一种基于大语言模型（LLM）的自主交易代理框架，通过分层记忆模块模拟人类工作记忆与长期记忆结构，结合动态角色配置（如风险偏好自适应）和多层信息处理机制，实现对新闻、财报等时序金融数据的高效整合与优先级排序，显著提升交易收益与决策鲁棒性。
+
+#### [PEC-W] Enhancing Recurrent Neural Networks For Stock Market Forecasts through PEC-W Framework
+- **Authors**: Bus¸ra C¸ alıs¸kan
+- **Year**: 2024
+- **Task**: 股票价格预测
+- **Abstract**: 为解决股票市场短期预测中LSTM和GRU模型存在的过拟合与训练时间长问题，本文提出一种基于PEC-W预处理框架的方法，通过滚动窗口均值聚合、均值减法归一化和离散小波变换（DWT）增强时序特征并降低数据维度，同时结合SHAP可解释性分析验证模型有效性，显著提升了预测精度并大幅缩短训练时间。
 
 #### [StockTime] StockTime: A Time Series Specialized Large Language Model Architecture for Stock Price Prediction
 - **Authors**: Shengkun Wang, Taoran Ji, Linhan Wang, Yanshen Sun, Shang-Ching Liu, Amit Kumar, Chang-Tien Lu
@@ -165,6 +272,30 @@ graph LR
 
 ### 金融时序数据插补
 
+#### [RegTensor] A Fast Non-Linear Coupled Tensor Completion Algorithm for Financial Data Integration and Imputation
+- **Authors**: Dan Zhou, Ajim Uddin, Zuofeng Shang, Cheickna Sylla, Xinyuan Tao, Dantong Yu
+- **Year**: 2023
+- **Task**: 金融数据缺失值插补
+- **Abstract**: 为解决金融数据中高稀疏张量的缺失值插补问题，本文提出了一种名为RegTensor的正则化非线性耦合张量完成算法，通过引入多层感知机（MLP）建模嵌入向量间的非线性交互，并结合正交正则化抑制过拟合与特征冗余，同时耦合辅助张量增强嵌入学习，实现在债券特征和分析师盈利预测等金融数据集上显著优于线性和现有非线性模型的插补精度（提升2%-52%）。
+
+#### Stripping the Swiss discount curve using kernel ridge regression
+- **Authors**: Nicolas Camenzind, Damir Filipović
+- **Year**: 2024
+- **Task**: 无风险贴现曲线估计
+- **Abstract**: 为解决瑞士国债市场中无风险贴现曲线估计的鲁棒性与灵活性不足问题，本文提出基于核岭回归（KR）的方法，通过在再生核希尔伯特空间中最小化定价误差与曲线平滑性的加权和，实现数据驱动、可解释且优于传统方法（如Smith–Wilson、SST和SNB）的曲线拟合与外推效果。
+
+#### [NMTucker] NMTucker: Non-linear Matryoshka Tucker Decomposition for Financial Time Series Imputation
+- **Authors**: Uras Varolgunes, Dan Zhou, Dantong Yu, Ajim Uddin
+- **Year**: 2023
+- **Task**: 金融时序数据插补
+- **Abstract**: 为解决金融时间序列中高稀疏性数据的缺失值插补问题，本文提出NMTucker方法，通过递归分解Tucker核心张量并引入多层非线性激活函数模拟复杂非线性交互，显著降低过拟合并提升插补精度，在多个真实金融数据集上比现有模型降低最高53.91%的RMSE。
+
+#### Missing value imputation and the effect of feature normalisation on financial distress prediction
+- **Authors**: Kuen-Liang Sue, Chih-Fong Tsai, Hau-Min Tsau
+- **Year**: 2024
+- **Task**: 财务困境预测
+- **Abstract**: 为解决财务困境预测中缺失值插补和特征归一化对模型性能的影响问题，本文比较了KNN、随机森林、MICE和深度神经网络等多种插补方法，并评估了最小-最大归一化对不同分类器（SVM、RF、DNN）预测效果的影响，发现随机森林插补效果最优，且归一化显著提升SVM和DNN性能但对RF无显著增益。
+
 #### Missing value imputation and the effect of feature normalisation on financial distress prediction
 - **Authors**: Kuen-Liang Sue, Chih-Fong Tsai, Hau-Min Tsau
 - **Year**: 2024
@@ -190,6 +321,72 @@ graph LR
 - **Abstract**: 为解决金融数据中高稀疏性张量的缺失值插补问题，本文提出了一种名为RegTensor的快速非线性耦合张量补全算法，通过引入多层感知机（MLP）建模嵌入向量间的非线性交互、正交正则化抑制嵌入冗余与过拟合，并联合多个相关张量进行协同因子分解，显著提升了插补精度，在债券特征和分析师盈利预测等数据集上比线性模型提升40%-74%，比现有非线性模型提升2%-52%。
 
 ### 金融时序数据增强
+
+#### Generating Synthetic Time-Series Data on Edge Devices Using Generative Adversarial Networks
+- **Authors**: Md Faishal Yousuf, MD Shaad Mahmud
+- **Year**: 2021
+- **Task**: 股票价格预测
+- **Abstract**: 为解决边缘设备上隐私保护与数据稀缺的金融时序数据生成问题，本文提出一种基于LSTM-GAN的合成时间序列生成方法，通过在边缘设备iBUG上部署经过剪枝和量化优化的生成器，在保留真实数据统计特性的同时实现低资源实时生成，实验表明合成数据与真实数据在PCA和t-SNE分析中高度相似，且参数趋势高度吻合。
+
+#### [RSQGAN] Regime-Specific Quant Generative Adversarial Network: A Conditional Generative Adversarial Network for Regime-Specific Deepfakes of Financial Time Series
+- **Authors**: Andrew Huang, Matloob Khushi, Basem Suleiman
+- **Year**: 2023
+- **Task**: 风险评估
+- **Abstract**: 为解决金融时间序列在市场危机等罕见 regimes 下数据稀缺和非平稳性导致的风险评估困难问题，本文提出了一种名为RSQGAN的条件生成对抗网络，通过结构断点算法（贪婪高斯分割）识别市场 regimes 并将其作为条件标签，利用时序卷积网络（TCN）生成符合特定 regimes 特征的合成资产回报数据，并引入Z-裁剪超参数控制合成数据保真度与多样性，实验证明其在危机 regimes 下的合成数据质量显著优于无条件GAN模型。
+
+#### [SGP-LSTM] Integrating Symbolic Genetic Programming With Lstm for Forecasting Cross-Sectional Price Returns: A Comparative Analysis of Chinese And Japanese Stock Market
+- **Authors**: Li Qi, Norshaliza Kamaruddin, Xun Gong, Chen Peng
+- **Year**: 2024
+- **Task**: 跨市场股票收益排序预测
+- **Abstract**: 为解决传统深度学习模型在跨市场股票收益排序预测中因特征数量有限和过拟合导致的精度不足问题，本文提出一种融合符号遗传编程（SGP）与长短期记忆网络（LSTM）的混合模型，通过SGP自动生成高质量金融因子并进行数据增强，再输入LSTM进行跨截面股票收益排序预测，在中国和日本市场分别实现Rank IC提升588.03%和194.27%，并获得显著超额收益。
+
+#### Data Augmentation of High Frequency Financial Data Using Generative Adversarial Network
+- **Authors**: Yusuke Naritomi, Takanori Adachi
+- **Year**: 2020
+- **Task**: 股票执行价格预测
+- **Abstract**: 为解决高频金融数据非平稳性导致的预测模型训练数据不足问题，本文提出一种基于Wasserstein GAN的合成数据增强方法，通过结合LSTM与1D-CNN的生成器模拟真实订单事件序列，并利用判别器优化生成数据的分布相似性，最终在人工市场模拟中生成执行价格数据，使股票价格涨跌预测准确率显著高于无数据增强的基线模型。
+
+#### Generation of Realistic Synthetic Financial Time-series
+- **Authors**: MIHAI DOGARIU, LIVIU-DANIEL ŞTEFAN, BOGDAN ANDREI BOTEANU, CLAUDIU LAMBA, BOMI KIM, BOGDAN IONESCU
+- **Year**: 2020
+- **Task**: 股票价格生成与趋势预测
+- **Abstract**: 为解决金融时间序列数据稀缺且难以加速获取的问题，本文提出一种基于多种生成模型（如GANs、VAEs、GMMNs）的合成金融时间序列生成框架，通过引入跨股票相关性捕捉机制、固定到可变长度序列转换策略及基于对数回报的预处理方法，生成具有真实市场统计特性（如肥尾分布、波动聚类）的合成数据，并通过量化指标和股票趋势预测任务验证其有效性，显著提升了预测模型的准确性。
+
+#### [CoFinDiff] CoFinDiff: Controllable Financial Diffusion Model for Time Series Generation
+- **Authors**: Yuki Tanaka, Ryuji Hashimoto, Takehiro Takayanagi, Zhe Piao, Yuri Murayama, Kiyoshi Izumi
+- **Year**: 2023
+- **Task**: 深度对冲策略训练
+- **Abstract**: 为解决金融领域因真实数据稀缺导致的极端事件模拟不足与合成数据可控性差的问题，本文提出CoFinDiff，一种基于条件扩散模型的金融时间序列生成方法，通过将对数收益率序列转换为Haar小波图像，并将趋势与已实现波动率作为条件通过交叉注意力机制注入扩散模型，从而生成符合金融stylized facts（如肥尾、波动聚集）且精准满足指定趋势与波动率条件的多样化合成数据，显著提升了深度对冲任务的模型性能。
+
+#### [DiGA] Controllable Financial Market Generation with Diffusion Guided Meta Agent
+- **Authors**: Yu-Hao Huang, Chang Xu, Yang Liu, Weiqing Liu, Wu-Jun Li, Jiang Bian
+- **Year**: 2023
+- **Task**: 订单流生成
+- **Abstract**: 为解决金融市场上订单流生成缺乏可控性与高保真度的问题，本文提出Diffusion Guided meta Agent (DiGA)模型，通过条件扩散模型建模市场状态（如中价回报率和订单到达率）的时变分布，并结合具有金融经济先验的元代理按分布采样订单，实现了对市场场景（如收益、波动率）的精准控制与高保真订单流生成。
+
+#### Time Series Generation with GANs for Momentum Effect Simulation on Moscow Stock Exchange
+- **Authors**: Maksim Kazadaev, Vitaliy Pozdnyakov, Ilya Makarov
+- **Year**: 2023
+- **Task**: 量化交易策略开发
+- **Abstract**: 为解决金融时间序列数据稀缺导致的交易策略过拟合问题，本文提出基于时间卷积网络（TCN）的生成对抗网络（GAN）方法，通过生成具有真实统计特性的多维股票对数收益率序列来增强训练数据，从而支持动量效应策略的回测与超参数调优，实验表明该方法能有效模拟股票间相关性但未能充分捕捉动量效应的复杂依赖关系。
+
+#### Management Analysis Method of Multivariate Time Series Anomaly Detection in Financial Risk Assessment
+- **Authors**: Yongshan Zhang, Weifang University of Science and Technology, China, Zhiyun Jiang, Weifang University of Science and Technology, China, Cong Peng, Guizhou University of Commerce, China, Xiumei Zhu, Weifang University of Science and Technology, China, Gang Wang, Imperial College London, UK
+- **Year**: 2023
+- **Task**: 风险评估
+- **Abstract**: 为解决金融多变量时间序列异常检测中模型过拟合与泛化能力不足的问题，本文提出一种结合对比学习与生成对抗网络（GAN）的创新方法，通过几何分布掩码进行数据增强，利用Transformer自编码器学习正常模式分布，并在判别器中引入对比损失以增强对正常模式的判别能力，实验表明该方法在四个真实金融数据集上显著优于现有主流方法，有效提升了异常检测的准确性和鲁棒性。
+
+#### [MarS] MARS: A FINANCIAL MARKET SIMULATION ENGINE POWERED BY GENERATIVE FOUNDATION MODEL
+- **Authors**: Junjie Li, Yang Liu, Weiqing Liu, Shikai Fang, Lewen Wang, Chang Xu, Jiang Bian
+- **Year**: 2024
+- **Task**: 金融市场的高保真仿真
+- **Abstract**: 为解决传统金融市场模拟器缺乏订单级细粒度、可控性与交互性的问题，本文提出基于生成基础模型LMM的MarS仿真引擎，通过订单序列与订单批次的双尺度建模，结合条件生成机制和模拟撮合引擎，实现高保真、可控制、可交互的市场行为仿真，显著提升预测、风险检测、市场影响分析和智能体训练等金融任务的性能与实用性。
+
+#### [TRADES] TRADES: Generating Realistic Market Simulations with Diffusion Models
+- **Authors**: Leonardo Berti, Bardh Prenkaj, Paola Velardi
+- **Year**: 2025
+- **Task**: 限价订单簿市场模拟
+- **Abstract**: 为解决金融市场上真实限价订单簿（LOB）数据稀缺且现有生成模型缺乏 realism、responsiveness 和 usefulness 的问题，本文提出 TRADES，一种基于 Transformer 的去噪扩散概率模型，通过条件化历史订单和 LOB 快照生成高保真、可响应的订单流时间序列，显著超越现有方法，在预测得分上提升 3.27–3.48 倍，并能复现金融市场的典型统计特征（stylized facts）。
 
 #### [CT-GAN+NAR-NN] RESEARCH ARTICLE
 - **Authors**: Aya Salama Abdelhady, Nadia Dahmani, Lobna M. AbouEl-Magd, Ashraf Darwish, Aboul Ella Hassanien
@@ -298,149 +495,3 @@ graph LR
 - **Year**: 2024
 - **Task**: 跨市场股票收益排序预测
 - **Abstract**: 为解决传统深度学习模型在跨市场股票收益排序预测中因特征数量有限和过拟合导致的精度不足问题，本文提出一种融合符号遗传编程（SGP）与长短期记忆网络（LSTM）的混合模型，通过SGP自动生成高质量金融因子并进行数据增强，再输入LSTM进行跨截面股票收益排序预测，在中国和日本市场分别实现Rank IC提升588.03%和194.27%，并获得显著超额收益。
-
-### 其他
-
-#### An LLM-Based Framework for Synthetic Data Generation
-- **Authors**: Mandeep Goyal, Qusay H. Mahmoud
-- **Year**: 2024
-- **Task**: 合成数据生成
-- **Abstract**: 为解决医疗、金融等敏感领域数据稀缺与隐私保护的难题，本文提出一种基于微调大语言模型（LLM）与差分隐私技术的合成数据生成框架，通过微调LLM学习真实数据分布，结合IBM diffprivlib施加差分隐私保护，实现对结构化与非结构化数据的高保真合成，显著提升数据质量与隐私安全性，且在机器学习任务中保持接近真实数据的模型性能。
-
-#### [TIME-LLM] TIME-LLM: TIME SERIES FORECASTING BY REPROGRAMMING LARGE LANGUAGE MODELS
-- **Authors**: Ming Jin, Shiyu Wang, Lintao Ma, Zhixuan Chu, James Y. Zhang, Xiaoming Shi, Pin-Yu Chen, Yuxuan Liang, Yuanfang Li, Shirui Pan, Qingsong Wen
-- **Year**: 2023
-- **Task**: 时间序列预测
-- **Abstract**: 为解决传统时间序列预测模型缺乏通用性、数据效率低和推理能力弱的问题，本文提出TIME-LLM框架，通过将时间序列数据重编程为文本原型并结合Prompt-as-Prefix提示机制，使冻结的大语言模型能够直接理解时序模式并生成预测，实现在长周期、短周期、少样本和零样本场景下超越现有专用模型的预测性能。
-
-#### [LLM40FD] LLM40FD: Unlocking the Potential of LLM for Anonymous Zero-Shot Fraud Detection
-- **Authors**: Kaixiang Yang, Zhijie Zhong, Song Sun, Zhiwen Yu, C. L. Philip Chen, Tong Zhang
-- **Year**: 2024
-- **Task**: 匿名零样本信用卡欺诈检测
-- **Abstract**: 为解决信用卡欺诈检测中标签稀缺、数据匿名化和跨系统泛化能力不足的问题，本文提出LLM40FD框架，通过行走嵌入将匿名交易特征统一转化为LLM可处理的序列，结合基于分布的一类函数（DOC）进行知识蒸馏，并利用隐式对比学习的双重数据增强策略生成正负样本以强化决策边界，无需微调LLM即可在零样本和全样本设置下实现SOTA性能。
-
-#### [TimeHF] TimeHF: Billion-Scale Time Series Models Guided by Human Feedback
-- **Authors**: Yongzhi Qi, Hao Hu, Dazhou Lei, Jianshen Zhang, Zhengxin Shi, Yulin Huang, Zhengyu Chen, Xiaoming Lin, Zuo-Jun Max Shen
-- **Year**: 2024
-- **Task**: 供应链需求预测
-- **Abstract**: 为解决大规模时间序列模型在 scalability、泛化能力和零样本预测性能上的挑战，本文提出TimeHF框架，通过构建210B规模的高质量时间序列数据集、设计基于补丁卷积的60亿参数纯时间序列模型（PCLTM），并首次引入面向时间序列的强化学习人类反馈优化方法（TPO），利用专家构建的优劣预测对比对引导模型学习隐性专家知识，最终在京东供应链中实现预测精度提升33.21%。
-
-#### [LLM-PS] LLM-PS: Empowering Large Language Models for Time Series Forecasting with Temporal Patterns and Semantics
-- **Authors**: Jialiang Tang, Shuo Chen, Chen Gong, Jing Zhang, Dacheng Tao
-- **Year**: 2024
-- **Task**: 时间序列预测
-- **Abstract**: 为解决大型语言模型（LLM）在时间序列预测中忽视时序数据固有特性（如多尺度时间模式和语义稀疏性）导致性能不佳的问题，本文提出LLM-PS方法，通过多尺度卷积神经网络（MSCNN）提取短长期时间模式，并通过时间到文本模块（T2T）从时间序列片段中提取语义信息，再将二者融合输入LLM进行预测，在多种数据集上实现了最先进的预测精度，尤其在少样本和零样本场景下表现优异。
-
-#### [MarS] MARS: A FINANCIAL MARKET SIMULATION ENGINE POWERED BY GENERATIVE FOUNDATION MODEL
-- **Authors**: Junjie Li, Yang Liu, Weiqing Liu, Shikai Fang, Lewen Wang, Chang Xu, Jiang Bian
-- **Year**: 2024
-- **Task**: 金融市场的高保真仿真
-- **Abstract**: 为解决传统金融市场模拟器缺乏订单级细粒度、可控性与交互性的问题，本文提出基于生成基础模型LMM的MarS仿真引擎，通过订单序列与订单批次的双尺度建模，结合条件生成机制和模拟撮合引擎，实现高保真、可控制、可交互的市场行为仿真，显著提升预测、风险检测、市场影响分析和智能体训练等金融任务的性能与实用性。
-
-#### [ILDH] Black-Scholes Meet Imitation Learning: Evidence From Deep Hedging in China
-- **Authors**: Fuwei Jiang, Jie Kang, Ruzheng Tian, Qingdong Xu
-- **Year**: 2025
-- **Task**: 期权对冲策略优化
-- **Abstract**: 为解决中国股票指数期权市场中深度对冲算法因数据稀缺和尾部风险难以管理而导致的性能不足问题，本文提出了一种融合Black-Scholes-Merton模型示范与深度强化学习的模仿学习深度对冲（ILDH）算法，通过将BSM模型生成的对冲动作作为专家示范与智能体自身探索数据结合进行训练，并引入循环神经网络记忆历史信息，显著提升了对冲收益、降低了风险与交易成本。
-
-#### Pattern recognition with limited data: an AI model inspired by BCR-Net and SwitchNet
-- **Authors**: Ali Sever
-- **Year**: 2024
-- **Task**: 模式识别
-- **Abstract**: 为解决小样本数据下深度学习模型性能受限的问题，本文提出了一种受BCR-Net和SwitchNet启发的模式识别系统（PRS），通过将逆问题数学框架与神经网络结合，利用积分算子的低秩结构和小波分解实现数据驱动的参数选择与增强，在多个合成与真实生物图像数据集上显著提升了模式识别的准确率与鲁棒性。
-
-#### [FINMEM] FINMEM: A PERFORMANCE-ENHANCED LLM TRADING AGENT WITH LAYERED MEMORY AND CHARACTER DESIGN
-- **Authors**: Yangyang Vu, Haohang Li, Zhi Chen, Yuechen Jiang, Yang Li, Denghui Zhang, Rong Liu, Jordan W. Suchow, Khaldoun Khashanah
-- **Year**: 2024
-- **Task**: 量化交易策略开发
-- **Abstract**: 为解决传统金融交易代理在处理多源异构金融数据时缺乏可解释性、记忆能力不足和无法自适应市场变化的问题，本文提出FINMEM，一种基于大语言模型（LLM）的自主交易代理框架，通过分层记忆模块模拟人类工作记忆与长期记忆结构，结合动态角色配置（如风险偏好自适应）和多层信息处理机制，实现对新闻、财报等时序金融数据的高效整合与优先级排序，显著提升交易收益与决策鲁棒性。
-
-#### Variational autoencoder-based anomaly detection in time series data for inventory record inaccuracy
-- **Authors**: Halil ARGUN, S. Emre ALPTEKİN
-- **Year**: 2023
-- **Task**: 库存记录异常检测
-- **Abstract**: 为解决零售业库存记录不准确（IRI）问题，本文提出一种基于变分自编码器（VAE）的无监督异常检测方法，通过构建单变量和多变量时间序列模型，利用编码-解码结构学习库存数据的潜在分布，并通过重建误差识别异常点，实现了在不依赖人工标注的情况下有效检测高低库存异常，显著减少误报并支持动态阈值调整。
-
-#### [CDDP-GAT] Enterprise violation risk deduction combining generative Al and event evolution graph
-- **Authors**: Chao Zhong, Pengjun Li, Jinlong Wang, Xiaoyun Xiong, Zhihan Lv, Xiaochen Zhou, Qixin Zhao
-- **Year**: 2023
-- **Task**: 企业违规风险评估
-- **Abstract**: 为解决上市公司违规事件因果逻辑缺失、可解释性低和训练数据不足的问题，本文提出一种融合生成式AI与事件演化图的违规风险推断框架，通过ChatGLM2生成违规文本摘要、基于UIE模型提取事件实体、设计CDDP-GAT模型提取因果关系、构建加权事件演化图，最终实现对违规风险路径与后果的精准识别与可视化，显著提升风险推断的准确性和可解释性。
-
-#### Management Analysis Method of Multivariate Time Series Anomaly Detection in Financial Risk Assessment
-- **Authors**: Yongshan Zhang, Weifang University of Science and Technology, China, Zhiyun Jiang, Weifang University of Science and Technology, China, Cong Peng, Guizhou University of Commerce, China, Xiumei Zhu, Weifang University of Science and Technology, China, Gang Wang, Imperial College London, UK
-- **Year**: 2023
-- **Task**: 风险评估
-- **Abstract**: 为解决金融多变量时间序列异常检测中模型过拟合与泛化能力不足的问题，本文提出一种结合对比学习与生成对抗网络（GAN）的创新方法，通过几何分布掩码进行数据增强，利用Transformer自编码器学习正常模式分布，并在判别器中引入对比损失以增强对正常模式的判别能力，实验表明该方法在四个真实金融数据集上显著优于现有主流方法，有效提升了异常检测的准确性和鲁棒性。
-
-#### A Comprehensive Survey of Time Series Forecasting: Architectural Diversity and Open Challenges
-- **Authors**: Jongseon Kim, Hyungjoon Kim, HyunGi Kim, Dongjun Lee, Sungroh Yoon
-- **Year**: 2024
-- **Task**: 时间序列预测
-- **Abstract**: 为解决时间序列预测领域中模型架构单一和开放性挑战（如通道依赖、分布偏移、因果性等）的问题，本文系统综述了从传统统计方法到深度学习架构（MLP、CNN、RNN、GNN、Transformer）以及新兴模型（扩散模型、Mamba、基础模型）的发展脉络，通过横向比较各类架构的优劣与演进趋势，揭示了架构多样化是当前研究的核心方向，并系统梳理了应对关键挑战的最新方法，为领域研究者提供了全面的理论框架与实践指南。
-
-#### Large Language Models for Time Series: A Survey
-- **Authors**: Xiyuan Zhang, Ranak Roy Chowdhury, Rajesh K. Gupta, Jingbo Shang
-- **Year**: 2024
-- **Task**: 时间序列分析
-- **Abstract**: 为解决大型语言模型（LLM）在处理数值型时间序列数据时面临的模态鸿沟问题，本文系统综述了五类方法（直接提示、时间序列量化、对齐、视觉作为桥梁、工具集成），通过将时间序列转换为文本、离散令牌、对齐嵌入、视觉表示或调用外部工具，实现LLM在气候、医疗、金融等领域的时序分析任务，显著提升了零样本和少样本场景下的性能与泛化能力。
-
-#### [RLVAL] Anomaly Detection In Time Series Data Using Reinforcement Learning, Variational Autoencoder, and Active Learning
-- **Authors**: Bahareh Golchin, Banafsheh Rekabdar
-- **Year**: 2023
-- **Task**: 时间序列异常检测
-- **Abstract**: 为解决时间序列数据中异常检测依赖大量标注数据、难以识别新型异常的问题，本文提出一种结合深度强化学习（DRL）、变分自编码器（VAE）和主动学习的RLVAL方法，通过LSTM建模时序依赖，利用VAE生成异常评分作为内在奖励，结合标注数据的外在奖励与主动学习的边际采样策略，实现对未知异常类别的高效探索与检测，显著提升检测性能并减少对标注数据的依赖。
-
-#### [HBA-LGBM] Hybrid boosted attention-based LightGBM framework for enhanced credit risk assessment in digital finance
-- **Authors**: Chengwei Ying, Anlu Shi, Xiongyi Li
-- **Year**: 2024
-- **Task**: 风险评估
-- **Abstract**: 为解决数字金融中信贷风险评估面临的高维数据、类别不平衡和模型可解释性差等问题，本文提出了一种混合增强注意力机制的LightGBM框架（HBA-LGBM），通过多阶段特征选择、注意力特征增强、混合提升机制和合成数据增强与代价敏感学习相结合的不平衡学习策略，显著提升了违约预测的准确性和模型稳定性，在LendingClub数据集上实现了RMSE=11.53、MAPE=4.44%和R²=0.998的优异性能。
-
-#### A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges
-- **Authors**: Yuqi Nie, Yaxuan Kong, Xiaowen Dong, John M. Mulvey, H. Vincent Poor, Qingsong Wen, Stefan Zohren
-- **Year**: 2024
-- **Task**: 金融应用中的大语言模型综述
-- **Abstract**: 为系统梳理大语言模型（LLM）在金融领域的应用进展、技术优势与关键挑战，本文通过分类综述 linguistic tasks、sentiment analysis、financial time series、financial reasoning 和 agent-based modeling 等六大核心方向，整合了主流模型、数据集与基准，并深入分析了数据偏差、伦理风险与可解释性等现实障碍，为金融行业智能化转型提供了全面的理论与实践参考。
-
-#### [RMT-Net] RMT-Net: Reject-Aware Multi-Task Network for Modeling Missing-Not-At-Random Data in Financial Credit Scoring
-- **Authors**: Qiang Liu, Yingtao Luo, Shu Wu, Zhen Zhang, Xiangnan Yue, Hong Jin, Liang Wang
-- **Year**: 2023
-- **Task**: 风险评估
-- **Abstract**: 为解决金融信用评分中因拒绝样本无标签导致的缺失不随机偏倚问题，本文提出RMT-Net，通过多任务学习框架联合建模拒绝/批准任务与违约/非违约任务，利用拒绝概率动态控制信息共享权重，使模型能有效利用拒绝样本信息提升对批准与拒绝样本的违约预测准确性，实验表明其相比传统方法平均提升47.9%，相比最优基线平均提升11.9%。
-
-#### Advanced Progress in Optimized Generative Adversarial Network Applications Across Domains: A Comprehensive Survey
-- **Authors**: Sudha Senthilkumar, P. Kumaresan, K. Brindha, Yu-Chen Hu
-- **Year**: 2025
-- **Task**: 生成对抗网络在多领域的优化应用
-- **Abstract**: 为解决生成对抗网络（GAN）在电力需求预测、供应链库存管理、医学图像合成、农业数据增强和投资组合优化等跨领域应用中的稳定性、模式坍塌和数据稀缺等问题，本文通过系统性综述分析了多种优化GAN架构（如cGAN、WGAN、CycleGAN、StyleGAN等）及其与LSTM、CNN、DenseNet121、AlexNet等网络的结合方法，通过改进损失函数（如Wasserstein损失、二元交叉熵）、引入数据增强与混合优化算法，显著提升了生成数据的真实性与模型收敛性，实现了在各领域更准确的预测与更高效的决策支持。
-
-#### Stripping the Swiss discount curve using kernel ridge regression
-- **Authors**: Nicolas Camenzind, Damir Filipović
-- **Year**: 2024
-- **Task**: 无风险贴现曲线估计
-- **Abstract**: 为解决瑞士国债市场中无风险贴现曲线估计的鲁棒性与灵活性不足问题，本文提出基于核岭回归（KR）的方法，通过在再生核希尔伯特空间中最小化定价误差与曲线平滑性的加权和，实现数据驱动、可解释且优于传统方法（如Smith–Wilson、SST和SNB）的曲线拟合与外推效果。
-
-#### Regression estimation for continuous-time functional data processes with missing at random response
-- **Authors**: Mohamed Chaouch, Naâmane Laïb
-- **Year**: 2024
-- **Task**: 连续时间函数型数据的回归估计与缺失值插补
-- **Abstract**: 为解决连续时间函数型数据中响应变量随机缺失（MAR）下的非参数回归估计问题，本文提出了一种基于核平滑的广义回归估计器，通过利用观测数据构建加权积分估计量，并结合连续时间遍历过程的渐近性质，实现了点态与一致几乎必然收敛率的理论保证，同时提供了置信区间构建方法，并成功应用于金融对数收益预测与家庭用电需求插补。
-
-#### Foundation Models for Time Series Analysis: A Tutorial and Survey
-- **Authors**: Yuxuan Liang, Haomin Wen, Yuqi Nie, Yushan Jiang, Ming Jin, Dongjin Song, Shirui Pan, Qingsong Wen
-- **Year**: 2024
-- **Task**: 时间序列分析
-- **Abstract**: 为解决时间序列分析中模型泛化能力不足和任务适配效率低的问题，本文系统综述了时间序列基础模型（TSFMs）的最新进展，提出了一种以方法论为核心的分类体系，涵盖模型架构、预训练技术、适配方法和数据模态，阐明了TSFMs如何通过大规模预训练与灵活适配实现跨域通用时间序列理解与预测，显著提升了零样本和少样本场景下的性能。
-
-#### [VAE-INN] VAE-INN: Variational Autoencoder with Integrated Neural Network Classifier for Imbalanced Credit Scoring, Utilizing Weighted Loss for Improved Accuracy
-- **Authors**: Dalia ATIF
-- **Year**: 2025
-- **Task**: 风险评估
-- **Abstract**: 为解决信贷评分中类别不平衡导致的Type II错误（漏判违约者）问题，本文提出VAE-INN方法，通过将带加权损失的神经网络分类器集成到变分自编码器（VAE）的潜在空间中，联合优化特征提取与分类，使潜在空间均衡表征多数与少数类，并利用类别权重和缩放因子α强化对违约样本的学习，显著降低误判率并提升金融风险识别能力。
-
-#### Deep learning for time series forecasting: a survey
-- **Authors**: Xiangjie Kong, Zhenghao Chen, Weiyao Liu, Kaili Ning, Lechao Zhang, Syauqie Muhammad Marier, Yichen Liu, Yuhao Chen, Feng Xia
-- **Year**: 2025
-- **Task**: 时间序列预测
-- **Abstract**: 为解决深度学习时间序列预测模型缺乏系统性架构分类、特征提取方法综述和数据集汇总的问题，本文提出了一种动态分类框架，系统梳理了编码器-解码器、Transformer、生成对抗网络等五大模型架构范式，结合时间序列的趋势、季节性和残差成分分析特征提取方法，并整合多领域数据集，全面总结了当前挑战与未来研究方向，为DTSF领域提供了首个结构化、多维度的综述体系。
