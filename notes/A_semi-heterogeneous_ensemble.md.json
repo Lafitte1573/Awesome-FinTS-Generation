@@ -1,0 +1,19 @@
+{
+    "authors": [
+        "Xiao Zhang",
+        "Peide Liu",
+        "Jing Feng"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票收益预测",
+    "summary": "为解决股票收益预测中传统模型忽视投资者情绪与特征多样性的问题，本文提出一种基于情感分析的半异构集成预测方法，通过监督数据增强构建注意力-PCA情感指数，结合变量扰动生成多样化的基模型（MLR与BPNN），并采用加权集成策略融合异构与同构优势，显著提升了S&P 500收益预测的准确性与泛化能力。",
+    "techniques": [
+        "基于机器学习",
+        "基于深度学习",
+        "基于注意力机制",
+        "基于主成分分析"
+    ],
+    "method": "1. 构建情感词典：从《纽约时报》和《华尔街日报》金融新闻中提取词项，经预处理（去停用词、词干化、二元搭配）后，使用TF-IDF筛选前100个高频词，形成N维词频矩阵。2. 构建监督情感指数：采用OLS、Ridge、LASSO、Elastic Net回归计算每个词项与S&P 500收益的相关系数ci，将词项分为pos、neg、pos+neg、all四类；对每类词项应用soft-max函数计算注意力权重ωi，加权构造新特征矩阵X*。3. 应用注意力-PCA：对加权后的X*进行主成分分析，提取第一主成分作为监督情感指数。4. 生成基模型池：结合四种回归方法（OLS/Ridge/LASSO/Elastic Net）与两种预测模型（MLR、BPNN），在不同情感指数输入（pos/neg/pos+neg/all）和变量扰动下，生成多组基模型。5. 构建半异构集成框架：集成策略融合同构（相同算法不同输入）与异构（不同算法）模型，采用基于预测性能的加权平均（如ABC算法优化权重）整合预测结果。6. 评估与优化：使用RMSE、MAE、R_OOS^2、Dstat评估性能，通过偏差-方差-协方差分解与双错误率度量评估模型多样性，实验表明该方法在S&P 500月度收益预测中显著优于基准模型。",
+    "title": "A semi-heterogeneous ensemble forecasting method for stock returns based on sentiment analysis"
+}

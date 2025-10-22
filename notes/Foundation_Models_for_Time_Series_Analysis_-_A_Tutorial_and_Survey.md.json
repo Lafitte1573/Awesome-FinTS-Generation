@@ -1,0 +1,27 @@
+{
+    "authors": [
+        "Yuxuan Liang",
+        "Haomin Wen",
+        "Yuqi Nie",
+        "Yushan Jiang",
+        "Ming Jin",
+        "Dongjin Song",
+        "Shirui Pan",
+        "Qingsong Wen"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "时间序列分析",
+    "summary": "为解决时间序列分析中模型泛化能力不足和任务适配效率低的问题，本文系统综述了时间序列基础模型（TSFMs）的最新进展，提出了一种以方法论为核心的分类体系，涵盖模型架构、预训练技术、适配方法和数据模态，阐明了TSFMs如何通过大规模预训练与灵活适配实现跨域通用时间序列理解与预测，显著提升了零样本和少样本场景下的性能。",
+    "techniques": [
+        "基于深度学习",
+        "基于Transformer",
+        "基于自监督学习",
+        "基于LLM",
+        "基于扩散模型",
+        "基于提示工程",
+        "基于多模态融合"
+    ],
+    "method": "本文并未提出新的具体模型，而是构建了一个系统性的方法论分类框架来综述和分析时间序列基础模型（TSFMs）。首先，将时间序列数据分为标准时间序列、时空序列、轨迹与事件四类；其次，从方法论角度将TSFMs划分为四大核心组件：（1）模型架构，包括基于Transformer（编码器-解码器、编码器-only、解码器-only）、非Transformer（MLP、CNN、RNN）和扩散模型；（2）预训练技术，分为全监督、自监督（生成式、对比式、混合式）和跨模态预训练（如使用LLM、VLM）；（3）适配方法，包括零样本直接使用、微调（全模型或部分组件）、提示工程（静态/可学习提示）和时间序列分词（如分块、归一化、分解）；（4）数据模态，涵盖单模态（仅时间序列）和多模态（时间序列+文本、图像、音频等）。通过该框架，本文系统梳理了代表性工作如Lag-Llama、TimeGPT-1、TS2Vec、Time-LLM、ClimaX、DiffTraj等，揭示了TSFMs通过大规模预训练获取通用时序表征，并通过灵活适配策略实现跨任务、跨领域高效迁移的核心机制，为后续研究提供了统一的分析视角与发展方向。",
+    "title": "Foundation Models for Time Series Analysis: A Tutorial and Survey"
+}

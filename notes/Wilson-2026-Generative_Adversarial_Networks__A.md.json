@@ -1,0 +1,16 @@
+{
+    "authors": [
+        "D. Wilson",
+        "A. Azmani"
+    ],
+    "year": 2025,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "金融数据生成与市场建模",
+    "summary": "为解决金融数据隐私受限、稀缺及传统模型难以捕捉复杂市场动态的问题，本文通过系统综述2019–2024年30篇文献，分析各类GAN架构（如CTGAN、WGAN、TGAN、TTGAN等）在生成高保真合成金融数据中的应用，发现其能有效增强数据隐私性并提升股票预测、风险评估、组合优化等任务性能，但仍面临模式坍塌、训练不稳定和缺乏统一评估标准等挑战。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络"
+    ],
+    "method": "本文采用系统性文献综述方法，遵循PRISMA框架，从IEEE Xplore、Web of Science、Scopus和arXiv四大数据库中筛选2019–2024年间30篇关于GAN在金融数据生成与市场建模中应用的高质量论文。首先，通过关键词组合（\"Generative Adversarial Networks\" OR \"GAN\" AND \"financial data\" OR \"synthetic financial data\" AND \"data generation\"）进行文献检索；其次，依据标题、摘要和内容进行筛选，排除无关或低质量文献；接着，对入选论文进行分类分析，系统梳理16种主流GAN变体（如Vanilla GAN、cGAN、WGAN、TGAN、CTGAN、StyleGAN、PATE-GAN、SigWGAN等）在金融场景中的适用性与性能表现；然后，归纳其在股票价格预测、算法交易、组合优化、风险评估、欺诈检测等六大金融任务中的具体应用与效果；最后，识别当前研究中的主要挑战，包括训练不稳定性、模式坍塌、市场动态建模不足、评估指标缺失、计算资源需求高及缺乏宏观经济学整合，并提出未来研究方向，如结合强化学习、引入极端事件建模、开发在线学习机制、融合市场博弈理论等，以推动GAN在金融领域的稳健应用。",
+    "title": "Generative Adversarial Networks: A Systematic Review of Characteristics, Applications, and Challenges in Financial Data Generation and Market Modeling: 2019-2024"
+}

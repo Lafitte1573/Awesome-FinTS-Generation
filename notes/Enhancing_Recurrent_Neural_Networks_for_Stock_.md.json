@@ -1,0 +1,14 @@
+{
+    "authors": [
+        "Bus¸ra C¸ alıs¸kan"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票价格预测",
+    "summary": "为解决股票市场短期预测中LSTM和GRU模型存在的过拟合与训练时间长问题，本文提出一种基于PEC-W预处理框架的方法，通过滚动窗口均值聚合、均值减法归一化和离散小波变换（DWT）增强时序特征并降低数据维度，同时结合SHAP可解释性分析验证模型有效性，显著提升了预测精度并大幅缩短训练时间。",
+    "techniques": [
+        "基于深度学习"
+    ],
+    "method": "该方法首先选取与调整收盘价高度相关的开盘价作为辅助特征；接着应用PEC-W预处理框架：(1) 使用60天滚动窗口对原始数据进行分割；(2) 在每个窗口内计算每周（5天）均值，生成聚合序列；(3) 对聚合序列进行均值减法归一化以消除趋势影响；(4) 应用离散小波变换（DWT）提取低频趋势与高频波动成分，压缩数据维度；(5) 将处理后的开盘价和调整收盘价特征拼接，输入至LSTM或GRU模型进行训练；(6) 模型结构为：64单元RNN层（返回序列）→ 20% Dropout → 32单元LSTM/GRU层 → 单输出Dense层，使用Adam优化器与MSE损失函数，训练200轮并采用EarlyStopping防止过拟合；(7) 使用SHAP方法分析特征重要性，验证预处理提升的鲁棒性。实验在AAPL、AMZN、MSFT三只股票数据上验证，结果显示PEC-W框架使RMSE降低约40%-70%，训练时间缩短60%-90%，R²提升至0.97以上。",
+    "title": "Enhancing Recurrent Neural Networks For Stock Market Forecasts through PEC-W Framework"
+}

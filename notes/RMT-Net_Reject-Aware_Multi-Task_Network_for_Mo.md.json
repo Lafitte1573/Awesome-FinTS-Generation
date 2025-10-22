@@ -1,0 +1,22 @@
+{
+    "authors": [
+        "Qiang Liu",
+        "Yingtao Luo",
+        "Shu Wu",
+        "Zhen Zhang",
+        "Xiangnan Yue",
+        "Hong Jin",
+        "Liang Wang"
+    ],
+    "year": 2023,
+    "research_directions": "其他",
+    "specific_task": "风险评估",
+    "summary": "为解决金融信用评分中因拒绝样本无标签导致的缺失不随机偏倚问题，本文提出RMT-Net，通过多任务学习框架联合建模拒绝/批准任务与违约/非违约任务，利用拒绝概率动态控制信息共享权重，使模型能有效利用拒绝样本信息提升对批准与拒绝样本的违约预测准确性，实验表明其相比传统方法平均提升47.9%，相比最优基线平均提升11.9%。",
+    "techniques": [
+        "基于深度学习",
+        "基于多任务学习",
+        "基于门控网络"
+    ],
+    "method": "RMT-Net由四部分组成：(1)嵌入层将原始特征转换为稠密向量；(2)拒绝/批准预测网络（R/A-Net）输出每个样本的拒绝概率；(3)违约/非违约预测网络（D/N-Net）用于预测违约概率，其每一层的隐层表示通过门控网络融合R/A-Net的输出，门控权重由拒绝概率通过可学习参数σ(α·p_i^(t) + β)动态计算，拒绝概率越高，从R/A-Net共享的信息越多；(4)损失函数由两部分组成：R/A-Net的二元交叉熵损失（对所有样本）和D/N-Net的二元交叉熵损失（仅对批准样本，通过(1−r_i)掩码），二者加权求和。RMT-Net++进一步扩展为支持多个拒绝/批准策略，为每个策略独立训练一个R/A-Net，并在D/N-Net中对所有策略的门控输出进行加权求和，实现多策略下的联合建模。",
+    "title": "RMT-Net: Reject-Aware Multi-Task Network for Modeling Missing-Not-At-Random Data in Financial Credit Scoring"
+}

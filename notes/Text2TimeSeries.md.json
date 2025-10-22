@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Litton Jose Kurisinkel",
+        "Pruthwik Mishra",
+        "Yue Zhang"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票价格预测",
+    "summary": "为解决金融时序预测中传统模型忽略事件驱动非数值因素导致预测不准确的问题，本文提出Text2TimeSeries方法，利用大语言模型（LLM）预测事件对股票价格的多步变化趋势（离散标签），并通过门控循环单元计算股票状态，生成价格放大/衰减值，动态更新时间序列模型的预测结果，从而在小盘、中盘和大盘股票上显著降低预测误差（RMSE和MAE）。",
+    "techniques": [
+        "基于LLM",
+        "基于深度学习",
+        "基于时间序列模型"
+    ],
+    "method": "本文方法包含三个核心步骤：(1) 为每只股票训练独立的多变量时间序列模型（如D-Linear或PatchTST），输入历史价格、纳斯达克指数和美元汇率，预测未来n天的价格趋势；(2) 使用微调的T5模型（Base/Large/3B）作为LLM，输入股票代号和新闻事件文本，输出未来n天的离散价格变化标签（INC/DEC及其幅度）；(3) 将LLM输出的标签输入GRU网络，结合股票嵌入向量计算每个时间步的股票状态，再通过线性层预测价格变化方向的概率分布（增加、减少、不变），计算期望放大/衰减值（As），最后将该值与时间序列模型预测结果进行线性融合，得到最终更新后的价格预测。整个系统以MSE为损失函数进行端到端训练，其中时间序列模型在微调阶段被冻结，仅更新融合模块。",
+    "title": "Text2TimeSeries: Enhancing Financial Forecasting through Time Series Prediction Updates with Event-Driven Insights from Large Language Models"
+}

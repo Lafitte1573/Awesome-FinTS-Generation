@@ -1,0 +1,23 @@
+{
+    "authors": [
+        "Kaixiang Yang",
+        "Zhijie Zhong",
+        "Song Sun",
+        "Zhiwen Yu",
+        "C. L. Philip Chen",
+        "Tong Zhang"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "匿名零样本信用卡欺诈检测",
+    "summary": "为解决信用卡欺诈检测中标签稀缺、数据匿名化和跨系统泛化能力不足的问题，本文提出LLM40FD框架，通过行走嵌入将匿名交易特征统一转化为LLM可处理的序列，结合基于分布的一类函数（DOC）进行知识蒸馏，并利用隐式对比学习的双重数据增强策略生成正负样本以强化决策边界，无需微调LLM即可在零样本和全样本设置下实现SOTA性能。",
+    "techniques": [
+        "基于LLM",
+        "知识蒸馏",
+        "隐式对比学习",
+        "数据增强",
+        "行走嵌入"
+    ],
+    "method": "LLM40FD框架包含三个核心组件：（1）行走嵌入（Walking Embedding）：将匿名交易特征按固定步长分割为多个token，通过线性层映射为LLM的隐藏维度向量，并以不同步长多次采样后拼接，形成统一上下文表示，解决匿名特征语义缺失和维度不一致问题；（2）知识蒸馏（DOC函数）：定义一个正常交易的知识中心C，通过最小化统一表示U与C之间的Softmax交叉熵损失（L_DOC），引导LLM将正常行为聚类至该中心，从而隐式学习正常模式分布；（3）双重数据增强（Dual-Augmentation）：在每个mini-batch中，基于均值μ和标准差σ生成正样本（X_pos = μ + γ_pos·σ·N）以强化正常行为聚类，生成负样本（X_neg = X + γ_neg·σ·N）以模拟异常行为并远离知识中心，分别计算正负样本的DOC损失（L_DOC^p 和 L_DOC^n），最终联合优化总损失L = L_DOC + L_DOC^p + L_DOC^n。推理阶段，计算每个样本的DOC异常得分，超过阈值则判定为欺诈。整个流程无需微调LLM参数，仅训练行走嵌入和投影头，实现跨数据集零样本迁移。",
+    "title": "LLM40FD: Unlocking the Potential of LLM for Anonymous Zero-Shot Fraud Detection"
+}

@@ -1,0 +1,22 @@
+{
+    "authors": [
+        "Woojung Kim",
+        "Jiyoung Jeon",
+        "Sanghoe Kim",
+        "Minwoo Jang",
+        "Heesoo Lee",
+        "Sanghyuk Yoo",
+        "Kyong Joo Oh"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "指数期货价格走势预测",
+    "summary": "为解决指数期货市场中时序数据稀缺与高波动性导致预测性能不佳的问题，本文提出一种结合TimeGAN数据增强与3D-CNN的混合模型，通过TimeGAN生成具有时间动态特性的合成数据并将其扩展为三维张量，再利用3D-CNN捕捉多市场、多特征、多时间步的时空关联，从而在韩国与美国期货市场实现风险调整后收益提升1.35倍、训练效率提升6390倍的显著效果。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于卷积神经网络"
+    ],
+    "method": "首先，使用TimeGAN对历史期货数据（如KOSPI200、S&P500、NASDAQ100期货的37个技术指标）进行时序数据增强，TimeGAN通过嵌入网络、生成网络、判别网络和恢复网络四部分，结合重建损失、无监督对抗损失和监督时序损失，生成与真实数据时间结构一致的合成序列；其次，将原始数据与生成的合成数据按相似度（MSE）筛选并堆叠成三维张量（时间步×特征×样本数），形成包含多场景模拟的时空结构；然后，将该三维张量输入3D-CNN模型，通过1×1×k卷积提取每日特征，再通过3×3×k卷积捕捉跨市场与跨时间的动态模式，最终输出次日价格涨跌预测；最后，模型在滑动窗口框架下进行5年回测，结合保证金机制与交易成本，评估其在收益、波动率、夏普比率和累积回报等指标上的表现，结果表明10TG-3DCNN（使用10组增强样本）在风险调整收益和计算效率上均显著优于基线模型。",
+    "title": "Prediction of index futures movement using TimeGAN and 3D-CNN: Empirical evidence from Korea and the United States"
+}

@@ -1,0 +1,26 @@
+{
+    "authors": [
+        "Xiangjie Kong",
+        "Zhenghao Chen",
+        "Weiyao Liu",
+        "Kaili Ning",
+        "Lechao Zhang",
+        "Syauqie Muhammad Marier",
+        "Yichen Liu",
+        "Yuhao Chen",
+        "Feng Xia"
+    ],
+    "year": 2025,
+    "research_directions": "其他",
+    "specific_task": "时间序列预测",
+    "summary": "为解决深度学习时间序列预测模型缺乏系统性架构分类、特征提取方法综述和数据集汇总的问题，本文提出了一种动态分类框架，系统梳理了编码器-解码器、Transformer、生成对抗网络等五大模型架构范式，结合时间序列的趋势、季节性和残差成分分析特征提取方法，并整合多领域数据集，全面总结了当前挑战与未来研究方向，为DTSF领域提供了首个结构化、多维度的综述体系。",
+    "techniques": [
+        "基于深度学习",
+        "基于Transformer",
+        "基于卷积神经网络",
+        "基于循环神经网络",
+        "基于生成对抗网络"
+    ],
+    "method": "本文首先定义了时间序列预测（TSF）的基本概念与任务分类（单变量/多变量、短期/长期），并回顾了传统统计模型（如ARIMA、指数平滑）的局限性；随后，提出一种动态分类框架，将深度学习模型划分为显式结构（编码器-解码器、Transformer、生成对抗网络）与隐式结构（集成模型、级联模型）两大类，系统梳理了如Informer、Autoformer、FEDformer、TimeGAN等代表性模型的架构设计、优缺点与应用场景；接着，从时间序列的三要素（趋势、季节性、残差）出发，系统总结了特征增强方法，包括维度分解、时频变换、预训练和分块（patch-based）分割；同时，构建了涵盖能源、交通、金融、医疗等领域的TSF数据集汇编；最后，归纳了当前面临的挑战，如长序列建模、外部因素融合、可解释性不足、数据异构性等，并提出未来研究方向，包括模型轻量化、跨域迁移、与大语言模型（LLM）结合、因果推理增强等，形成了一套完整的DTSF研究体系。",
+    "title": "Deep learning for time series forecasting: a survey"
+}

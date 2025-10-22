@@ -1,0 +1,19 @@
+{
+    "authors": [
+        "Yue Wang",
+        "Zhong Wang",
+        "Yuyan Luo"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "碳价格预测",
+    "summary": "为解决碳价格序列高波动、非平稳和数据量小导致的预测精度低与过拟合问题，本文提出一种融合时间序列聚类、数据增强与TVFEMD分解的混合预测模型Informer-DA-BOHB-TVFEMD-CL，通过TVFEMD分解获得高细节IMF分量，利用时间序列聚类保留高频分量并重构低频分量，采用VAE生成数据增强训练集，并结合BOHB优化的Informer模型进行预测，显著提升了多碳市场的预测精度与交易盈利能力。",
+    "techniques": [
+        "基于深度学习",
+        "基于数据增强",
+        "基于分解重构",
+        "基于超参数优化"
+    ],
+    "method": "首先，使用时间变滤波经验模态分解（TVFEMD）对碳价格序列进行分解，获得多个本征模态函数（IMF）；其次，采用基于动态时间规整（DTW）距离的k-means时间序列聚类方法，将IMF分为高频与低频组，保留高频IMF，合并低频IMF进行重构；接着，利用变分自编码器（VAE）对每个重构分量的训练集进行数据增强，以缓解数据稀缺与过拟合问题；然后，采用贝叶斯优化与超带（BOHB）算法自动优化Informer模型的超参数（如编码器层数、注意力头数、学习率等）；随后，将增强后的训练数据输入优化后的Informer模型，分别预测各分量；最后，将各分量的预测结果加总，得到最终碳价格预测值。实验在EU-ETS、广东、湖北和全国碳市场验证，结果表明该模型在MAE、RMSE、MAPE和R²等指标上显著优于基准模型，且构建的交易策略具有更高盈利能力。",
+    "title": "A hybrid carbon price forecasting model combining time series clustering and data augmentation"
+}

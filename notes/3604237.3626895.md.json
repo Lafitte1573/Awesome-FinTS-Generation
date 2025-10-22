@@ -1,0 +1,21 @@
+{
+    "authors": [
+        "Giuseppe Masi",
+        "Matteo Prata",
+        "Michele Conti",
+        "Novella Bartolini",
+        "Svitlana Vyetrenko"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据增强",
+    "specific_task": " correlated stock market time series generation",
+    "summary": "为解决多股票市场中合成时序数据难以准确捕捉资产间相关性动态的问题，本文提出CoMeTS-GAN框架，基于条件Wasserstein生成对抗网络（C-WGAN），通过在判别器中引入交叉相关性评分项，联合优化价格与成交量序列的统计真实性与资产间相关性，实现了在保持金融时序经典统计特征（如尖峰厚尾、波动聚集）的同时，精准复现多资产间正负相关关系，并支持自回归生成任意长度序列，训练效率显著优于现有模型。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于条件生成对抗网络",
+        "基于时间卷积网络"
+    ],
+    "method": "CoMeTS-GAN是一种基于条件Wasserstein生成对抗网络（C-WGAN）的多变量金融时间序列生成框架。其核心包括：（1）生成器采用7个扩张卷积块（dilated temporal convolutional blocks）与线性输出层，输入为过去P个时间步的多股票价格/成交量序列与随机噪声向量，输出为未来F个时间步的合成序列；（2）判别器（critic）由两部分组成：第一部分为卷积与线性层组成的序列真实度评分器o₁，第二部分为接收所有股票对（共C(n,2)对）相关系数的线性层，输出相关性评分o₂；（3）判别器最终得分o = o₁ + α·o₂，其中α为超参数，用于平衡序列真实度与相关性匹配度；（4）训练时，使用Wasserstein损失函数优化生成器与判别器，通过谱归一化（spectral normalization）保证Lipschitz连续性；（5）生成过程采用自回归方式：将生成的F步序列的后P步作为下一时刻的输入，迭代生成任意长度序列；（6）为评估相关性捕捉能力，提出交叉相关距离（cross-correlation distance）指标，即真实与生成序列间Pearson相关系数的均方误差。该方法在Sines、高斯模型和真实股票数据（如KO、PEP、NVDA、KSU）上验证，能同时复现金融时序的六大经典统计特征（尖峰厚尾、聚合正态性、无自相关、波动聚集、量-波正相关）与复杂资产间动态相关性，训练时间仅为TimeGAN的约1/10，且支持扩展至30只股票的DJIA指数。",
+    "title": "On Correlated Stock Market Time Series Generation"
+}

@@ -1,0 +1,19 @@
+{
+    "authors": [
+        "Md Faishal Yousuf",
+        "MD Shaad Mahmud"
+    ],
+    "year": 2021,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "股票价格预测",
+    "summary": "为解决边缘设备上隐私保护与数据稀缺的金融时序数据生成问题，本文提出一种基于LSTM-GAN的合成时间序列生成方法，通过在边缘设备iBUG上部署经过剪枝和量化优化的生成器，在保留真实数据统计特性的同时实现低资源实时生成，实验表明合成数据与真实数据在PCA和t-SNE分析中高度相似，且参数趋势高度吻合。",
+    "techniques": [
+        "基于深度学习",
+        "生成对抗网络（GAN）",
+        "长短期记忆网络（LSTM）",
+        "模型剪枝",
+        "半精度量化（float16）"
+    ],
+    "method": "本文方法包含四个阶段：（1）数据预处理：使用Yahoo Finance的股票数据（2017-2021），包含Open、High、Low、Close、Adj Close、Volume六个特征，通过MinMaxScaler归一化，并按80:20划分训练集与测试集；（2）模型训练：构建基于LSTM的生成器与判别器组成的GAN架构，生成器接收高斯噪声作为输入，输出时间序列；判别器判断输入序列是真实数据还是生成数据，通过最小最大博弈交替优化，目标函数为V(D,G) = E_x∼p_data[log D(x)] + E_z∼p_z[log(1 - D(G(z)))]；（3）模型优化：为适配边缘设备资源限制，对生成器进行结构剪枝以移除冗余神经元，并将权重与激活值从float32量化为float16，减少模型体积50%并提升推理速度，随后使用小学习率进行微调以恢复精度；（4）边缘部署：将优化后的生成器部署于自研iBUG边缘设备（双核ARM Cortex-M0+，133MHz，246KB SRAM），在不依赖云端的情况下实时生成合成时间序列，通过PCA与t-SNE可视化及参数趋势对比验证合成数据与真实数据在分布和时序模式上的高度一致性。",
+    "title": "Generating Synthetic Time-Series Data on Edge Devices Using Generative Adversarial Networks"
+}

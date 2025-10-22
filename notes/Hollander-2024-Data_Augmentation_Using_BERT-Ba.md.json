@@ -1,0 +1,17 @@
+{
+    "authors": [
+        "Bron Hollander",
+        "Flavius Frasincar",
+        "Finn van der Knaap"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "基于方面的情感分析",
+    "summary": "为解决方面情感分析（ABSA）中训练数据稀缺导致模型性能受限的问题，本文提出在HAABSA++模型中引入多种BERT-based数据增强方法，通过掩码语言建模（MLM）生成语义一致的增强样本，并结合标签感知的BERTprepend和BERTexpand策略保留情感标签信息，显著提升了模型在SemEval 2015和2016数据集上的测试准确率，最高提升达1.85个百分点。",
+    "techniques": [
+        "基于深度学习",
+        "基于LLM"
+    ],
+    "method": "本文基于HAABSA++模型，该模型由领域情感本体和LCR-Rot-hop++神经网络组成。为增强训练数据，作者比较了五种数据增强方法：(1) EDA-adjusted：基于词典和词性标注的同义词替换、随机插入、交换和删除，并引入词义消歧与目标词跨句交换；(2) BERT：使用预训练BERT的MLM任务，以15%概率掩码每个词，用最高概率词替换（排除原词）；(3) C-BERT：将BERT的段嵌入替换为标签嵌入，训练时注入情感标签信息以指导掩码词预测；(4) BERTprepend：在输入序列前拼接情感标签（不加入词汇表），使BERT在生成时感知标签但不破坏通用性；(5) BERTexpand：与BERTprepend类似，但将情感标签作为单个token加入BERT词汇表。所有BERT模型均在SemEval训练集上微调10个epoch，使用默认掩码参数。最终，将增强后的数据输入HAABSA++的LCR-Rot-hop++模块进行情感分类。实验表明，BERTprepend和BERTexpand在SemEval 2016上表现最佳，将测试准确率从82.62%提升至84.47%。",
+    "title": "Data Augmentation Using BERT-Based Models for Aspect-Based Sentiment Analysis"
+}

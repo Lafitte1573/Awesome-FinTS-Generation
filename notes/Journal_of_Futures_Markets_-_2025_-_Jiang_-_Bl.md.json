@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "Fuwei Jiang",
+        "Jie Kang",
+        "Ruzheng Tian",
+        "Qingdong Xu"
+    ],
+    "year": 2025,
+    "research_directions": "其他",
+    "specific_task": "期权对冲策略优化",
+    "summary": "为解决中国股票指数期权市场中深度对冲算法因数据稀缺和尾部风险难以管理而导致的性能不足问题，本文提出了一种融合Black-Scholes-Merton模型示范与深度强化学习的模仿学习深度对冲（ILDH）算法，通过将BSM模型生成的对冲动作作为专家示范与智能体自身探索数据结合进行训练，并引入循环神经网络记忆历史信息，显著提升了对冲收益、降低了风险与交易成本。",
+    "techniques": [
+        "基于深度学习",
+        "基于强化学习",
+        "基于模仿学习",
+        "基于循环神经网络"
+    ],
+    "method": "本文提出模仿学习深度对冲（ILDH）算法，其核心包括三部分：（1）采用TD3（Twin Delayed Deep Deterministic Policy Gradient）作为基础强化学习算法，处理连续状态与动作空间的期权对冲问题，利用裁剪双Q学习和延迟策略更新提升稳定性；（2）引入模仿学习模块，采用DAgger算法，将Black-Scholes-Merton模型生成的对冲动作作为专家示范，与智能体在真实交易数据中探索得到的动作样本共同存储于经验回放缓冲区，进行混合训练，实现数据增强并提升对尾部风险的应对能力；（3）在TD3的Actor与Critic网络中嵌入循环神经网络（RNN）结构，将历史观测序列（如价格、波动率、持仓等）作为记忆输入，使智能体能够建模部分可观测马尔可夫决策过程（POMDP），更准确推断隐藏状态；训练过程中，每个对冲周期的奖励函数结合当期盈亏与风险厌恶系数，通过最大化期望收益减去风险惩罚来引导策略优化；最终，算法在CSI 300期权数据集上实证表明，其收益高于传统Delta对冲、纯数据驱动对冲（EDH）和模型驱动对冲（MDDH），且在不同交易成本和风险厌恶水平下均保持稳健性能。",
+    "title": "Black-Scholes Meet Imitation Learning: Evidence From Deep Hedging in China"
+}

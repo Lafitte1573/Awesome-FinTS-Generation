@@ -1,0 +1,21 @@
+{
+    "authors": [
+        "Dan Zhou",
+        "Ajim Uddin",
+        "Zuofeng Shang",
+        "Cheickna Sylla",
+        "Xinyuan Tao",
+        "Dantong Yu"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据插补",
+    "specific_task": "金融数据缺失值插补",
+    "summary": "为解决金融数据中高稀疏性张量的缺失值插补问题，本文提出了一种名为RegTensor的快速非线性耦合张量补全算法，通过引入多层感知机（MLP）建模嵌入向量间的非线性交互、正交正则化抑制嵌入冗余与过拟合，并联合多个相关张量进行协同因子分解，显著提升了插补精度，在债券特征和分析师盈利预测等数据集上比线性模型提升40%-74%，比现有非线性模型提升2%-52%。",
+    "techniques": [
+        "基于深度学习",
+        "基于张量分解",
+        "基于正则化"
+    ],
+    "method": "RegTensor方法包含四个核心步骤：(1) 构建嵌入学习模块，为张量每个模式（如时间、公司、债券）学习低维潜在嵌入矩阵U、V、W；(2) 使用多层感知机（MLP）替代传统CP分解中的线性点积，对嵌入向量的拼接结果进行非线性重建，预测缺失值；(3) 引入耦合张量分解机制，将目标张量（如EPS预测）与辅助张量（如公司基本面）共享部分模式（如季度、公司），通过联合优化两者的重建误差实现信息互补；(4) 添加正交正则化项，强制嵌入矩阵的列向量相互正交，消除特征冗余与共线性，降低过拟合风险，最终采用随机梯度下降（SGD）对所有参数进行端到端优化，仅在观测值上计算损失，实现高效可扩展训练。",
+    "title": "A Fast Non-Linear Coupled Tensor Completion Algorithm for Financial Data Integration and Imputation"
+}

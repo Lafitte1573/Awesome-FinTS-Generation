@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Qi Li",
+        "Norshaliza Kamaruddin",
+        "Siti Sophiayati Yuhaniz",
+        "Hamdan Amer Ali Al-Jaif"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票收益跨截面预测",
+    "summary": "为解决中国股票市场跨截面收益预测中特征工程薄弱和传统深度学习模型精度不足的问题，本文提出一种结合符号遗传编程（SGP）与长短期记忆网络（LSTM）的混合模型，通过SGP自动生成并优化融合基本面与技术面指标的非线性特征，再输入LSTM进行时序模式学习，显著提升了预测准确率和风险调整收益，Rank IC和ICIR分别提升1128%和5360%（基本面）及20%和2752%（技术面），年化超额收益超越CSI 300达31.00%",
+    "techniques": [
+        "基于深度学习",
+        "基于符号遗传编程"
+    ],
+    "method": "该方法包含四个阶段：（1）数据预处理：从S&P Alpha Factor Library获取中国A股4500只股票的基本面与技术面指标（共304个），进行缺失值处理、异常值剔除和Z-score标准化；（2）符号遗传编程（SGP）增强：以原始指标为基因，结合40种启发式算子（如ts_corr、ts_rank、delta等），通过遗传算法进行选择、交叉（40%概率）和突变（低概率），构建符号表达式树，使用改进的适应度函数（融合Rank IC、收益单调性、Top/Bottom组超额收益）评估特征质量，并通过成功率（IC_success_ratio）和盈亏比（IC_PNL）筛选最优特征；（3）特征序列化：将SGP生成的最优特征按15日滞后序列化，形成时序输入；（4）LSTM特征提取：将序列化特征输入双层LSTM网络，使用最终隐藏层输出预测个股未来5日收益是否高于市场中位数，通过Rank IC与ICIR评估模型性能，并构建多头投资组合（前10%股票等权持有），在2019-2022年滚动窗口（训练1020天、验证160天、测试20天，滚动周期20天）下进行回测，最终实现显著超越CSI 300、CSI 500及市场平均的超额收益。",
+    "title": "Forecasting stock prices changes using long‑short term memory neural network with symbolic genetic programming"
+}

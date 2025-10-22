@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Uras Varolgunes",
+        "Dan Zhou",
+        "Dantong Yu",
+        "Ajim Uddin"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据插补",
+    "specific_task": "金融时序数据插补",
+    "summary": "为解决金融时间序列中高稀疏性数据的缺失值插补问题，本文提出NMTucker方法，通过递归分解Tucker核心张量并引入多层非线性激活函数模拟复杂非线性交互，显著降低过拟合并提升插补精度，在多个真实金融数据集上比现有模型降低最高53.91%的RMSE。",
+    "techniques": [
+        "基于深度学习",
+        "基于张量分解"
+    ],
+    "method": "NMTucker方法通过构建多层神经网络架构实现非线性Tucker张量分解：首先，将金融数据建模为三阶张量（时间、公司、属性）；其次，在每一层中，使用嵌入矩阵（U, V, W）和核心张量（G）进行元素级Tucker分解，并在每次张量-矩阵乘法后引入非线性激活函数σ，形成非线性Tucker操作；接着，采用递归Matryoshka式结构，将上层核心张量G^(l)通过下层的非线性Tucker操作分解为更小的核心张量G^(l+1)，从而减少可训练参数并隐式正则化模型复杂度；所有层共享相同网络结构，仅第一层的核心张量和所有嵌入矩阵为可训练参数，其余核心张量在前向传播中动态计算；训练时采用随机梯度下降（SGD）优化均方误差（MSE）损失，仅对观测值进行反向传播；最终通过多层递归分解实现高维稀疏张量的高效、非线性插补，显著提升泛化能力。",
+    "title": "NMTucker: Non-linear Matryoshka Tucker Decomposition for Financial Time Series Imputation"
+}

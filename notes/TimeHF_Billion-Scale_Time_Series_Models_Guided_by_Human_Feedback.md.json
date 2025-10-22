@@ -1,0 +1,24 @@
+{
+    "authors": [
+        "Yongzhi Qi",
+        "Hao Hu",
+        "Dazhou Lei",
+        "Jianshen Zhang",
+        "Zhengxin Shi",
+        "Yulin Huang",
+        "Zhengyu Chen",
+        "Xiaoming Lin",
+        "Zuo-Jun Max Shen"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "供应链需求预测",
+    "summary": "为解决大规模时间序列模型在 scalability、泛化能力和零样本预测性能上的挑战，本文提出TimeHF框架，通过构建210B规模的高质量时间序列数据集、设计基于补丁卷积的60亿参数纯时间序列模型（PCLTM），并首次引入面向时间序列的强化学习人类反馈优化方法（TPO），利用专家构建的优劣预测对比对引导模型学习隐性专家知识，最终在京东供应链中实现预测精度提升33.21%。",
+    "techniques": [
+        "基于深度学习",
+        "基于强化学习",
+        "基于LLM"
+    ],
+    "method": "TimeHF框架包含三个核心步骤：(1) 基础模型训练：提出Patch Convolutional Large Time Series Model (PCLTM)，采用补丁卷积层（PatchConv）捕捉跨补丁长期依赖，结合旋转位置编码（ROPE）和分组查询注意力（GQA）提升建模能力，模型输入为时间序列分块，输出为多步预测；(2) 监督微调（SFT）：在领域特定数据集（如京东销售数据）上对PCLTM进行微调，提升特定场景预测精度；(3) 时序策略优化（TPO）：首次将RLHF引入纯时间序列模型，构建由专家模型生成的‘优预测-劣预测’对比对，采用REINFORCE风格的奖励函数，通过概率化预测（假设预测服从正态分布）计算策略比值与优势函数，联合优化模型以逼近专家偏好，同时引入MSE损失约束优劣预测的差距，仅训练单一策略模型，避免传统PPO/RLOO的多模型开销，显著提升效率与效果。最终模型在京东20,000个SKU的自动补货系统中部署，实现33.21%的精度提升。",
+    "title": "TimeHF: Billion-Scale Time Series Models Guided by Human Feedback"
+}

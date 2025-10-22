@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Leonardo Berti",
+        "Bardh Prenkaj",
+        "Paola Velardi"
+    ],
+    "year": 2025,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "限价订单簿市场模拟",
+    "summary": "为解决金融市场上真实限价订单簿（LOB）数据稀缺且现有生成模型缺乏 realism、responsiveness 和 usefulness 的问题，本文提出 TRADES，一种基于 Transformer 的去噪扩散概率模型，通过条件化历史订单和 LOB 快照生成高保真、可响应的订单流时间序列，显著超越现有方法，在预测得分上提升 3.27–3.48 倍，并能复现金融市场的典型统计特征（stylized facts）。",
+    "techniques": [
+        "基于深度学习",
+        "基于扩散模型",
+        "基于Transformer架构"
+    ],
+    "method": "TRADES 是一种条件化去噪扩散概率模型，用于生成限价订单簿（LOB）的订单流时间序列。其核心流程包括：（1）前向过程：仅对目标生成部分（即下一个订单）添加高斯噪声，保留历史条件数据（前 N−1 个订单和最近 N 个 LOB 快照）不变；（2）模型架构：采用 Transformer 编码器作为主干网络，输入通过两个 MLP 分别对订单序列和 LOB 快照进行特征增强，再拼接后输入 Transformer，同时融合时间步嵌入和位置嵌入；（3）去噪过程：通过神经网络 ε_θ 预测噪声，并学习可变方差 Σ_θ，使用重参数化公式逐步去噪，重构原始订单；（4）训练目标：最小化预测噪声的均方误差（L_ε）与扩散过程负对数似然（L_Σ）的加权和；（5）推理过程：以滑动窗口方式自回归生成订单，每生成一个订单后将其加入条件序列，持续生成直至模拟结束；（6）条件输入：融合前 256 个订单（含价格、数量、方向、深度、时间偏移、订单类型）和前 256 个 LOB 快照（前 10 层买卖盘价格与成交量），以捕捉市场供需动态；（7）评估指标：提出预测得分（Predictive Score），即在合成数据上训练价格预测模型，在真实数据上测试 MAE，用以量化生成数据的实用性；（8）系统实现：构建开源框架 DeepMarket，集成 TRADES 模型、合成数据集 TRADES-LOB 和扩展的 ABIDES 仿真环境，支持引入实验性交易代理进行市场冲击实验。",
+    "title": "TRADES: Generating Realistic Market Simulations with Diffusion Models"
+}

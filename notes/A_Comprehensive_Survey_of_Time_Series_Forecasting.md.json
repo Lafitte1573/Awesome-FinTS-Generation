@@ -1,0 +1,22 @@
+{
+    "authors": [
+        "Jongseon Kim",
+        "Hyungjoon Kim",
+        "HyunGi Kim",
+        "Dongjun Lee",
+        "Sungroh Yoon"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "时间序列预测",
+    "summary": "为解决时间序列预测领域中模型架构单一和开放性挑战（如通道依赖、分布偏移、因果性等）的问题，本文系统综述了从传统统计方法到深度学习架构（MLP、CNN、RNN、GNN、Transformer）以及新兴模型（扩散模型、Mamba、基础模型）的发展脉络，通过横向比较各类架构的优劣与演进趋势，揭示了架构多样化是当前研究的核心方向，并系统梳理了应对关键挑战的最新方法，为领域研究者提供了全面的理论框架与实践指南。",
+    "techniques": [
+        "基于深度学习",
+        "基于Transformer",
+        "基于扩散模型",
+        "基于状态空间模型（Mamba）",
+        "基于基础模型"
+    ],
+    "method": "本文并非提出一种新的预测模型，而是一篇全面的综述性研究。其方法包括：（1）系统梳理时间序列预测的历史演进，从统计模型（ARIMA、指数平滑）到传统深度学习模型（MLP、CNN、RNN、GNN），再到Transformer的兴起与局限；（2）深入分析新兴架构的崛起，包括Transformer的改进（如分块注意力、跨维注意力）、传统模型的复兴（MLP/CNN/RNN在新设计下超越Transformer）、扩散模型（通过条件扩散过程建模时间序列分布）、Mamba模型（基于状态空间模型SSM的高效长序列建模）以及基础模型（预训练大模型在TSF中的迁移应用）；（3）系统归纳时间序列预测面临的五大开放性挑战：通道依赖（多变量间相关性建模）、分布偏移（训练与测试数据分布不一致）、因果性（区分相关性与因果关系）、特征提取（有效捕捉趋势、季节性、周期性等）以及评估指标的局限性，并综述针对每个挑战的最新解决方案；（4）通过大量图表和表格（如模型分类、数据集对比、评估指标汇总）对各类方法进行结构化对比与分析，构建了当前TSF研究的全景图，旨在降低新研究者入门门槛并为资深研究者指明未来方向。",
+    "title": "A Comprehensive Survey of Time Series Forecasting: Architectural Diversity and Open Challenges"
+}

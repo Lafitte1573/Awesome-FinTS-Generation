@@ -1,0 +1,14 @@
+{
+    "authors": [
+        "Ming Kang"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "股票价格预测",
+    "summary": "为解决新上市公司股票数据稀缺导致预测精度低的问题，本文提出WGAN-BiLSTM模型，利用WGAN生成符合真实数据重尾分布的增强样本，并结合BiLSTM双向提取时序特征进行预测，显著提升了小样本场景下的预测准确性。",
+    "techniques": [
+        "基于深度学习"
+    ],
+    "method": "首先，使用WGAN生成与真实股票价格数据具有相似重尾分布的增强样本，WGAN的生成器以200维高斯噪声为输入，通过全连接层（FC）构建，采用RMSProp优化器，判别器通过FC层学习真实数据分布，并通过Kolmogorov-Smirnov (KS)检验和对数-对数图面积评估生成数据的重尾特性；其次，将生成的增强数据（扩展比例为30%、60%、100%）与原始数据合并，输入BiLSTM模型进行预测，BiLSTM包含三层隐藏层（100、150、300个神经元），使用Dropout防止过拟合，采用Adam优化器和均方误差（MSE）损失函数，双向结构同时捕捉历史与未来时间依赖信息；最后，通过MAE、RMSE和R²评估预测性能，实验表明在数据增强后，BiLSTM模型在两个小样本数据集上预测精度显著优于无增强模型及其他基线模型（如LSTM、GRU、SVR等），R²最高提升至0.973。",
+    "title": "Stock Price Prediction with Heavy‑Tailed Distribution Time‑Series Generation Based on WGAN‑BiLSTM"
+}

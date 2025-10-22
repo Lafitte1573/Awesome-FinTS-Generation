@@ -1,0 +1,24 @@
+{
+    "authors": [
+        "Ming Jin",
+        "Shiyu Wang",
+        "Lintao Ma",
+        "Zhixuan Chu",
+        "James Y. Zhang",
+        "Xiaoming Shi",
+        "Pin-Yu Chen",
+        "Yuxuan Liang",
+        "Yuanfang Li",
+        "Shirui Pan",
+        "Qingsong Wen"
+    ],
+    "year": 2023,
+    "research_directions": "其他",
+    "specific_task": "时间序列预测",
+    "summary": "为解决传统时间序列预测模型缺乏通用性、数据效率低和推理能力弱的问题，本文提出TIME-LLM框架，通过将时间序列数据重编程为文本原型并结合Prompt-as-Prefix提示机制，使冻结的大语言模型能够直接理解时序模式并生成预测，实现在长周期、短周期、少样本和零样本场景下超越现有专用模型的预测性能。",
+    "techniques": [
+        "基于LLM"
+    ],
+    "method": "TIME-LLM框架包含三个核心步骤：(1) 输入变换：将多变量时间序列按通道分离，通过可逆实例归一化（RevIN）处理后，划分为重叠或非重叠的时序块（patches），并使用线性层嵌入为低维向量；(2) 模态对齐与增强：使用多头交叉注意力机制，将时序块嵌入与一组预训练的语言文本原型（text prototypes）进行对齐，将时序模式转化为语言模型可理解的语义表示；同时引入Prompt-as-Prefix（PaP）机制，在输入前缀中注入数据集上下文、任务指令和统计特征（如趋势、前五阶自相关滞后值），引导模型推理；(3) 输出投影：将经过冻结LLM处理后的输出表示去除前缀部分，展平后通过线性投影层映射为未来H步的预测值。整个过程中仅优化轻量级的嵌入层、文本原型和投影层参数，LLM主干完全冻结，实现高效、无微调的跨模态迁移学习。",
+    "title": "TIME-LLM: TIME SERIES FORECASTING BY REPROGRAMMING LARGE LANGUAGE MODELS"
+}

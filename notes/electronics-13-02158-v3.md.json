@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Filippo Orlandi",
+        "Enrico Barbierato",
+        "Alice Gatti"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "股票价格预测",
+    "summary": "为解决金融时间序列中极端事件样本稀缺导致预测模型性能不足的问题，本文提出一种量子增强的Wasserstein生成对抗网络（QWGAN-GP）方法，通过量子生成器与经典判别器协同生成与S&P 500对数收益率统计特性高度一致的合成数据，并结合LSTM模型验证其在提升预测准确性（尤其是极端事件预测）方面的有效性，实验表明融合合成数据的模型显著优于仅使用真实数据的基准模型。",
+    "techniques": [
+        "基于量子机器学习",
+        "基于深度学习",
+        "基于生成对抗网络"
+    ],
+    "method": "本文提出一种量子Wasserstein生成对抗网络带梯度惩罚（QWGAN-GP）模型，用于生成S&P 500指数的合成金融时间序列。首先，采集2000–2008年S&P 500日收盘价，计算对数收益率，并通过Z-score标准化和Lambert-W逆变换使其分布趋近高斯分布；接着，采用滚动窗口（窗口长度10，步长2）将序列划分为子序列作为训练样本。量子生成器由5个量子比特构成，包含Hadamard初始化、三层Rx/Ry旋转门与CNOT纠缠门结构，输入为随机噪声（0–2π角度），通过Pauli-X和Pauli-Z测量输出量子态并转换为经典数据；经典判别器为CNN结构，包含三层卷积层（64、128、128滤波器）、LeakyReLU激活、Flatten、32神经元全连接层、20% Dropout和单神经元输出层，采用Wasserstein距离作为损失函数并引入梯度惩罚以稳定训练。模型训练2000轮，批量大小为20。生成的合成数据经Wasserstein距离、DTW、熵、QQ图、PDF/CDF、ACF和散点图等多维度评估，结果显示其与真实数据分布高度相似（Wasserstein距离≈0.00086，DTW距离=1.954），随后将合成数据与真实数据混合训练LSTM预测模型，实验表明该混合训练策略显著提升了对S&P 500趋势与极端事件的预测准确率。",
+    "title": "Article Enhancing Financial Time Series Prediction with Quantum-Enhanced Synthetic Data Generation: A Case Study on the S&P 500 Using a Quantum Wasserstein Generative Adversarial Network Approach with a Gradient Penalty"
+}

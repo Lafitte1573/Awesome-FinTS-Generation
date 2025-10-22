@@ -1,0 +1,21 @@
+{
+    "authors": [
+        "Sudha Senthilkumar",
+        "P. Kumaresan",
+        "K. Brindha",
+        "Yu-Chen Hu"
+    ],
+    "year": 2025,
+    "research_directions": "其他",
+    "specific_task": "生成对抗网络在多领域的优化应用",
+    "summary": "为解决生成对抗网络（GAN）在电力需求预测、供应链库存管理、医学图像合成、农业数据增强和投资组合优化等跨领域应用中的稳定性、模式坍塌和数据稀缺等问题，本文通过系统性综述分析了多种优化GAN架构（如cGAN、WGAN、CycleGAN、StyleGAN等）及其与LSTM、CNN、DenseNet121、AlexNet等网络的结合方法，通过改进损失函数（如Wasserstein损失、二元交叉熵）、引入数据增强与混合优化算法，显著提升了生成数据的真实性与模型收敛性，实现了在各领域更准确的预测与更高效的决策支持。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于卷积神经网络",
+        "基于循环神经网络",
+        "基于迁移学习"
+    ],
+    "method": "本文通过系统性文献综述方法，基于PRISMA框架，从IEEE Xplore、Springer、Elsevier等数据库中筛选2018–2023年间51篇高质量全文文献，涵盖GAN架构优化与跨领域应用。首先，全面梳理了条件GAN（cGAN）、Wasserstein GAN（WGAN）、CycleGAN、StyleGAN、Progressive GAN等主流变体的结构与优化机制；其次，分析了生成器与判别器的网络设计（如LSTM、CNN、MLP、DenseNet121、AlexNet）及损失函数（如最小最大损失、Wasserstein距离、梯度惩罚）对训练稳定性的影响；接着，针对五大核心应用领域展开深入分析：（1）电力需求预测中，采用cDCGAN、TimeGAN、CWGAN-GP等模型结合气象与时间特征，降低MAE与RMSE；（2）供应链库存管理中，利用E-commerce GAN与V-GAN生成真实订单分布，优化库存策略；（3）医学图像合成中，结合WGAN、DCGAN与Whale Optimization Algorithm生成高质量CT/MRI图像，提升疾病检测准确率；（4）农业数据增强中，使用Dual GAN与SAM-GAN生成高分辨率病害图像，训练DenseNet121实现高精度分类；（5）投资组合优化中，采用LSTM-GAN生成多因子金融时序数据，通过MLP判别器实现股票趋势预测。最后，本文总结了模式坍塌、收敛不稳定、评估指标缺失等挑战，并提出未来研究需融合物理模型、多模态数据与自适应优化算法以提升泛化能力。",
+    "title": "Advanced Progress in Optimized Generative Adversarial Network Applications Across Domains: A Comprehensive Survey"
+}

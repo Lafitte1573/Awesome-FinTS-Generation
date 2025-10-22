@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Sebastien Valeyre",
+        "Sofiane Aboura"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序预测",
+    "specific_task": "量化交易策略开发",
+    "summary": "为解决金融时间序列预测中传统模型难以识别微弱市场无效性的问题，本文提出使用预训练和微调的LLM模型Chronos对美国个股残差收益进行日度预测，通过零样本和在线微调方式构建多空投资组合，实证表明Chronos能在不依赖金融数据预训练的情况下识别出可盈利的交易信号，实现高达4.21的夏普比率，虽仍低于专用模型但证明了LLM在噪声金融数据中提取Alpha的潜力。",
+    "techniques": [
+        "基于LLM"
+    ],
+    "method": "本文使用Amazon开发的Chronos-T5-Tiny模型（1100万参数），该模型预训练于非金融时间序列数据（如温度、能源等）。实验使用Guijarro-Ordonnez等（2022）发布的美国前550大股票的残差日收益数据（基于IPCA、PCA、Fama-French三因子模型剔除系统性风险）。方法分三部分：（1）零样本预测：输入过去100天残差收益（或其指数移动平均EMA，α=0.3为最优），由Chronos输出次日收益预测，按预测值排序构建50%多头、50%空头的等权投资组合，权重按排名与中位数距离调整并可按波动率逆向缩放；（2）在线微调：每日使用前100天数据对Chronos进行15步AdamW优化（τ=15），更新模型权重，持续微调并保持预测能力；（3）基准对比：与CNN-Transformer（169参数）、AutoARIMA和短期反转策略（STR，β=0.2/0.3）比较。结果显示，零样本Chronos（α=0.3）在PCA数据上夏普比率达3.17，微调后（α=0.3, τ=15）提升至3.97，加波动率调整后达4.21，虽仍低于CNN-Transformer（5.01），但显著优于AutoARIMA和STR，证明LLM可从噪声数据中提取非线性无效性，实现Alpha生成。",
+    "title": "LLMs for Time Series: an Application for Single Stocks and Statistical Arbitrage"
+}

@@ -1,0 +1,16 @@
+{
+    "authors": [
+        "Miguel Noguer i Alonso",
+        "Rodolfo Pereira Franklin"
+    ],
+    "year": 2025,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票价格预测",
+    "summary": "为解决传统时间序列模型在金融数据中泛化能力差和依赖大量标注数据的问题，本文评估了包括Time-LLM在内的多种大语言模型（LLM）在股票价格预测中的表现，其基本思路是通过文本重编程（patch reprogramming）和提示引导（Prompt-as-Prefix）将连续时间序列转化为语言模型可处理的离散文本表示，无需微调基础LLM即可实现零样本或小样本预测，实验表明Time-LLM、PatchTST和KAN在稳定与波动市场中均能超越传统模型如NBEATS和NHITS。",
+    "techniques": [
+        "基于LLM",
+        "基于深度学习"
+    ],
+    "method": "本文方法核心为Time-LLM框架，其步骤包括：1) 将多变量时间序列分解为多个单变量序列；2) 对每个序列应用可逆实例归一化（RevIN）以处理非平稳性；3) 将时间序列划分为长度为L_p的重叠或非重叠补丁（patches）；4) 使用学习的文本原型将补丁嵌入映射到预训练语言模型（如Llama、GPT-2）的词嵌入空间，实现跨模态重编程；5) 引入提示前缀（Prompt-as-Prefix, PaP）将任务指令、统计特征（如趋势、周期、极值）以自然语言形式作为输入前缀，引导LLM理解时序语义；6) 利用多头交叉注意力机制对齐时间序列补丁与语言嵌入，捕捉局部与全局依赖；7) 通过线性投影层将LLM输出映射回时间序列域，生成未来H步预测；8) 仅训练轻量级的输入转换与输出投影模块，保持基础LLM参数冻结，实现高效微调。同时，论文对比评估了NBEATS（基于神经基底展开）、NHITS（多尺度分层插值）、PatchTST（Transformer补丁编码）和Chronos（量化token化）等模型，采用MAE、MSE、RMSE指标在Google、Apple、Amazon、JPMorgan、Meta等股票数据上验证性能。",
+    "title": "Large Language Models for Financial Time Series Forecasting"
+}

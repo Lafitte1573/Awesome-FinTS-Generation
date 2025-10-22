@@ -1,0 +1,31 @@
+{
+    "authors": [
+        "Mengxi Xiao",
+        "Zhengyu Chen",
+        "Lingfei Qian",
+        "Zihao Jiang",
+        "Yueru He",
+        "Yijing Xu",
+        "Yuechen Jiang",
+        "Dong Li",
+        "Ruey-Ling Weng",
+        "Jimin Huang",
+        "Min Peng",
+        "Sophia Ananiadou",
+        "Jian-Yun Nie",
+        "Qianqian Xie"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票价格走势预测",
+    "summary": "为解决金融时序数据中传统检索方法难以捕捉复杂时序依赖与隐含市场信号的问题，本文提出FinSrag框架，通过引入基于LLM反馈训练的领域专用检索器FinSeer，从包含28个金融指标的增强数据集中检索最具预测价值的历史序列，并将其注入微调的StockLLM中进行股票涨跌预测，显著提升了预测准确率并超越了现有文本和距离基检索方法。",
+    "techniques": [
+        "基于LLM",
+        "对比学习",
+        "知识蒸馏",
+        "时间序列序列化",
+        "多特征检索"
+    ],
+    "method": "FinSrag框架包含三个核心步骤：(1) 构建增强型检索候选池：基于Yahoo Finance数据，整合6个基础价格指标、10个技术指标和18个通过互信息筛选的Alpha因子，形成共34个金融特征的候选序列，每个候选为过去5日的单一指标值序列，并采用JSON格式序列化；(2) 训练FinSeer检索器：利用StockLLM-1B-Instruct作为教师模型，对每个查询-候选对生成预测logits，将其转化为概率作为相关性分数，选取Top-1为正样本、Bottom-15为负样本，通过对比学习最大化查询与正样本嵌入相似度、最小化与负样本相似度，并使用KL散度进行知识蒸馏，使FinSeer学习LLM的隐式偏好；(3) 推理阶段：FinSeer根据训练好的嵌入空间检索最相关的候选序列，将其结构化后作为上下文输入StockLLM，由LLM综合历史信号预测未来股价涨跌。该方法首次实现金融时序数据的领域自适应检索增强，突破了传统基于价格或距离（如DTW）的检索局限。",
+    "title": "Retrieval-augmented Large Language Models for Financial Time Series Forecasting"
+}

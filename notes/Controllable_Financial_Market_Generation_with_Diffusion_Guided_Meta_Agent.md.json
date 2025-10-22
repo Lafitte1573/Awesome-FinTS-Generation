@@ -1,0 +1,22 @@
+{
+    "authors": [
+        "Yu-Hao Huang",
+        "Chang Xu",
+        "Yang Liu",
+        "Weiqing Liu",
+        "Wu-Jun Li",
+        "Jiang Bian"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "订单流生成",
+    "summary": "为解决金融市场上订单流生成缺乏可控性与高保真度的问题，本文提出Diffusion Guided meta Agent (DiGA)模型，通过条件扩散模型建模市场状态（如中价回报率和订单到达率）的时变分布，并结合具有金融经济先验的元代理按分布采样订单，实现了对市场场景（如收益、波动率）的精准控制与高保真订单流生成。",
+    "techniques": [
+        "基于深度学习",
+        "基于扩散模型",
+        "基于条件生成",
+        "基于金融经济先验"
+    ],
+    "method": "DiGA模型由两个模块组成：1）元控制器（Meta Controller）：使用条件扩散模型（DDPM）学习市场状态（分钟级中价回报率和订单到达率）的时变分布，通过引入控制目标（如日收益、振幅、波动率）的编码器（离散或连续）和无分类器引导（classifier-free guidance）实现对生成过程的控制；2）订单生成器（Order Generator）：包含模拟交易所和元代理，元代理根据扩散模型输出的市场状态参数，遵循CARA效用函数优化决策，通过指数分布采样唤醒时间，结合基本面、技术面和噪声成分估算未来收益，推导需求函数并均匀采样订单价格与数量，最终生成订单流。训练时联合优化扩散模型的去噪损失与控制目标的均方误差，采样时通过引导尺度调整控制强度，最终生成的订单流在控制精度和金融统计特性（stylized facts）上均达到SOTA水平。",
+    "title": "Controllable Financial Market Generation with Diffusion Guided Meta Agent"
+}

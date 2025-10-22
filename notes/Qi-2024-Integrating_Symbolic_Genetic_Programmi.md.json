@@ -1,0 +1,19 @@
+{
+    "authors": [
+        "Li Qi",
+        "Norshaliza Kamaruddin",
+        "Xun Gong",
+        "Chen Peng"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "跨市场股票收益排序预测",
+    "summary": "为解决传统深度学习模型在跨市场股票收益排序预测中因特征数量有限和过拟合导致的精度不足问题，本文提出一种融合符号遗传编程（SGP）与长短期记忆网络（LSTM）的混合模型，通过SGP自动生成高质量金融因子并进行数据增强，再输入LSTM进行跨截面股票收益排序预测，在中国和日本市场分别实现Rank IC提升588.03%和194.27%，并获得显著超额收益。",
+    "techniques": [
+        "基于深度学习",
+        "基于符号遗传编程",
+        "基于数据增强"
+    ],
+    "method": "该方法包含四个阶段：（1）数据准备：收集中日市场4600+只股票的244个基本面因子，进行清洗、标准化和7:2:1划分；（2）数据增强：使用符号遗传编程（SGP）以基本面因子、数学运算符和滚动窗口为基因，通过交叉、变异和选择生成新因子，采用自定义适应度函数（结合Top R、单调性与信息系数）评估因子质量，并设置过滤条件（Rank IC > 7%、Success Ratio > 75%、IC PNL > 1.8）筛选高质量因子；（3）特征选择与建模：将增强后的因子输入LSTM或MLP模型，通过Rank IC和ICIR指标选择最优网络结构（LSTM表现更优），模型配置为两层结构（100-100节点）、学习率0.01、Dropout 0.6；（4）投资策略与回测：在2019-2022年期间使用20日滚动窗口进行训练、验证和测试，中国采用多头策略（买入前k%股票），日本采用多空策略，以CSI 300/500、N225/TPX和等权组合为基准，最终实现中国年化收益22.35%（超CSI 300）、日本超N225 4.56%和TPX 5.10%。",
+    "title": "Integrating Symbolic Genetic Programming With Lstm for Forecasting Cross-Sectional Price Returns: A Comparative Analysis of Chinese And Japanese Stock Market"
+}

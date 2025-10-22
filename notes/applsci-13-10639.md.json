@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Andrew Huang",
+        "Matloob Khushi",
+        "Basem Suleiman"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "风险评估",
+    "summary": "为解决金融时间序列在市场危机等罕见 regimes 下数据稀缺和非平稳性导致的风险评估困难问题，本文提出了一种名为RSQGAN的条件生成对抗网络，通过结构断点算法（贪婪高斯分割）识别市场 regimes 并将其作为条件标签，利用时序卷积网络（TCN）生成符合特定 regimes 特征的合成资产回报数据，并引入Z-裁剪超参数控制合成数据保真度与多样性，实验证明其在危机 regimes 下的合成数据质量显著优于无条件GAN模型。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于时序卷积网络"
+    ],
+    "method": "1. 使用贪婪高斯分割（GGS）算法对金融时间序列进行结构断点检测，自动划分出非重叠的市场 regimes（如危机与非危机），并为每个时间片段生成 one-hot 编码的 regime 类别标签；2. 构建条件生成对抗网络（RSQGAN），其生成器和判别器均基于时序卷积网络（TCN）架构，TCN 采用膨胀因果卷积、残差连接和跳过连接以捕获长期依赖和多尺度时序特征；3. 将 regime 类别标签作为条件输入，与噪声向量 z 一起输入生成器，使生成器学习生成特定 regime 下的资产回报序列，同时判别器判断输入序列的真实性并识别其所属 regime；4. 引入 Z-裁剪（Z-clipping）机制，对噪声向量 z 的每个维度进行截断（|z| ≥ z_clip 时重采样），以控制生成数据的多样性与真实数据的保真度之间的权衡；5. 采用 WGAN-GP 损失函数（带梯度惩罚）提升训练稳定性，避免模式坍塌；6. 使用四个专为危机环境设计的路径依赖评估指标（如最大回撤、波动率聚类、尾部风险等）对生成数据质量进行量化评估，验证 RSQGAN 在模拟危机 regimes 行为上的优越性；7. 通过参数共享机制，利用非危机 regimes 的大量数据辅助学习通用时序特征，提升对稀有危机 regimes 的生成能力。",
+    "title": "Regime-Specific Quant Generative Adversarial Network: A Conditional Generative Adversarial Network for Regime-Specific Deepfakes of Financial Time Series"
+}

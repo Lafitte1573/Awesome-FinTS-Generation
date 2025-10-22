@@ -1,0 +1,24 @@
+{
+    "authors": [
+        "Junjie Li",
+        "Yang Liu",
+        "Weiqing Liu",
+        "Shikai Fang",
+        "Lewen Wang",
+        "Chang Xu",
+        "Jiang Bian"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "金融市场的高保真仿真",
+    "summary": "为解决传统金融市场模拟器缺乏订单级细粒度、可控性与交互性的问题，本文提出基于生成基础模型LMM的MarS仿真引擎，通过订单序列与订单批次的双尺度建模，结合条件生成机制和模拟撮合引擎，实现高保真、可控制、可交互的市场行为仿真，显著提升预测、风险检测、市场影响分析和智能体训练等金融任务的性能与实用性。",
+    "techniques": [
+        "基于深度学习",
+        "基于LLM",
+        "基于Transformer",
+        "基于自回归生成",
+        "基于VQ-VAE"
+    ],
+    "method": "本文提出Large Market Model (LMM)，作为金融市场的生成基础模型，其核心包括两个互补模块：(1) Order Model：使用因果Transformer对个体订单序列和限价簿(LOB)信息进行编码，通过嵌入订单类型、价格、成交量及LOB的10档买卖量和中间价，实现订单级的自回归生成；(2) Order-Batch Model：将时间窗口内的订单聚合为图像格式（order image），使用VQ-VAE进行离散表示与生成，捕捉宏观市场行为模式。LMM通过集成这两个模型，构建统一的生成框架，并引入条件生成机制，支持四种输入条件：用户描述的市场情景（DES.TEXT）、用户注入的交互订单（Interactive Orders）、初始历史订单序列（Starting Sequence）和市场撮合规则（MTCH.R）。MarS引擎基于LMM构建，通过模拟撮合引擎实时匹配生成订单与用户订单，动态更新LOB状态，形成闭环仿真。生成过程遵循两大原则：'基于已实现现实塑造未来'和'从所有可能未来中选择最优匹配'，确保仿真既符合市场微观结构，又能响应用户干预。通过大规模训练（32B订单token）和扩展性验证，MarS能精确复现金融市场的14项经典统计特征（stylized facts），并支持高精度市场预测、异常检测、'假设分析'（如发现新市场影响因子resiliency、LOB pressure）和强化学习智能体训练，实现金融仿真从统计建模到生成式交互环境的范式转变。",
+    "title": "MARS: A FINANCIAL MARKET SIMULATION ENGINE POWERED BY GENERATIVE FOUNDATION MODEL"
+}

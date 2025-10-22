@@ -1,0 +1,17 @@
+{
+    "authors": [
+        "Varad Srivastava"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "银行客户意图识别",
+    "summary": "为解决银行领域数据稀缺条件下客户意图识别的低性能与高成本问题，本文提出基于小样本学习和检索增强生成（RAG）的开源大语言模型（LLM）方法，通过在Banking77数据集上对比开源与闭源LLM的性能与成本，发现小规模开源模型Mistral-7B结合RAG和参数高效微调（PEFT）可超越大型闭源模型，实现94.58%的微F1分数且成本降低540倍。",
+    "techniques": [
+        "基于LLM",
+        "小样本学习",
+        "检索增强生成（RAG）",
+        "参数高效微调（PEFT）"
+    ],
+    "method": "本文首先在Banking77数据集上评估了Llama-3、Mistral-7B、Gemma-2和Falcon等开源指令微调LLM在零样本和小样本（1-shot、3-shot）场景下的意图分类性能，比较随机选取示例与专家精选示例的效果；其次，提出使用RAG方法，通过MPNet模型计算测试句与训练句的语义相似性，仅选取最相似的5、10或20个示例作为上下文，显著减少输入规模并提升性能；接着，探索使用Mistral-7B生成人工标注样本以增强小样本数据，发现其增益有限；随后，通过成本分析证明Mistral-7B在RAG设置下性能优于GPT-4且成本仅为1/540；为验证RAG的偏差影响，进行去偏差实验（强制每个类仅选一个示例），发现性能显著下降，表明语义相似示例的类别偏差对性能提升至关重要；最后，采用QLoRA、rsLoRA和DoRA三种参数高效微调方法对Mistral-7B进行微调，最终提出BAI-Fintent模型，在仅使用4-bit量化和部分注意力模块微调下，达到94.58%的微F1分数，成为当前最优方法。",
+    "title": "Lending an Ear: How LLMs Hear Your Banking Intentions"
+}

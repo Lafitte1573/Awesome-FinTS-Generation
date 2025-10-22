@@ -1,0 +1,26 @@
+{
+    "authors": [
+        "Yongshan Zhang",
+        "Weifang University of Science and Technology, China",
+        "Zhiyun Jiang",
+        "Weifang University of Science and Technology, China",
+        "Cong Peng",
+        "Guizhou University of Commerce, China",
+        "Xiumei Zhu",
+        "Weifang University of Science and Technology, China",
+        "Gang Wang",
+        "Imperial College London, UK"
+    ],
+    "year": 2023,
+    "research_directions": "其他",
+    "specific_task": "风险评估",
+    "summary": "为解决金融多变量时间序列异常检测中模型过拟合与泛化能力不足的问题，本文提出一种结合对比学习与生成对抗网络（GAN）的创新方法，通过几何分布掩码进行数据增强，利用Transformer自编码器学习正常模式分布，并在判别器中引入对比损失以增强对正常模式的判别能力，实验表明该方法在四个真实金融数据集上显著优于现有主流方法，有效提升了异常检测的准确性和鲁棒性。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于Transformer",
+        "基于对比学习"
+    ],
+    "method": "本文提出的方法包含四个核心模块：（1）数据增强模块：采用基于几何分布的随机掩码策略，通过马尔可夫链生成二值掩码矩阵，对多变量时间序列进行局部数据扰动，以扩大输入空间并提升模型泛化能力；（2）生成器模块：构建基于Transformer的自编码器，编码器通过多头自注意力机制提取时间序列的长程依赖特征，解码器为两层MLP，用于重构原始序列，目标是学习正常模式的潜在分布；（3）判别器模块：采用三层MLP结构，以原始数据为真实样本、重构数据为假样本，通过对抗训练约束生成器输出，使其逼近真实分布，判别损失采用标准GAN的二元交叉熵形式；（4）对比学习模块：在每个批次中，将两组重构序列的潜在表示视为正样本对，其余为负样本对，通过对比损失函数拉近正样本对距离、推远负样本对距离，增强判别器对正常模式的泛化能力。整个模型联合优化四个模块，以无监督方式训练，最终通过重构误差与对比表示的联合判别实现异常检测。",
+    "title": "Management Analysis Method of Multivariate Time Series Anomaly Detection in Financial Risk Assessment"
+}

@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Sogand Pourkhoshgoftar",
+        "Asadollah Shahbahrami",
+        "Nima Esmi"
+    ],
+    "year": 2025,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "信用风险评估",
+    "summary": "为解决信用风险预测中极端类别不平衡和非线性借款人关系建模不足的问题，本文提出一种结合条件表格生成对抗网络（CTGAN）与图采样与聚合图神经网络（GraphSAGE）的混合方法，先通过CTGAN生成合成违约样本以平衡数据分布，再构建借款人相似性图并利用GraphSAGE进行归纳式关系学习，最终在GMSC和GC数据集上显著提升了准确率、F1分数和AUC指标，同时通过SHAP增强模型可解释性。",
+    "techniques": [
+        "基于深度学习",
+        "基于图神经网络",
+        "基于生成对抗网络"
+    ],
+    "method": "首先，使用条件表格生成对抗网络（CTGAN）对少数类（违约）样本进行合成增强，通过模式感知归一化和条件向量引导生成与真实数据统计特性一致的合成违约实例；其次，基于K近邻（KNN）构建借款人图结构，其中每个借款人作为节点，边表示特征空间中的相似性；然后，采用两层GraphSAGE模型对图进行归纳式学习，通过邻居采样和均值聚合机制迭代更新节点嵌入，捕捉高阶关系；最后，将学习到的节点嵌入输入多层感知机（MLP）分类器进行违约预测，并结合SHAP方法对特征重要性进行量化解释，提升模型透明度。整个流程在GMSC和GC两个信用数据集上验证，显著优于传统机器学习和现有平衡技术。",
+    "title": "Graph-Based Inductive Learning for Credit Risk Prediction with Imbalance Mitigation"
+}

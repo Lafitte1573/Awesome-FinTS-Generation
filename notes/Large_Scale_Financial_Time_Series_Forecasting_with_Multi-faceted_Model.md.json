@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "Defu Cao",
+        "Yixiang Zheng",
+        "Parisa Hassanzadeh",
+        "Simran Lamba",
+        "Xiaomo Liu",
+        "Yan Liu"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "收入与EBITDA预测",
+    "summary": "为解决金融时序预测中因分布偏移导致的模型泛化能力差的问题，本文提出一种基于松弛不变风险最小化的多面统一模型，通过引入优化驱动的正则化项放宽传统IRM的严格约束，在S&P 500多行业数据上联合训练线性/非线性模型，显著提升对已见和零样本行业的预测准确性，EBITDA预测误差平均降低27.87%。",
+    "techniques": [
+        "基于深度学习",
+        "基于不变性学习"
+    ],
+    "method": "本文提出一种优化驱动的不变性正则化方法，用于提升金融时序预测模型在分布偏移场景下的泛化能力。首先，收集S&P 500公司10个行业的季度财务数据（收入、COGS、SG&A、RD_EXP等），构建多变量时间序列预测任务，目标为预测未来一年的Revenue和EBITDA。其次，采用多层感知机（MLP）作为基础预测模型，结合滑动窗口（24季度窗口，前20季度输入，后4季度预测）构建训练样本。然后，提出一种松弛的不变性正则化项：$\\mathrm{L}_{\\mathrm{OB}}^{e} = \\| (w \\circ \\nabla R^{e}(w, f))^{\\circ c} \\|_{2}^{2}$，其中$w$为预测器权重，$\\nabla R^{e}(w, f)$为环境e的损失梯度，$\\circ$为Hadamard积，$c > 1$为可调超参数，用于增强对大梯度维度的惩罚，同时通过乘以权重$w$抑制非因果特征。该正则项替代传统IRM的严格不变性约束，通过梯度幅值动态调节正则强度，使模型在保持跨环境一致性的同时，允许更灵活的表示学习。最后，总损失为$\\mathrm{L}^{e} = \\mathrm{L}_{\\mathrm{MSE}}^{e} + \\gamma \\mathrm{L}_{\\mathrm{OB}}^{e}$，通过梯度下降联合优化模型参数与正则化项，在7个已见行业训练，在3个零样本行业（Consumer Defensive, Consumer Cyclical, Industrials）评估。实验表明，该方法在EBITDA预测上相比最佳基线平均降低27.87%的SMAPE误差，且模型参数量仅为Transformer的1/856，具备高效与强泛化双重优势。",
+    "title": "Large Scale Financial Time Series Forecasting with Multi-faceted Model"
+}

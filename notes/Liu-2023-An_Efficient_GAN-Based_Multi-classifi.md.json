@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "Lei Liu",
+        "Zheng Pei",
+        "Peng Chen",
+        "Hang Luo",
+        "Zhisheng Gao",
+        "Kang Feng",
+        "Zhihao Gan"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "金融时序波动趋势多分类预测",
+    "summary": "为解决金融时间序列中短期、中性、长期波动趋势的多分类预测问题，本文提出了一种基于序回归生成对抗网络（ORGAN-FVT）的方法，通过ConvLSTM生成器学习时序数据分布，结合引入序回归惩罚机制的MLP判别器，优化预测结果对误判方向（如将短期误判为长期）的敏感性，显著提升了在MSFT、TSLA和PAICC三个股票数据集上的AUC和F1分数，最高提升达20.81%",
+    "techniques": [
+        "基于深度学习"
+    ],
+    "method": "本文提出的ORGAN-FVT方法包含生成器与判别器两部分：生成器采用ConvLSTM结构，以包含11个技术指标（如Close、RSI、ADX等）的30天滑动窗口时序数据为输入，通过卷积层提取局部特征，再经LSTM层捕获长期时序依赖，最后通过全连接层与Softmax输出三类趋势（短、中、长）的概率分布；判别器采用MLP结构，输入包括真实标签的one-hot向量和生成器输出的预测概率向量，通过交叉熵损失函数进行训练，并引入序回归约束：当真实标签为短期时，惩罚预测为长期（增大β而非γ）；当真实标签为长期时，惩罚预测为短期（增大β而非α），从而在损失函数中对跨类误判施加更高代价。整个模型通过对抗训练最小化生成器损失和最大化判别器损失，最终达到纳什均衡，训练完成后使用生成器进行端到端的三分类预测。实验在三个真实股票数据集上进行，对比LSTM、GRU、CNN、ConvLSTM和GAN-FVT等基线方法，采用宏观平均和加权平均的F1-score、AUC等指标评估，结果表明ORGAN-FVT在多数指标上显著优于其他方法。",
+    "title": "An Efcient GAN‑Based Multi‑classifcation Approach for Financial Time Series Volatility Trend Prediction"
+}

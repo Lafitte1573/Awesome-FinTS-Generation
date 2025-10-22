@@ -1,0 +1,17 @@
+{
+    "authors": [
+        "Xiyuan Zhang",
+        "Ranak Roy Chowdhury",
+        "Rajesh K. Gupta",
+        "Jingbo Shang"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "时间序列分析",
+    "summary": "为解决大型语言模型（LLM）在处理数值型时间序列数据时面临的模态鸿沟问题，本文系统综述了五类方法（直接提示、时间序列量化、对齐、视觉作为桥梁、工具集成），通过将时间序列转换为文本、离散令牌、对齐嵌入、视觉表示或调用外部工具，实现LLM在气候、医疗、金融等领域的时序分析任务，显著提升了零样本和少样本场景下的性能与泛化能力。",
+    "techniques": [
+        "基于LLM"
+    ],
+    "method": "本文提出了一种系统性分类框架，将LLM应用于时间序列分析的方法分为五类：（1）直接提示（Prompting）：将时间序列数值直接作为文本输入LLM，如PromptCast使用模板将时间序列转为自然语言问题；（2）时间序列量化（Quantization）：通过VQ-VAE、K-Means或频率分析将连续时间序列离散化为令牌，如Chronos将数值分箱为离散标签，TDML将价格变化编码为文本类别；（3）对齐（Aligning）：训练时间序列编码器，使其嵌入与语言模型语义空间对齐，如ETP使用对比学习对齐ECG信号与临床文本，GPT4TS将时间序列分块嵌入后输入冻结的GPT-2；（4）视觉作为桥梁（Vision as Bridge）：将时间序列绘制为图像，利用视觉-语言模型（如CLIP、LLaVA）作为中介，如CLIP-LSTM将股价图输入CLIP生成特征；（5）工具集成（Tool Integration）：使用LLM生成代码或API调用（如CTG++生成扩散模型损失函数，ToolLLM调用金融API），间接增强时序分析能力。本文还整合了多模态数据集（如PTB-XL、Ego4D、PIXIU）并分析了各方法在数据需求、模型规模、效率和优化难度上的权衡，为未来研究提供全面的技术路线图。",
+    "title": "Large Language Models for Time Series: A Survey"
+}

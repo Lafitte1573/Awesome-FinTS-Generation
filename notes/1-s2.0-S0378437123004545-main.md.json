@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "Matteo Rizzato",
+        "Julien Wallart",
+        "Christophe Geissler",
+        "Nicolas Morizet",
+        "Noureddine Boumlaik"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "风险评估",
+    "summary": "为解决金融领域中多变量时序数据在宏观情景约束下难以生成符合现实统计特性合成场景的问题，本文提出Jinkou算法，基于双向GAN（BiGAN）和条件GAN（cGAN）的耦合架构，先通过BiGAN生成宏观状态变量变化，再以这些变化为条件驱动cGAN生成金融工具特征的时序变化，最终通过MCMC采样实现情景条件生成，成功复现了金融市场的经典统计特征并实现了对能源和金融组合的高保真情景模拟。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络（GAN）",
+        "基于马尔可夫链蒙特卡洛（MCMC）"
+    ],
+    "method": "Jinkou算法由两个耦合的生成对抗网络组成：1）双向GAN（BiGAN）用于建模宏观状态变量（如通胀、油价、利率）的时序变化分布，其包含生成器和编码器，通过将高斯噪声映射为状态变量变化，并逆映射回潜在空间，学习状态变量的隐式分布；2）条件GAN（cGAN）用于在给定当前金融工具特征和未来状态变量变化的条件下，生成工具特定特征（如价格、市值、ESG得分）的增量变化，其输入为当前状态向量和状态变量变化向量，输出为特征变化量；训练时，BiGAN和cGAN分别使用历史数据中的状态变量变化和工具特征变化进行独立训练；在推理阶段，用户通过设定宏观情景（如通胀区间）作为超矩形约束，利用MCMC在BiGAN的潜在空间中采样满足该约束的状态变量变化，再将这些变化输入cGAN，结合初始金融工具状态，递归生成多步时序轨迹；最终通过笛卡尔积组合状态变量和工具特征的采样，构建完整投资组合的多轨迹模拟，实现对金融风险的条件化评估。",
+    "title": "Generative Adversarial Networks applied to synthetic financial scenarios generation"
+}

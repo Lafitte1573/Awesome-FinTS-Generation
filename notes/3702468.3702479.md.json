@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Pongpanod Sankosik",
+        "Chotirat Ratanamahatana"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "时间序列分类",
+    "summary": "为解决时间序列分类中数据稀缺、类别不平衡和噪声干扰等问题，本文系统评估了多种数据增强技术（如wDBA、SMOTE、窗口扭曲等）对MiniRocket分类器在85个UCR数据集上的性能影响，发现增强效果高度依赖数据集特性，其中wDBA在44个数据集上显著提升准确率，但整体平均性能略低于基线，强调了数据增强需采用数据集特定策略。",
+    "techniques": [
+        "基于机器学习"
+    ],
+    "method": "本研究使用MiniRocket作为基础分类器，在85个UCR时间序列数据集上系统评估了8种数据增强方法：幅度扭曲（Magnitude Warping）、窗口扭曲（Window Warping）、傅里叶变换（Fourier Transform）、短时傅里叶变换（STFT）、SMOTE、判别引导扭曲（DGW）、加权动态时间规整质心平均（wDBA）和双指数平滑（Double Exponential Smoothing）。每种方法在多个参数组合下运行（共165次/数据集），使用预定义的训练/测试划分，以分类准确率为评估指标。通过对比增强后与原始数据的准确率差异，分析不同数据集特征（如类型、长度、大小、噪声、不平衡性）对增强效果的影响。结果发现，wDBA在44个数据集上优于基线，尤其在小规模、有噪声和模拟类数据上表现突出；而ECG数据集几乎无提升，大型数据集增强效果有限。最终结论是：数据增强并非普遍有效，必须根据数据特性选择合适方法，推荐采用数据集特定的增强策略。",
+    "title": "Data Augmentation Strategies for Improving Time Series Classification Accuracy"
+}

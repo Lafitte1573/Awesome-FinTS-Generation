@@ -1,0 +1,24 @@
+{
+    "authors": [
+        "Menglin Kong",
+        "Ruichen Li",
+        "Jia Wang",
+        "Xingquan Li",
+        "Shengzhong Jin",
+        "Wanying Xie",
+        "Muzhou Hou",
+        "Cong Cao"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "信用卡欺诈检测",
+    "summary": "为解决信用卡欺诈检测中因数据极度不平衡和模型依赖虚假相关性导致的鲁棒性差与召回率低问题，本文提出CFTNet模型，通过强化学习生成反事实样本（CFs）并构建三元组网络，利用风险表征与混淆表征的解耦学习增强因果建模能力，显著提升了检测准确率与模型鲁棒性。",
+    "techniques": [
+        "基于深度学习",
+        "基于强化学习",
+        "基于对比学习",
+        "基于因果推断"
+    ],
+    "method": "CFTNet方法包含两个核心阶段：第一阶段，将最优反事实样本（CFs）的生成建模为马尔可夫决策过程（MDP），采用P-DQN强化学习算法，在离散-连续混合动作空间中优化策略，通过最小化扰动使欺诈样本（正样本）的预测标签翻转，生成高质量的反事实样本；第二阶段，构建三元组网络结构，输入包括正样本、其对应的CFs和随机负样本，通过特征编码器提取嵌入表示，引入分离模块（Sep）将表征分解为风险表征（X）和混淆表征（Z），并基于对比学习设计相似性正则项ℓ_sim，约束正样本与CFs在Z上相似、在X上相异，同时引入实例加权分类损失ℓ_wcls，根据Z的相似性动态加权，强化对因果特征的学习。最终联合优化总损失ℓ_total = ℓ_wcls + αℓ_sim + Ω，使模型在推理阶段仅依赖X进行预测，有效消除Z引入的虚假相关性，提升模型在不平衡数据下的泛化能力与因果解释性。",
+    "title": "CFTNet: a robust credit card fraud detection model enhanced by counterfactual data augmentation"
+}

@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "Andreas Sideras",
+        "Konstantinos Bougiatiotis",
+        "Elias Zavitsanos",
+        "Georgios Paliouras",
+        "George Vouros"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "破产风险评估",
+    "summary": "为解决企业破产预测中样本极度不平衡及单一数据源信息不足的问题，本文提出一种融合管理层讨论与分析（MD&A）和审计意见（AO）文本的多源数据增强方法，利用变分自编码器（VAE）生成合成破产样本，并采用晚期融合策略整合双源预测结果，显著提升了破产预测的F1分数和召回率，同时评估了大语言模型（LLM）在零样本预测和数据增强中的表现与局限性。",
+    "techniques": [
+        "基于深度学习",
+        "基于LLM",
+        "基于数据增强"
+    ],
+    "method": "首先，扩展ECL数据集，加入审计意见（AO）文本，构建多源数据集ECL+AO；其次，对MD&A和AO文本分别提取30K维tf-idf特征向量；接着，使用变分自编码器（VAE）对破产样本（正类）进行建模，生成7500个MD&A合成样本和20000个AO合成样本以缓解类别不平衡；然后，训练两个独立的逻辑回归（LR）分类器，分别以MD&A和AO的原始或增强文本为输入，预测破产概率；在测试阶段，采用晚期融合策略，对两个模型的预测概率取平均作为最终预测结果；此外，实验还探索了使用LLM（如Llama-3）进行零样本破产预测和基于关键词的文本生成数据增强，但发现LLM受提示词敏感、存在前瞻偏差，且生成质量不稳定，效果不如VAE；最终，通过对比实验验证了多源融合与VAE数据增强的组合方法在F1-score和R@100等指标上优于单源模型和早期融合方法。",
+    "title": "Bankruptcy Prediction: Data Augmentation, LLMs and the Need for Auditor's Opinion"
+}

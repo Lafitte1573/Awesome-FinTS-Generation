@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "Shengkun Wang",
+        "Taoran Ji",
+        "Linhan Wang",
+        "Yanshen Sun",
+        "Shang-Ching Liu",
+        "Amit Kumar",
+        "Chang-Tien Lu"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票价格预测",
+    "summary": "为解决传统金融大语言模型（FinLLMs）在股票价格预测中忽视时序特征、依赖冗余文本信息且效率低下的问题，本文提出StockTime，一种专门针对股票价格时序数据的LLM架构，通过将股票价格分块为令牌、提取其相关性与统计趋势等文本信息，并与自回归编码器提取的时序特征在嵌入空间融合，利用冻结的LLM进行下一令牌预测，从而在不微调LLM的情况下实现更高精度、更低资源消耗的多周期股票价格预测。",
+    "techniques": [
+        "基于LLM"
+    ],
+    "method": "StockTime架构包含四个核心组件：(1) 分块输入：对标准化后的股票价格序列进行非重叠分块，每块作为基本令牌，降低计算负担；(2) 自回归编码器：使用LSTM层捕捉分块序列的时序依赖关系，并通过全连接层将特征投影至LLM嵌入维度，生成价格嵌入；(3) 多模态融合：从同一价格数据中提取股票相关性、行业分类、统计指标（极值、均值、变化率）和时间戳，构建文本模板，经冻结LLM编码为文本嵌入，并与价格嵌入在潜在空间相加融合，实现时序与文本信息的无缝集成；(4) 令牌级预测：将融合后的嵌入序列输入冻结的LLM，利用其自然语言的下一令牌预测能力，输出预测的下一价格块，通过线性投影层还原为预测价格序列，使用均方误差（MSE）损失函数仅训练嵌入与投影层，实现高效微调。整个过程完全基于股票价格时序数据，无需外部文本或FinLLM微调。",
+    "title": "StockTime: A Time Series Specialized Large Language Model Architecture for Stock Price Prediction"
+}

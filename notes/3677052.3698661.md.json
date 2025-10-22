@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Sohyeon Kwon",
+        "Yongjae Lee"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "金融时序stylized facts建模",
+    "summary": "为解决传统金融时序模拟方法难以捕捉随机游走、均值回归、跳跃和时变波动率等stylized facts的问题，本文通过实验验证了多种GAN生成器架构（MLP、MLP-CNN、LSTM、GRU、TCN）在模拟五种随机过程（BM、GBM、OU、JD、HT）中的表现，发现GAN能较好学习简单随机过程的分布，但对复杂时序结构（如均值回归和多变量依赖）建模能力有限，且性能高度依赖生成器架构选择，表明需谨慎设计和验证GAN模型以有效增强金融时序数据。",
+    "techniques": [
+        "基于深度学习"
+    ],
+    "method": "本文采用生成对抗网络（GAN）框架，通过对抗训练生成金融时序数据。首先，构建五种代表性随机过程（布朗运动、几何布朗运动、Ornstein-Uhlenbeck过程、跳跃扩散模型、Heston模型）的合成数据集，涵盖单变量和双变量场景。其次，测试五种生成器架构（MLP、MLP-CNN、LSTM、GRU、TCN），固定判别器为MLP-CNN。为优化超参数，设计基于Jensen-Shannon散度的复合目标函数，结合对数收益率分布和最终值分布的散度，对单变量数据；对多变量数据，进一步加入变量间联合分布的KL散度和边际分布的JS散度。通过对比生成数据与真实数据的统计特征（如均值、标准差、跳跃次数、波动率分布、相关系数等），评估各架构对stylized facts的捕捉能力。实验发现，MLP和MLP-CNN在多数任务中表现最佳，但所有架构均难以精确复现均值回归速度和多变量依赖结构，尤其在长序列和高波动场景下性能下降显著。",
+    "title": "Can GANs Learn the Stylized Facts of Financial Time Series?"
+}

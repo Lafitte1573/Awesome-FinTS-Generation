@@ -1,0 +1,26 @@
+{
+    "authors": [
+        "Yangyang Vu",
+        "Haohang Li",
+        "Zhi Chen",
+        "Yuechen Jiang",
+        "Yang Li",
+        "Denghui Zhang",
+        "Rong Liu",
+        "Jordan W. Suchow",
+        "Khaldoun Khashanah"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "量化交易策略开发",
+    "summary": "为解决传统金融交易代理在处理多源异构金融数据时缺乏可解释性、记忆能力不足和无法自适应市场变化的问题，本文提出FINMEM，一种基于大语言模型（LLM）的自主交易代理框架，通过分层记忆模块模拟人类工作记忆与长期记忆结构，结合动态角色配置（如风险偏好自适应）和多层信息处理机制，实现对新闻、财报等时序金融数据的高效整合与优先级排序，显著提升交易收益与决策鲁棒性。",
+    "techniques": [
+        "基于LLM",
+        "分层记忆机制",
+        "认知科学建模",
+        "提示工程",
+        "向量语义检索"
+    ],
+    "method": "FINMEM包含三个核心模块：(1) Profiling模块：为代理配置专业背景知识（如行业、公司历史财务表现）和三种风险偏好（风险偏好型、风险规避型、自适应风险型），支持根据累计收益动态切换风险策略；(2) Memory模块：采用分层长期记忆结构（浅层、中层、深层），分别对应日度新闻（Q_s=14天）、季度报告（Q_i=90天）和年度报告（Q_d=365天），每层记忆事件通过综合评分γ_l^E = S_Recency + S_Relevancy + S_Importance进行排序，其中：① S_Recency基于指数衰减模型 e^(-δ^E/Q_l) 计算时间衰减；② S_Relevancy使用OpenAI文本嵌入模型计算查询与记忆的余弦相似度；③ S_Importance通过分段函数v_l^E（浅层：80%概率40分，15%概率60分，5%概率80分；深层反之）乘以时间衰减因子θ_l = (α_l)^δ^E（α_shallow=0.9, α_intermediate=0.967, α_deep=0.988）计算重要性；同时引入访问计数器，将高影响力事件自动升级至深层记忆；工作记忆执行摘要、观察（训练时用未来价格标签，测试时用M日累计收益）和反思（即时反思生成交易决策与理由，扩展反思汇总M日表现并存入深层记忆）；(3) Decision-making模块：在测试阶段，综合当前市场趋势、扩展反思结果和各层Top-K记忆事件，通过LLM生成Buy/Sell/Hold决策。整个系统基于FAISS向量数据库实现高效检索，利用LLM进行文本摘要与推理，实现端到端的自主交易决策。",
+    "title": "FINMEM: A PERFORMANCE-ENHANCED LLM TRADING AGENT WITH LAYERED MEMORY AND CHARACTER DESIGN"
+}

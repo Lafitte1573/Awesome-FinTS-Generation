@@ -1,0 +1,17 @@
+{
+    "authors": [
+        "Md Khairul Islam",
+        "Ayush Karmacharya",
+        "Timothy Sue",
+        "Judy Fox"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序预测",
+    "specific_task": "财政援助资金预测",
+    "summary": "为解决金融援助领域因数据稀缺导致传统深度学习模型效果不佳的问题，本文提出利用预训练大语言模型（LLM）作为基础模型，在仅使用少量训练数据（少样本）或完全不微调（零样本）的情况下，对州级财政援助资金进行年度预测，实验表明TimeLLM和PatchTST在少样本场景下表现最优，而GPT4TS在零样本场景下表现相对较好，但整体零样本效果仍有限。",
+    "techniques": [
+        "基于LLM"
+    ],
+    "method": "本文首先收集了来自四个金融领域（股票、商品、货币、机构）的8个时间序列数据集，其中金融援助数据为17年（2004–2020）的年度数据，其他为日频数据。对于金融援助任务，使用过去10年的数据预测下一年的援助金额；其他任务使用过去96天预测未来24天。模型方面，选取了5个传统时间序列模型（DLinear、iTransformer、TimesNet、PatchTST、TimeMixer）和3个基于预训练GPT-2的LLM基础模型（TimeLLM、CALF、GPT4TS）。训练时，传统模型从零开始训练，LLM模型仅微调输出层，其余参数冻结。在少样本实验中，仅使用10%的训练数据进行微调；在零样本实验中，直接使用预训练模型在测试集上评估，不进行任何微调。评估指标为MSE和MAE，实验结果表明LLM在少样本学习中显著优于传统模型，但在零样本场景下预测性能仍不理想，表明其尚未完全适应金融时序数据的分布特性。",
+    "title": "Large Language Models for Financial Aid in Financial Time-series Forecasting"
+}

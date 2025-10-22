@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "GIANFRANCO LOMBARDO",
+        "ANDREA BERTOGALLI",
+        "SERGIO CONSOLI",
+        "DIEGO REFORGIATO RECUPERO"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "破产风险评估",
+    "summary": "为解决企业破产预测中传统方法无法有效利用财务报告文本信息且难以适应概念漂移的问题，本文提出一种端到端的Transformer与多头LSTM融合架构，通过文本摘要模块提取SEC年报中的关键语义信息并结合财务时序数据进行联合建模，实现了87.5%的预测准确率和0.84的违约召回率，显著优于单一数据源模型。",
+    "techniques": [
+        "基于深度学习",
+        "基于Transformer",
+        "基于循环神经网络",
+        "基于自然语言处理"
+    ],
+    "method": "本文提出一种端到端的破产预测架构，包含两个核心模块：1) NLP模块：首先对SEC 10-K年报进行提取式摘要，包括三步操作——(a) 主题选择：基于词袋模型（BoW）和Loughran-McDonald金融词典训练逻辑回归分类器，筛选出对破产预测最有效的报告章节（Item 1、5、7）；(b) 文档减法：计算连续两年报告的文本相似度，剔除重复内容，保留新增或修改部分；(c) 情感分析：使用FinBERT模型对文本块进行情感分类，过滤中性语句，仅保留积极或消极内容；随后将处理后的文本分块输入预训练的DistilBERT模型生成文档嵌入向量。2) 财务时序模块：采用多头LSTM架构，为18个财务变量分别构建独立的LSTM子网络，处理过去三年的时序数据。两个模块分别预训练后，将其输出向量拼接，通过全连接层进行端到端微调，完成二分类破产预测任务。该架构避免了人工特征工程，实现了文本与财务数据的联合自适应学习，提升了模型对概念漂移的鲁棒性。",
+    "title": "Natural Language Processing and Deep Learning for Bankruptcy Prediction: An End-to-End Architecture"
+}

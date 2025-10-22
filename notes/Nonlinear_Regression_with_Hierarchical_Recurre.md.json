@@ -1,0 +1,17 @@
+{
+    "authors": [
+        "S. Onur Sahin",
+        "Suleyman S. Kozat"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票价格预测",
+    "summary": "为解决序列数据中存在缺失值导致传统神经网络性能下降的问题，本文提出了一种层次化LSTM架构，通过将输入空间根据历史输入的‘存在模式’划分为多个区域，并为每个模式分配独立的LSTM专家网络，仅利用实际存在的输入进行预测，避免数据插补带来的误差累积，从而在金融和真实世界数据集上显著提升了预测精度且计算复杂度与传统LSTM相当。",
+    "techniques": [
+        "基于深度学习",
+        "基于循环神经网络",
+        "基于混合专家模型"
+    ],
+    "method": "本文提出层次化LSTM（Hierarchical-LSTM）架构，其核心思想是：1) 定义一个滑动窗口（长度为L），记录最近L个输入的存在/缺失模式（presence-pattern），每个模式是一个长度为L的二进制向量；2) 为每个可能的presence-pattern（共2^L - 1种非全零模式）分配一个独立的LSTM网络（称为叶网络），并设置一个主LSTM网络处理窗口外的历史信息；3) 当新输入到达时，根据当前窗口的presence-pattern确定激活的LSTM网络集合（包括所有子模式对应的网络）；4) 主LSTM网络将其状态传递给所有激活的叶LSTM网络作为初始状态；5) 每个激活的叶LSTM网络仅使用其对应模式中存在的输入进行前向计算，生成输出；6) 使用softmax加权融合所有激活LSTM网络的输出，权重由当前输入模式、网络模式和输出向量共同决定；7) 最终预测值由融合后的状态向量通过线性变换得到；8) 该架构不进行任何数据插补，完全基于实际观测值和缺失模式进行建模，且计算复杂度随缺失率升高而降低，在高缺失场景下优于传统插补方法。",
+    "title": "Nonlinear Regression with Hierarchical Recurrent Neural Networks Under Missing Data"
+}

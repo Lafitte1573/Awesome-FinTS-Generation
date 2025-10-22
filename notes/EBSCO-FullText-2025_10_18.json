@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Bayartsetseg Kalina",
+        "Ju-Hong Lee",
+        "Kwang-Tek Na"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "投资组合分散化",
+    "summary": "为解决金融时间序列数据不足和历史数据不确定性缺失导致的投资组合模型性能受限问题，本文提出了一种基于金融时间序列分解的变分编码器-解码器（FED）数据增强方法，通过将时序数据分解为趋势、离散度和残差三个潜在成分并分别建模，生成更具真实性和多样性的合成数据，进而构建FED2Port强化学习投资组合模型，使算法能在更全面的市场不确定性环境中学习，显著提升投资组合绩效。",
+    "techniques": [
+        "基于深度学习",
+        "基于强化学习",
+        "基于变分自编码器"
+    ],
+    "method": "本文提出的方法包括两个核心部分：FED数据增强和FED2Port投资组合决策模型。首先，FED方法通过三个独立的编码器分别建模金融时间序列的潜在趋势（ν_t）、离散度（τ_t）和残差（ξ_t）成分，每个成分均假设为多元正态分布，并通过乘积运算合成完整潜在变量h_t = ν_t × τ_t × ξ_t，利用变分自编码器框架最大化三个成分的证据下界（ELBO）联合目标函数，从而生成具有真实统计特性的合成金融时序数据。其次，FED2Port框架基于强化学习构建，状态为当前投资组合收益，动作是高风险与低风险资产的权重分配（满足和为1），奖励函数采用市场自适应比率（Market-Adaptive Ratio），该比率根据市场涨跌状态动态调整风险偏好，训练智能体在FED生成的合成市场环境中最大化长期期望奖励，最终实现更稳健和高性能的投资组合配置。",
+    "title": "Article Enhancing Portfolio Performance through Financial Time-Series Decomposition-Based Variational Encoder-Decoder Data Augmentation"
+}

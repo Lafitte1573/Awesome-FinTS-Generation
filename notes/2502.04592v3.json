@@ -1,0 +1,19 @@
+{
+    "authors": [
+        "Yang Zhang",
+        "Wenbo Yang",
+        "Jun Wang",
+        "Qiang Ma",
+        "Jie Xiong"
+    ],
+    "year": 2025,
+    "research_directions": "金融时序预测",
+    "specific_task": "宏观事件驱动的金融资产价格预测",
+    "summary": "为解决现有金融预测方法忽视宏观事件与市场反应之间的因果关系及多模态信息融合不足的问题，本文提出CAMEF方法，通过整合高频率时间序列数据与宏观事件文本，利用LLM生成反事实事件增强因果学习，并设计多模态编码-融合-解码架构，显著提升对市场反应的预测准确性与鲁棒性。",
+    "techniques": [
+        "基于深度学习",
+        "基于LLM"
+    ],
+    "method": "CAMEF方法包含四个核心组件：(1) 文本编码器使用RoBERTa提取宏观事件文本的语义特征，并通过三层线性网络投影为768维向量；(2) 时间序列编码器采用预训练的MOMENT模型提取5分钟高频金融数据特征，并通过多残差网络进一步优化为1024维向量；(3) 特征融合模块将文本与时间序列向量拼接后输入两层GELU激活的前馈网络，生成联合嵌入，再由GPT-2解码器进行自回归建模；(4) 引入基于LLM的反事实事件增强机制，通过结构化提示生成语义一致但情感极性不同的反事实事件脚本，并设计多样采样策略（同类型与异类型反事实事件），结合因果对比学习目标，使模型能区分真实事件与反事实事件，从而强化因果推理能力；最终通过MSE与MAE联合损失优化预测结果，实现对金融资产未来价格的高精度预测。",
+    "title": "CAMEF: Causal-Augmented Multi-Modality Event-Driven Financial Forecasting by Integrating Time Series Patterns and Salient Macroeconomic Announcements"
+}

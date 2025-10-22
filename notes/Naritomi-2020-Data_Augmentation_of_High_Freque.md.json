@@ -1,0 +1,19 @@
+{
+    "authors": [
+        "Yusuke Naritomi",
+        "Takanori Adachi"
+    ],
+    "year": 2020,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "股票执行价格预测",
+    "summary": "为解决高频金融数据非平稳性导致的预测模型训练数据不足问题，本文提出一种基于Wasserstein GAN的合成数据增强方法，通过结合LSTM与1D-CNN的生成器模拟真实订单事件序列，并利用判别器优化生成数据的分布相似性，最终在人工市场模拟中生成执行价格数据，使股票价格涨跌预测准确率显著高于无数据增强的基线模型。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于Wasserstein GAN",
+        "基于长短期记忆网络",
+        "基于一维卷积神经网络"
+    ],
+    "method": "本文方法包括以下步骤：(1) 定义高频金融数据中的订单事件（order event）为四元组(s,d,Δ,v)，并构建市场事件（market event）五元组(x_i = (t_i, o_i, a_i, b_i, w_i))，其中包含时间、订单类型、买卖方向、价格偏移和成交量；(2) 构建Wasserstein GAN模型，生成器接收历史市场事件序列H_{i-k:i}（k=20）和随机噪声向量z∈R^100，通过嵌入层将订单类型转为向量，经LSTM提取时序特征，再与噪声向量拼接，通过全连接层和1D-CNN生成合成市场事件；(3) 判别器接收真实或合成市场事件与对应历史序列，同样使用LSTM+1D-CNN+全连接层输出标量评分；(4) 使用WGAN-GP（带梯度惩罚）训练，通过最小化Wasserstein距离优化生成器，最大化判别器区分能力，采用Adam优化器，判别器每轮迭代5次，生成器1次；(5) 使用东京证券交易所FLEX Full数据（TOPIX CORE 30股票，2020年1月为训练期，2-5月为测试期）训练模型，生成合成订单事件后，通过人工市场模拟推导执行价格，并作为训练数据输入LSTM预测模型，验证其对价格涨跌预测的准确率提升效果。",
+    "title": "Data Augmentation of High Frequency Financial Data Using Generative Adversarial Network"
+}

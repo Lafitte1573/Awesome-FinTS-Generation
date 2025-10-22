@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "César Vaca",
+        "Jesús-Ángel Román-Gallego",
+        "Verónica Barroso-García",
+        "Fernando Tejerina",
+        "Benjamín Sahelices"
+    ],
+    "year": 2025,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "董事会成员专业背景提取",
+    "summary": "为解决金融领域非结构化文本（如公司治理报告中的董事履历）数据稀缺导致深度学习模型性能受限的问题，本文提出了一种名为连接增强（Concatenation Augmentation, CA）的新数据增强方法，通过将原始文本样本串联并基于逻辑激活函数的逆变换对标签进行凸加性融合，生成语义连贯的新样本，显著提升了模型在低数据场景下的准确率（92.4%–99.7%）和鲁棒性。",
+    "techniques": [
+        "基于深度学习"
+    ],
+    "method": "Concatenation Augmentation (CA) 方法通过以下步骤实现：1) 从训练集中随机选取两个样本 (x_i, y_i) 和 (x_j, y_j)，其中 x 为董事履历文本，y 为六维专业背景标签（每维为 [0,1] 区间内 0.1 间隔的数值）；2) 对文本进行串联操作：\\tilde{x} = x_i \\oplus x_j（仅在缺少句末标点时添加句号，无其他预处理）；3) 对标签进行非线性凸组合：\\tilde{y} = \\Phi(y_i, y_j) = \\sigma(\\sigma^{-1}(y_i) + \\sigma^{-1}(y_j))，其中 \\sigma 为逻辑函数，\\sigma^{-1}(y) = \\ln(y/(1-y)) 为其逆函数，该操作等价于在对数几率空间中进行加法后映射回概率空间；4) 将生成的新样本 (\\tilde{x}, \\tilde{y}) 加入训练集，用于训练 AWD-LSTM 或 Transformer 集成模型；5) 该方法无需外部模型、不依赖超参数调优、计算开销极低，且可直接集成于数据预处理流水线中，适用于任何满足凸加性假设的回归型 NLP 任务。",
+    "title": "Article"
+}

@@ -1,0 +1,21 @@
+{
+    "authors": [
+        "Jeevesh Natarajan",
+        "Wayne Wang",
+        "Yaqiao Jiang",
+        "Zeqi Zhang",
+        "Huanhui Ye",
+        "Lingxi Kuang"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据增强",
+    "specific_task": "K线形态识别",
+    "summary": "为解决金融领域中K线模式识别因标注图像数据稀缺导致的卷积神经网络（CNN）性能受限问题，本文提出Generative-CNN方法，通过使用深度卷积生成对抗网络（DCGAN）基于少量真实K线图像生成大量合成图像，并将合成图像与真实图像结合训练Inception V3 CNN模型，从而显著提升K线模式分类准确率至80%以上，有效缓解了数据稀缺瓶颈。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于卷积神经网络"
+    ],
+    "method": "首先，手动收集并标注400张真实K线图像，分为两类：看涨反转（Inverse Head and Shoulders）和看跌反转（Head and Shoulders）；其次，使用其中70张图像训练一个DCGAN生成器，生成840张高质量合成K线图像，模拟真实模式的三峰/三谷结构；接着，将70张真实图像与840张合成图像合并，构建一个增强的混合数据集；然后，采用预训练的Inception V3模型作为分类器，冻结底层参数，替换顶层分类层以适配二分类任务，并使用二元交叉熵损失函数进行训练；训练过程中先固定基础层进行微调，再解冻部分层进行精细优化；最后，通过对比仅使用70张真实图像的基准模型（准确率约58%）与使用增强数据集的Generative-CNN模型（准确率约80%），验证了该方法在提升分类性能上的显著效果。",
+    "title": "Generative-CNN for Pattern Recognition in Finance"
+}

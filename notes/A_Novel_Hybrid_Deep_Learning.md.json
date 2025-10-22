@@ -1,0 +1,19 @@
+{
+    "authors": [
+        "Farhat Iqbal",
+        "Dimitrios Koutmos",
+        "Eman A. Ahmed",
+        "Lulwah M. Al-Essa"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序预测",
+    "specific_task": "外汇汇率预测",
+    "summary": "为解决低频金融时间序列数据中过拟合和预测精度低的问题，本文提出了一种名为MVO-BiGRU的混合深度学习模型，该方法通过变分模态分解（VMD）将汇率序列分解为多个子序列，利用防过拟合模块（Prevention module）随机组合子序列进行数据增强，结合预测模块（Prediction module）使用全部子序列进行建模，并通过Optuna优化超参数，最终融合两模块输出通过全连接网络预测汇率，实现了显著优于基准模型的预测精度和泛化能力。",
+    "techniques": [
+        "基于深度学习",
+        "基于数据增强",
+        "基于超参数优化"
+    ],
+    "method": "本文提出的MVO-BiGRU方法包含以下步骤：首先，使用变分模态分解（VMD）将原始外汇汇率时间序列分解为K个具有不同频率的变分模态函数（VMFs）；其次，构建两个双向门控循环单元（BiGRU）模块：Prevention模块每10个训练周期随机选择n_K（1 < n_K < K）个VMFs作为输入，通过动态组合增强数据多样性以防止过拟合；Prediction模块则使用全部K个VMFs作为输入进行预测；接着，利用Optuna算法自动优化BiGRU的超参数（包括窗口长度、神经元数量、层数、学习率、dropout概率）以及Prevention模块的n_K值；然后，两个模块的输出被融合为新特征，输入至一个全连接神经网络进行最终汇率预测；训练过程中采用L2正则化和Dropout进一步抑制过拟合，使用Adam优化器最小化均方误差（MSE）；最后，模型在EUR/SAR和EUR/CNY两个汇率数据集上进行验证，结果表明其在R²、MAE、MSE、MAPE和方向准确率（DA）等指标上均显著优于传统ML/DL基准模型。",
+    "title": "Article"
+}

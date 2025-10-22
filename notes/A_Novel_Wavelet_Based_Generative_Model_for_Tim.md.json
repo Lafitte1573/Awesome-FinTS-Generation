@@ -1,0 +1,21 @@
+{
+    "authors": [
+        "Chaofan Dai",
+        "Xiaoguang Yuan",
+        "Zongkai Tian",
+        "Xinyue Hu",
+        "Zhen Luan",
+        "Youchen Wang"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序预测",
+    "specific_task": "股票价格预测",
+    "summary": "为解决股票市场非线性、非平稳时间序列预测精度低的问题，本文提出一种基于小波变换的生成对抗网络（Wavelet-GAN），通过小波分解将原始价格序列分解为多尺度频率分量，分别用ARMA模型预测小波系数，再将预测系数输入Wasserstein GAN框架生成合成价格趋势，最终实现比GRU、LSTM和传统GAN更精准的预测效果（R²达0.99）。",
+    "techniques": [
+        "基于深度学习",
+        "基于小波变换",
+        "基于生成对抗网络"
+    ],
+    "method": "首先，对原始股票价格序列进行离散小波变换（DWT），采用DB2小波基函数分解为多尺度低频和高频系数；其次，对每一层小波系数建立ARMA模型进行独立预测；然后，将预测得到的小波系数作为输入，构建Wasserstein GAN（WGAN-GP）生成器与判别器：生成器由两层GRU（256和128单元）组成，用于生成合成价格序列，判别器由三层一维卷积层（32、64、128通道）构成，通过Wasserstein距离与梯度惩罚项优化对抗训练，确保稳定收敛；最后，将预测并生成的小波系数进行小波重构，恢复为完整的价格序列预测结果。整个流程在TensorFlow 2.13.0上实现，使用Adam优化器训练100轮，对比GRU、LSTM和传统GAN，显著降低MSE、RMSE和MAE，提升R²至0.99。",
+    "title": "A Novel Wavelet based Generative Model for Time Series Prediction"
+}

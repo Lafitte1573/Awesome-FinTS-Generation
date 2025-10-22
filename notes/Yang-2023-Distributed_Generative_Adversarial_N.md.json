@@ -1,0 +1,21 @@
+{
+    "authors": [
+        "Xueying Yang",
+        "Chen Li",
+        "Zidong Han",
+        "Zhonghua Lu"
+    ],
+    "year": 2023,
+    "research_directions": "金融时序预测",
+    "specific_task": "多步 ahead 股票收益模拟与模糊投资组合优化",
+    "summary": "为解决金融时间序列多步预测精度低、训练效率差及模糊投资组合优化计算耗时的问题，本文提出基于WGAN-GP的分布式生成对抗网络AssetGANs，通过卷积神经网络生成器与判别器联合训练模拟未来多日资产收益，并结合模糊模拟与MPI并行化遗传算法优化模糊Mean-CVaR投资组合模型，实现了比LSTM更低的RMSE（0.4615 vs 0.6638）和8 GPU下573倍的训练加速，同时模糊组合优化并行效率达96.3%。",
+    "techniques": [
+        "基于深度学习",
+        "基于生成对抗网络",
+        "基于分布式并行计算",
+        "基于模糊逻辑",
+        "基于遗传算法"
+    ],
+    "method": "首先，构建基于WGAN-GP的AssetGANs模型，生成器采用4层卷积网络提取过去k天资产收益模式，结合随机噪声向量，通过反卷积生成未来Δl天的收益序列；判别器采用5层卷积网络区分真实与生成序列，并引入梯度惩罚稳定训练。模型采用PyTorch的DistributedDataParallel在多GPU上并行训练，使用Ring All-reduce算法聚合梯度，Gloo通信库实现节点间通信。其次，利用训练好的生成器对资产未来收益进行模糊模拟，通过蒙特卡洛采样生成多组收益路径，估计每个资产的三角模糊变量参数（a_i, b_i, c_i），构建隶属度函数。然后，使用SARPROP神经网络近似模糊期望收益与模糊CVaR，加速目标函数计算。最后，采用MPI并行化的遗传算法进行全局优化，通过轮盘赌选择、交叉变异操作求解满足约束的最优资产权重，实现模糊Mean-CVaR模型的高效求解。",
+    "title": "Distributed Generative Adversarial Networks for Fuzzy Portfolio Optimization"
+}

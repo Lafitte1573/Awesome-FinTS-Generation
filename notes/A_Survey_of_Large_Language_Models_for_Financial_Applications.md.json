@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "Yuqi Nie",
+        "Yaxuan Kong",
+        "Xiaowen Dong",
+        "John M. Mulvey",
+        "H. Vincent Poor",
+        "Qingsong Wen",
+        "Stefan Zohren"
+    ],
+    "year": 2024,
+    "research_directions": "其他",
+    "specific_task": "金融应用中的大语言模型综述",
+    "summary": "为系统梳理大语言模型（LLM）在金融领域的应用进展、技术优势与关键挑战，本文通过分类综述 linguistic tasks、sentiment analysis、financial time series、financial reasoning 和 agent-based modeling 等六大核心方向，整合了主流模型、数据集与基准，并深入分析了数据偏差、伦理风险与可解释性等现实障碍，为金融行业智能化转型提供了全面的理论与实践参考。",
+    "techniques": [
+        "基于LLM"
+    ],
+    "method": "本文并未提出新的模型或算法，而是一篇系统性综述论文。其方法包括：（1）系统收集并分类整理近五年来LLM在金融领域的研究文献，按六大应用方向（语言任务、情感分析、金融时序、金融推理、基于智能体的建模、其他应用）进行结构化梳理；（2）详细分析代表性金融专用LLM（如FinBERT、BloombergGPT、FinGPT、XuanYuan 2.0等）的架构、预训练策略与微调方法，对比zero-shot与fine-tuning的应用场景；（3）汇总公开可用的金融数据集、代码库与基准测试平台，为研究者提供资源指南；（4）深入探讨金融LLM部署中的独特挑战，如前瞻偏差、数据污染、法律合规、可解释性与隐私问题；（5）通过对比现有相关综述（如Lee et al.、Li et al.等），突出本综述在应用广度、挑战深度与实践导向上的创新性，最终构建一个连接学术研究与工业实践的全景式框架，推动LLM在金融领域的负责任创新与落地。",
+    "title": "A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges"
+}

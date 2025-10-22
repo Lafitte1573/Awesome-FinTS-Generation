@@ -1,0 +1,17 @@
+{
+    "authors": [
+        "Kuen-Liang Sue",
+        "Chih-Fong Tsai",
+        "Hau-Min Tsau"
+    ],
+    "year": 2024,
+    "research_directions": "金融时序数据插补",
+    "specific_task": "财务困境预测",
+    "summary": "为解决财务困境预测中缺失值插补和特征归一化对模型性能的影响问题，本文比较了KNN、随机森林、MICE和深度神经网络等多种插补方法，并评估了最小-最大归一化对不同分类器（SVM、RF、DNN）预测效果的影响，发现随机森林插补效果最优，且归一化显著提升SVM和DNN性能但对RF无显著增益。",
+    "techniques": [
+        "基于机器学习",
+        "基于深度学习"
+    ],
+    "method": "本文首先在9个财务困境数据集（含破产预测和信用评分数据）上模拟10%至50%的缺失值（MCAR机制），并使用SMOTE平衡类别；随后对比四种插补方法：均值/众数（基线）、KNN、MICE、随机森林（RF）和深度神经网络（DNN）；插补后，对数据进行最小-最大归一化（[0,1]），并分别训练SVM、RF和DNN三类分类器；使用AUC和II类错误率评估预测性能；实验发现：在高缺失率（≥40%）下，RF插补表现最佳；归一化对DNN和SVM显著提升性能（p<0.05），但对RF分类器无显著影响，故在使用RF分类器时可省略归一化步骤。",
+    "title": "Missing value imputation and the effect of feature normalisation on financial distress prediction"
+}
