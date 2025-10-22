@@ -188,8 +188,8 @@ if __name__ == "__main__":
     """)
 
     papers_data = []
-    for i, file in enumerate(os.listdir('../notes')):
-        line = json.load(open(os.path.join('../notes', file), 'r'))
+    for i, file in enumerate(os.listdir('../assets/notes')):
+        line = json.load(open(os.path.join('../assets/notes', file), 'r'))
         papers_data.append((
             i+1,
             line['title'],
@@ -205,25 +205,17 @@ if __name__ == "__main__":
 
     print(len(papers_data), papers_data[0])
 
-    nick_name = pd.read_csv('nick_names.csv')
+    nick_name = pd.read_csv('../assets/nick_names.csv')
     paper_cites = []
     for i, line in nick_name.iterrows():
         assert line['paper_id'], "No paper_id"
         paper_cites.append((i+1, line['title'], line['nick_name'] if line['nick_name'] else 'None', line['paper_id']))
     print(len(paper_cites), paper_cites[0])
 
-    with open('metas.md', 'r') as f:
-        lines = f.readlines()
-        metas_data = []
-        for line in lines[2:]:
-            idx, title, is_survey, theme, task, technology = (t.strip() for t in line.strip().strip('|').split('|'))
-            metas_data.append((idx, title, is_survey == '是', theme, task, technology))
-    print(len(metas_data), metas_data[0])
-
     notes_data = []
-    for file in os.listdir('../tech-notes'):
+    for file in os.listdir('../assets/tech-notes'):
         if file.endswith('.md'):
-            with open(os.path.join('../tech-notes', file), 'r') as f:
+            with open(os.path.join('../assets/tech-notes', file), 'r') as f:
                 content = f.read()
                 title = content.split('\n')[0].split('# ')[-1].strip()
                 notes_data.append((len(notes_data)+1, title, content, file.rstrip('.md')))

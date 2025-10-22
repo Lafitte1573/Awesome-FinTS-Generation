@@ -1,0 +1,104 @@
+paper_id,title,nick_name
+Kong-2024-CFTNet__a_robust_credit_card_fraud_,CFTNet: a robust credit card fraud detection model enhanced by counterfactual data augmentation,CFTNet
+LLM40FD_Unlocking_the_Potential_of_LLM_for_Ano,LLM40FD: Unlocking the Potential of LLM for Anonymous Zero-Shot Fraud Detection,LLM40FD
+Text2TimeSeries,Text2TimeSeries: Enhancing Financial Forecasting through Time Series Prediction Updates with Event-Driven Insights from Large Language Models,TimeS
+Enhancing_Recurrent_Neural_Networks_for_Stock_,Enhancing Recurrent Neural Networks For Stock Market Forecasts through PEC-W Framework,PEC-W
+FINMEM_-_A_PERFORMANCE-ENHANCED_LLM_TRADING_AGENT_WITH_LAYERED_MEMORY_AND_CHARACTER_DESIGN,FINMEM: A PERFORMANCE-ENHANCED LLM TRADING AGENT WITH LAYERED MEMORY AND CHARACTER DESIGN,FINMEM
+Ying-2025-Hybrid_boosted_attention-based_Light,Hybrid boosted attention-based LightGBM framework for enhanced credit risk assessment in digital finance,HBA-LGBM
+TimeHF_Billion-Scale_Time_Series_Models_Guided_by_Human_Feedback,TimeHF: Billion-Scale Time Series Models Guided by Human Feedback,TimeHF
+Large_Language_Models_for_Time_Series_-_A_Survey,Large Language Models for Time Series: A Survey,None
+Lombardo-2024-Natural_Language_Processing_an,Natural Language Processing and Deep Learning for Bankruptcy Prediction: An End-to-End Architecture,None
+Variational_autoencoder-based_anomaly_detectio,Variational autoencoder-based anomaly detection in time series data for inventory record inaccuracy,None
+3677052.3698649,A Financial Time Series Denoiser Based on Diffusion Models,None
+Price_Forecast_of_Treasury_Bond_Market_Yield_Optimize_Method_Based_on_Deep_Learning_Model,Price Forecast of Treasury Bond Market Yield: Optimize Method Based on Deep Learning Model,LASSOSMLR-PCA-LSTM
+Zhang-2025-Desensitized_Financial_Data_Generat,Desensitized Financial Data Generation Based on Generative Adversarial Network and Differential Privacy,NVF-DPGAN
+Hollander-2024-Data_Augmentation_Using_BERT-Ba,Data Augmentation Using BERT-Based Models for Aspect-Based Sentiment Analysis,None
+2309.17379v1,Handling missing data in Burundian sovereign bond market,None
+3677052.3698606,Macroeconomic Conditioned Synthetic Financial Markets,MC-TE-GAN
+Naritomi-2020-Data_Augmentation_of_High_Freque,Data Augmentation of High Frequency Financial Data Using Generative Adversarial Network,None
+1-s2.0-S0957417424016609-main,SimMix: Local similarity-aware data augmentation for time series,SimMix
+1-s2.0-S0360544224027038-main,A hybrid carbon price forecasting model combining time series clustering and data augmentation,None
+Robust_Synthetic_Data_Generation_for_Sequentia,Article,None
+A_Survey_of_Large_Language_Models_for_Financial_Applications,"A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges",None
+A_Novel_Wavelet_,A Novel Wavelet based Generative Model for Time Series Prediction,Wavelet-GAN
+EBSCO-FullText-2025_10_08,Article Enhancing Portfolio Performance through Financial Time-Series Decomposition-Based Variational Encoder-Decoder Data Augmentation,FED2Port
+Time_Series_Generation_with_GANs_for_Momentum_,Time Series Generation with GANs for Momentum Effect Simulation on Moscow Stock Exchange,None
+Large_Language_Models_for_Financial_Aid_in_Financial_Time-series_Forecasting,Large Language Models for Financial Aid in Financial Time-series Forecasting,None
+1-s2.0-S0378437123004545-main,Generative Adversarial Networks applied to synthetic financial scenarios generation,Jinkou
+Regression_estimation_for_continuous-time_func,Regression estimation for continuous-time functional data processes with missing at random response,None
+Sever-2025-Pattern_recognition_with_limited_da,Pattern recognition with limited data: an AI model inspired by BCR-Net and SwitchNet,None
+Tong-2024-Improving_Anti-money_Laundering_via,Improving Anti-money Laundering via Fourier-Based Contrastive Learning,FCLM
+Generating_Synthetic_Time-Series_Data_on_Edge,Generating Synthetic Time-Series Data on Edge Devices Using Generative Adversarial Networks,None
+LLM-PS,LLM-PS: Empowering Large Language Models for Time Series Forecasting with Temporal Patterns and Semantics,LLM-PS
+TIME-LLM,TIME-LLM: TIME SERIES FORECASTING BY REPROGRAMMING LARGE LANGUAGE MODELS,TIME-LLM
+electronics-14-02289,Article,None
+3677052.3698661,Can GANs Learn the Stylized Facts of Financial Time Series?,None
+Li-2024-Forecasting_stock_prices_changes_using,Forecasting stock prices changes using long‑short term memory neural network with symbolic genetic programming,SGP-LSTM
+A_semi-heterogeneous_ensemble,A semi-heterogeneous ensemble forecasting method for stock returns based on sentiment analysis,None
+RMT-Net_Reject-Aware_Multi-Task_Network_for_Mo,RMT-Net: Reject-Aware Multi-Task Network for Modeling Missing-Not-At-Random Data in Financial Credit Scoring,RMT-Net
+TRADES_-_Generating_Realistic_Market_Simulations_with_Diffusion_Models,TRADES: Generating Realistic Market Simulations with Diffusion Models,TRADES
+Wilson-2026-Generative_Adversarial_Networks__A,"Generative Adversarial Networks: A Systematic Review of Characteristics, Applications, and Challenges in Financial Data Generation and Market Modeling: 2019-2024",None
+2309.07708v2,Market-GAN: Adding Control to Financial Market Data Generation with Semantic Context,Market-GAN
+LLMs_for_Time_Series,LLMs for Time Series: an Application for Single Stocks and Statistical Arbitrage,Chronos
+1-s2.0-S2666546824000880-main,Probabilistic simulation of electricity price scenarios using Conditional Generative Adversarial Networks,TSS-CGAN
+Controllable_Financial_Market_Generation_with_Diffusion_Guided_Meta_Agent,Controllable Financial Market Generation with Diffusion Guided Meta Agent,DiGA
+Intelligent_Sys_in_Account_-_2022_-_Huang_-_Enhanced_financial_fraud_detection_using_cost%E2%80%90sensitive_cascade_forest_with,Enhanced financial fraud detection using cost-sensitive cascade forest with missing value imputation,None
+A_Novel_Hybrid_Deep_Learning,Article,MVO-BiGRU
+applsci-13-10639,Regime-Specific Quant Generative Adversarial Network: A Conditional Generative Adversarial Network for Regime-Specific Deepfakes of Financial Time Series,RSQGAN
+A_Novel_Hybrid_Deep_Learning_Method_for_Accura,Article,MVO-BiGRU
+Camenzind-2024-Stripping_the_Swiss_discount_cu,Stripping the Swiss discount curve using kernel ridge regression,None
+2411.01368v1_1,Combining Financial Data and News Articles for Stock Price Movement Prediction Using Large Language Models,None
+Pourkhoshgoftar-2025-Graph-Based_Inductive_Lea,Graph-Based Inductive Learning for Credit Risk Prediction with Imbalance Mitigation,GraphSAGE-CTGAN
+Expert_Systems_-_2024_-_Zhong_-_Enterprise_vio,Enterprise violation risk deduction combining generative Al and event evolution graph,CDDP-GAT
+Qi-2024-Integrating_Symbolic_Genetic_Programmi,Integrating Symbolic Genetic Programming With Lstm for Forecasting Cross-Sectional Price Returns: A Comparative Analysis of Chinese And Japanese Stock Market,SGP-LSTM
+3677052.3698627,"Bankruptcy Prediction: Data Augmentation, LLMs and the Need for Auditor's Opinion",None
+1-s2.0-S0957417424006110-main,A two-stage case-based reasoning driven classification paradigm for financial distress prediction with missing and imbalanced data,None
+Nonlinear_Regression_with_Hierarchical_Recurre,Nonlinear Regression with Hierarchical Recurrent Neural Networks Under Missing Data,Hierarchical-LSTM
+Large_Language_Models_for_Financial_Time_Series_Forecasting,Large Language Models for Financial Time Series Forecasting,Time-LLM
+A_Comprehensive_Survey_of_Time_Series_Forecasting,A Comprehensive Survey of Time Series Forecasting: Architectural Diversity and Open Challenges,None
+2406.11903v1,"A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges",None
+1-s2.0-S1568494625000596-main,Prediction of index futures movement using TimeGAN and 3D-CNN: Empirical evidence from Korea and the United States,TG-3DCNN
+2203.01664v4,Tail-GAN:Learning to Simulate Tail Risk Scenarios∗,Tail-GAN
+3677052.3698608,Lending an Ear: How LLMs Hear Your Banking Intentions,BAI-Fintent
+NMTucker,NMTucker: Non-linear Matryoshka Tucker Decomposition for Financial Time Series Imputation,NMTucker
+2412.08179v1,Auto-Generating Earnings Report Analysis via an Augmented LLM,None
+Deep_learning_for_time_series_forecasting_a_survey,Deep learning for time series forecasting: a survey,None
+Retrieval-augmented_Large_Language_Models_for_Financial_Time_Series_Forecasting,Retrieval-augmented Large Language Models for Financial Time Series Forecasting,FinSrag
+2310.17784v2,DATA-CENTRIC FINANCIAL LARGE LANGUAGE MODELS,None
+Atif-2025-VAE-INN__Variational_Autoencoder_wit,"VAE-INN: Variational Autoencoder with Integrated Neural Network Classifier for Imbalanced Credit Scoring, Utilizing Weighted Loss for Improved Accuracy",VAE-INN
+Foundation_Models_for_Time_Series_Analysis_-_A_Tutorial_and_Survey,Foundation Models for Time Series Analysis: A Tutorial and Survey,None
+2403.02990v4,"Data Augmentation using Large Language Models: Data Perspectives, Learning Paradigms and Challenges",None
+StockTime,StockTime: A Time Series Specialized Large Language Model Architecture for Stock Price Prediction,StockTime
+A_Survey_of_Explainable_Artificial_Intelligence_XAI__in_Financial_Time_Series_Forecasting,A Survey of Explainable Artificial Intelligence (XAI) in Financial Time Series Forecasting,None
+3604237.3626895,On Correlated Stock Market Time Series Generation,CoMeTS-GAN
+Large_Scale_Financial_Time_Series_Forecasting_with_Multi-faceted_Model,Large Scale Financial Time Series Forecasting with Multi-faceted Model,None
+Zhang-2024-Management_Analysis_Method_of_Multi,Management Analysis Method of Multivariate Time Series Anomaly Detection in Financial Risk Assessment,None
+2410.18897v1,Generation of synthetic financial time series by diffusion models,DDPM+Wavelet
+3702468.3702479,Data Augmentation Strategies for Improving Time Series Classification Accuracy,wDBA
+Senthilkumar-2025-Advanced_Progress_in_Optimiz,Advanced Progress in Optimized Generative Adversarial Network Applications Across Domains: A Comprehensive Survey,None
+Journal_of_Futures_Markets_-_2025_-_Jiang_-_Bl,Black-Scholes Meet Imitation Learning: Evidence From Deep Hedging in China,ILDH
+EBSCO-FullText-2025_10_18,Article Enhancing Portfolio Performance through Financial Time-Series Decomposition-Based Variational Encoder-Decoder Data Augmentation,FED and FED2Port
+3677052.3698622,Generative-CNN for Pattern Recognition in Finance,Generative-CNN
+3604237.3626855,Decision-Aware Conditional GANs for Time Series Data,DAT-CGAN
+3677052.3698638,Simulating Asset Prices using Conditional Time-Series GAN,CTS-GAN
+Golchin-2024-Anomaly_Detection_In_Time_Series,"Anomaly Detection In Time Series Data Using Reinforcement Learning, Variational Autoencoder, and Active Learning",RLVAL
+Kang-2025-Stock_Price_Prediction_with_Heavy-Ta,Stock Price Prediction with Heavy‑Tailed Distribution Time‑Series Generation Based on WGAN‑BiLSTM,WGAN-BiLSTM
+An_LLM-Based_Framework_for_Synthetic_Data_Gene,An LLM-Based Framework for Synthetic Data Generation,None
+2502.04592v3,CAMEF: Causal-Augmented Multi-Modality Event-Driven Financial Forecasting by Integrating Time Series Patterns and Salient Macroeconomic Announcements,CAMEF
+MARS_-_A_FINANCIAL_MARKET_SIMULATION_ENGINE_POWERED_BY_GENERATIVE_FOUNDATION_MODEL,MARS: A FINANCIAL MARKET SIMULATION ENGINE POWERED BY GENERATIVE FOUNDATION MODEL,MarS
+Liu-2023-An_Efficient_GAN-Based_Multi-classifi,An Efcient GAN‑Based Multi‑classifcation Approach for Financial Time Series Volatility Trend Prediction,ORGAN-FVT
+Missing_value_imputation_and_the_effect_of_feature_normalisation_on_financial_distress_prediction,Missing value imputation and the effect of feature normalisation on financial distress prediction,None
+10.1515_snde-2022-0115,Miguel C. Herculano\* and Punnoose Jacob,None
+A_Novel_Wavelet_Based_Generative_Model_for_Ti,A Novel Wavelet based Generative Model for Time Series Prediction,Wavelet-GAN
+A_Fast_Non-Linear_Coupled_Tensor_Completion_Al,A Fast Non-Linear Coupled Tensor Completion Algorithm for Financial Data Integration and Imputation,RegTensor
+electronics-13-02158-v3,Article Enhancing Financial Time Series Prediction with Quantum-Enhanced Synthetic Data Generation: A Case Study on the S&P 500 Using a Quantum Wasserstein Generative Adversarial Network Approach with a Gradient Penalty,QWGAN-GP
+2411.01368v1,Combining Financial Data and News Articles for Stock Price Movement Prediction Using Large Language Models,None
+CoFinDiff_-_Controllable_Financial_Diffusion_Model_for_Time_Series_Generation,CoFinDiff: Controllable Financial Diffusion Model for Time Series Generation,CoFinDiff
+Treatment_of_Missing_Market_Data_Case_of_Bon,Обработка пропусков в рыночных данных на примере задачи оценки кривой доходностей облигаций,None
+Yang-2023-Distributed_Generative_Adversarial_N,Distributed Generative Adversarial Networks for Fuzzy Portfolio Optimization,AssetGANs
+Financial_Fine-tuning_a_Large_Time_Series_Model,Financial Fine-tuning a Large Time Series Model,Financial TimesFM
+A_Fast_Non-Linear_Coupled_Tensor_Completion_Algorithm_for_Financial_Data_Integration_and_Imputation,A Fast Non-Linear Coupled Tensor Completion Algorithm for Financial Data Integration and Imputation,RegTensor
+LLM4FTS,LLM4FTS: Enhancing Large Language Models for Financial Time Series Prediction,LLM4FTS
+Adversarial_Learning_Networks_for_FinTech_Appl,Adversarial Learning Networks for FinTech Applications Using Heterogeneous Data Sources,ALN
+Abdelhady-2024-Green_finance_growth_prediction,RESEARCH ARTICLE,CT-GAN+NAR-NN
+3501305,Generation of Realistic Synthetic Financial Time-series,None
