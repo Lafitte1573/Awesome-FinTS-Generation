@@ -1,29 +1,60 @@
-## Recent Advanced Technologies in Financial Time-Series Generation: A Survey
+## 金融时间序列数据生成的最新先进技术综述
 
 > This repository displays a paper collection of the survey of recent financial data-generation technologies.
 
-<p align="center">
-  <img src="assets/Survey_00.png" alt="UniGen-FinTS Cover" width="800"/>
-</p>
+### 写作大纲
 
-### Motivations
-Time-series generation (TSG) is a crucial technology for enhancing the development of time-series foundation models. 
-However, in the financial context, previous surveys have only focused on temporal forecasting or a specific learning paradigm, e.g., deep learning, GAN, LLM, etc., lacking a comprehensive overview of the recent advances in financial time-series generation (FTSG).
+| 章节 | 标题 | 主要内容 |
+| --- | --- | --- |
+| 1 | 引言 | |
+| 2 | 时间序列数据预测 | 问题定义、方法分类、评价指标、主要挑战 |
+| 3 | 时间序列数据补插 | 问题定义、方法分类、评价指标、主要挑战 |
+| 4 | 时间序列数据增强 | 问题定义、方法分类、评价指标、主要挑战 |
+| 5 | 数据集整理 | 为方便研究工作的开展，列表总结金融时序数据生成领域的数据集，维度包括开放性、下游任务、数据量等 |
+| 6* | 未来方向* | 总结金融时序数据生成领域（非时序预测/合成/增强）未来的研究方向 |
+| 7 | 总结 | |
 
-### Highlights
-1. A two-level taxonomy, covering orthogonal task types and task-agnostic techniques.
-2. An overview of the recent advances in FTSG from 2020 to 2024, including 40+ papers.
-3. A collection of data resources, including raw data sources, databases, and benchmark datasets for FTSG.
-4. Identification of key challenges and potential future research directions in FTSG.
+### 基本思路
 
-### Taxonomy
+1. **确定任务**：金融时序预测（基于数据生成方法）、金融时序数据补插、金融时序数据增强
+2. **确定技术路线**：
+- 金融时序预测：基于机器学习、基于深度学习（基于 VAE、GAN、DM）、基于大模型（Model-level、System-Level）
+- 金融时序数据增强：基于机器学习（神经网络）、基于GAN、基于扩散模型
+- 金融时序数据补插：基于机器学习（、待完善）
+
+### 方法分类
+
+```mermaid
+
+graph LR
+
+    A(金融数据生成（Synthesis）) --> B([金融时序预测（Forecasting）])
+
+    B --> B1(GAN_based) --> C1(Wavelet-GAN, TG-3DCNN, ORGAN-FVT, AssetGANs, CT-GAN-NAR-NN, TSS-CGAN)
+
+    B --> B2(LLM_based) --> C2(TimeLLM, Chronos, Time-LLM, LLM4FTS, TimesFM_Financial_Finetuning, StockTime, TimeS, FINMEM)
+
+    B --> B3(Machine_Learning) --> C3(SGP-LSTM, LVQ-CBR, Hierarchical-LSTM, MVO-BiGRU, ALN, 优化不变正则化器（L_OB^e）, PEC-W)
+
+    A --> C([金融时序数据增强（Augmentation）])
+
+    C --> D1(GAN_based) --> E1(Market-GAN, RSQGAN, WGAN-based Market Simulation, , DAT-CGAN, CTS-GAN, Tail-GAN, TCN-GAN, WGAN-BiLSTM, CoMeTS-GAN, , Jinkou, MC-TE-GAN, Generative-CNN, QWGAN-GP)
+
+    C --> D2(Machine_Learning) --> E2(SGP-LSTM, FED2Port, VAE-GRU-MCMC, CFTNet)
+
+    C --> D3(Diffusion_based) --> E3(CoFinDiff, DiGA, Wavelet-Diffusion, TRADES)
+
+    A --> D([金融时序数据插补（Imputation）])
+
+    D --> E(Machine_Learning) --> F1(RegTensor, NMTucker, Nicolas Camenzind et al., Kuen-Liang Sue et al.)
+```
 
 ![FTSG方法分类学](./assets/taxonomy.png "系统架构")
 
 ----
-## Literature Collection
+## 文献列表
 
-### Financial Time Series Extrapolation
+### 金融时序预测
 
 #### [[FINMEM]]() FINMEM: A PERFORMANCE-ENHANCED LLM TRADING AGENT WITH LAYERED MEMORY AND CHARACTER DESIGN
 - **Authors**: Yangyang Vu, Haohang Li, Zhi Chen, Yuechen Jiang, Yang Li, Denghui Zhang, Rong Liu, Jordan W. Suchow, Khaldoun Khashanah
@@ -157,7 +188,7 @@ However, in the financial context, previous surveys have only focused on tempora
 - **Task**: 外汇汇率预测
 - **Abstract**: 为解决低频金融时间序列数据中过拟合和预测精度低的问题，本文提出了一种名为MVO-BiGRU的混合深度学习模型，通过变分模态分解（VMD）将汇率序列分解为多个子序列，利用预防模块随机组合子序列进行数据增强以提升泛化能力，再结合预测模块使用全部子序列进行建模，并通过Optuna优化超参数，最终在EUR/SAR和EUR/CNY汇率预测中实现了显著优于基准模型的预测精度和稳定性。
 
-### Financial Time Series Imputation
+### 金融时序数据插补
 
 #### Stripping the Swiss discount curve using kernel ridge regression
 - **Authors**: Nicolas Camenzind, Damir Filipović
@@ -183,7 +214,7 @@ However, in the financial context, previous surveys have only focused on tempora
 - **Task**: 财务困境预测
 - **Abstract**: 为解决财务困境预测中缺失值插补和特征归一化对模型性能的影响问题，本文比较了KNN、随机森林、MICE和深度神经网络等多种插补方法，并评估了最小-最大归一化对不同分类器（SVM、RF、DNN）预测效果的影响，发现随机森林插补效果最优，且归一化显著提升SVM和DNN性能但对RF无显著增益。
 
-### Financial Time Series Augmentation
+### 金融时序数据增强
 
 #### [[DiGA]]() Controllable Financial Market Generation with Diffusion Guided Meta Agent
 - **Authors**: Yu-Hao Huang, Chang Xu, Yang Liu, Weiqing Liu, Wu-Jun Li, Jiang Bian
