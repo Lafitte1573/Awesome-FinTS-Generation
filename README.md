@@ -3,7 +3,7 @@
 > This repository displays a paper collection of the survey of recent financial data-generation technologies.
 
 <p align="center">
-  <img src="assets/Survey_00.png" alt="UniGen-FinTS Cover" width="60%"/>
+  <img src="assets/Survey_00.png" alt="UniGen-FinTS Cover" width="80%"/>
 </p>
 
 ### Motivations
