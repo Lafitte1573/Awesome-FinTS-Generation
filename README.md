@@ -20,8 +20,27 @@ However, in the financial context, previous surveys have only focused on tempora
 
 ![FTSG方法分类学](./assets/taxonomy.png "系统架构")
 
-----
-## Literature Collection
+### Datasets
+
+| **Dataset**        | **Task** | **Data Sources**                                       | **Split**<sup>1</sup> | **Total**<sup>2</sup> |
+|--------------------|----------|--------------------------------------------------------|-----------------------|-----------------------|
+| FinTSB             | FTSE     | Chinese A-share, NYSE, NASDAQ                          | 7:1:2                 | 150M                  |
+| GIFT-EVAL          | FTSE     | FRED, Exchanges, Bitcoin, NYSE, NASDAQ, NN5            | 9:0:1                 | 25M                   |
+| TFB                | FTSE     | FRED, Exchanges, NN5, NYSE, NASDAQ                     | 7:1:2                 | 8,068                 |
+| M-Competitions [4] | FTSE     | Walmart Sales                                          | 49:0:1                | 1,941                 |
+| FinTSBridge        | FTSE     | S&P 500, NASDAQ, Dow Jones, FTSE, CSI 300 ETF, Bitcoin | 7:1:2                 | 86,978                |
+| TSGBench           | FTSA     | GOOGL, Exchanges                                       | 9:0:1                 | 13,213                |
+| CTBench            | FTSA     | Cryptocurrencies on Binance Exchange                   | 9:0:1                 | 530                   |
+| FinMultiTime       | FTSE     | S&P 500, HS 300                                        | -                     | 6M                    |
+
+<sup>1</sup>: the ratio of train: valid: test.  
+<sup>2</sup>: the number of time series with a pre-defined temporal span.  
+
+[4]: https://forecasters.org/resources/time-series-data  
+
+
+
+## Literature Review
 
 ### Financial Time Series Extrapolation
 
