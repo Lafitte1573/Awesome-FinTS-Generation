@@ -266,8 +266,15 @@ smallest type on the figure.
 
 | File | Role |
 |---|---|
-| `assets/cover.png` | 2840 × 2200 raster, 689 KB, referenced by the README hero block |
-| `assets/cover.svg` | vector source — edit the generator, not the SVG by hand |
+| `assets/cover.png` | 3520 × 2200 raster (4:2.5), 727 KB, referenced by the README hero block |
+| `assets/cover.svg` | vector source — 1267.2 × 792 pt, also 4:2.5 — edit the generator, not the SVG by hand |
+
+The canvas is fixed at **4:2.5 landscape** (`W_IN = 11.0 × 4/2.5 = 17.6`, `H_IN = 11.0`). It was
+widened rather than re-scaled: `H_IN` is what sets the data-to-point ratio
+(`PT_PER_UNIT = H_IN × 72 = 792`), so keeping it at 11.0 leaves every y coordinate, every font size
+and every verified fit result exactly as they were, and the wider frame simply gives the outward
+regions more margin. Both outputs land on the ratio exactly (3520/2200 = 1.60000,
+1267.2/792 = 1.60000).
 
 Content is taken from the paper's taxonomy and the verified dataset, and carries the current counts
 (33 + 13 + 26 = 72 primary works, 115 curated entries) and the current task codes
@@ -322,9 +329,9 @@ To regenerate after an edit:
 ```python
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-fig = plt.figure(figsize=(13.4, 11.0), dpi=200, facecolor="#FCFBF9")
+fig = plt.figure(figsize=(11.0 * 4/2.5, 11.0), dpi=200, facecolor="#FCFBF9")
 ax  = fig.add_axes([0, 0, 1, 1])
-ax.set_xlim(0, 13.4 / 11.0); ax.set_ylim(0, 1.0); ax.set_aspect("equal"); ax.axis("off")
+ax.set_xlim(0, 4/2.5); ax.set_ylim(0, 1.0); ax.set_aspect("equal"); ax.axis("off")
 # ... Wedge(...) / Circle(...) for the rings, ax.text(...) for every label ...
 fig.savefig("assets/cover.png", dpi=200, facecolor="#FCFBF9")
 fig.savefig("assets/cover.svg", facecolor="#FCFBF9")
