@@ -213,27 +213,124 @@ most needs to avoid.
 
 ## 5. Images
 
-### `assets/cover.png` — new cover figure
+### `assets/cover.png` — two-level taxonomy, radial
 
-The README hero image is now a purpose-built figure rather than the old hand-drawn diagram.
-It is generated from vector source, so every label is real text and the file stays crisp at any
-size.
+The README hero image is a purpose-built figure rather than the old hand-drawn diagram. It follows
+the "three-way circular flow" convention used in published survey overviews: a **central core**,
+an **inner ring**, an **outer ring**, and one **outward region per sector** that runs off the canvas
+edge. The two rings are the two levels, which the core states as an eyebrow.
+
+The figure carries **no title block** — the README's own H1 and the repository name already do that
+job, and a hero image that repeats the page heading wastes the top third of the canvas. The
+two-level framing therefore survives as a small letterspaced eyebrow inside the core
+(*A TWO-LEVEL TAXONOMY*); drop that one line if the eyebrow reads as clutter.
+
+| Element | Content |
+|---|---|
+| Central core | `FTSG` + a **10-word** definition, on a warm off-white card (not a dark disc) |
+| Inner ring — **Level 1** | `FTSE` Extrapolation, `FTSI` Imputation, `FTSS` Synthesis, each on a 120° sector, with its icon |
+| Outer ring — **Level 2** | one wedge per technique family, subdivided inside its parent sector |
+| Outward region | that task's **core problem**, as a three-line statement |
+| Gap arcs | three thin arcs between core and inner ring, one per task colour |
+
+**Typography in the outward regions** is a three-step ladder: letterspaced 11 pt bold eyebrow
+(*CORE PROBLEM*) → 18 pt bold sentence-case head in the task colour → 17 pt regular body in
+neutral ink. The per-task work counts were dropped from the figure on review — they were carried
+in a saturated pill that competed with the taxonomy itself, and the counts live in the README anyway.
+
+Body length is not uniform, and deliberately so: the `FTSE` block sits above the ring in a region
+that spans the full canvas, so its statement fits on **one** line (measured 0.736 of 1.291 data
+units); the two corner blocks are capped near 0.39 wide by the ring, so their statements stay on
+two. `BLOCK_Y` therefore carries a variable-length row list per side — do not assume three rows
+per block.
+
+**One vertical rhythm across all three blocks.** The generator does not hard-code the top block's
+rows: it measures the corner blocks' gaps (`_RHYTHM`) and derives the top block from them, taking
+only the first two because the top statement is a single line. The shared rhythm is
+eyebrow → head **0.060**, head → first body line **0.055**, body → body **0.040**. If the corner
+blocks move, the top block follows automatically; that is the point.
+
+Two layout rules fall out of the geometry and are worth preserving on any future edit:
+
+* **The icon rides the eyebrow row, not the head row.** The icon is a square; on the head row its
+  lower corner reaches towards the ring and costs about a centimetre of horizontal room in the two
+  corner blocks, whose outward region tapers to nothing at the ring. On the eyebrow row the whole
+  icon + label group is pushed to the canvas-side edge instead, which is always clear of it.
+* **Every line in a block shares one alignment.** A right-anchored block reads as right-anchored;
+  mixing a flush-right eyebrow with centred head and body lines looked broken.
+
+The core was enlarged in step with the outward regions (FTSG 24 → 28 pt, definition 10.5 → 13 pt on
+three short lines — at 13 pt the two-line version is wider than the disc at the radius where it
+sits), because otherwise the core — the element a reader should reach first — ends up with the
+smallest type on the figure.
 
 | File | Role |
 |---|---|
-| `assets/cover.png` | 3720 × 2256 raster, referenced by the README hero block |
-| `assets/cover.svg` | vector source — edit this, not the PNG |
+| `assets/cover.png` | 2840 × 2200 raster, 689 KB, referenced by the README hero block |
+| `assets/cover.svg` | vector source — edit the generator, not the SVG by hand |
 
-The figure shows the project's actual positioning: a two-level taxonomy plate, one column per
-FTSG task, with the technique families the survey reviews listed beneath each. It uses the
-current task codes (`FTSE` / `FTSI` / **`FTSS`**), so it does not repeat the `FTSA` error carried
-by the old artwork.
+Content is taken from the paper's taxonomy and the verified dataset, and carries the current counts
+(33 + 13 + 26 = 72 primary works, 115 curated entries) and the current task codes
+(`FTSE` / `FTSI` / **`FTSS`**), so it cannot repeat the `FTSA` error carried by the old artwork.
+
+**Icons.** Seven Material Design Icons, fetched from the `@mdi/svg` package on jsDelivr
+(`https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/<name>.svg`, **Apache-2.0**, Pictogrammers) —
+`waveform` in the core, plus `trending-up` / `puzzle` / `layers` repeated in the inner ring and in
+the matching outward region. They are parsed from the SVG `<path d="…">` straight into
+`matplotlib.path.Path` rather than rasterised, so no SVG-to-PNG step is involved and the icons stay
+crisp in both outputs. Two API details bite if you rewrite the parser: `Path` takes
+`(vertices, codes)` in that order, and it expects **one code per vertex** — a cubic Bézier is three
+`CURVE4` codes over three vertices, not one code and three vertices.
+
+**Reading order.** Family names sit on the arc, so the `FTSE` list is stored **reversed** and laid out
+counter-clockwise, purely so the top arc — the one a reader scans left-to-right — comes out in
+taxonomy order (`Deep Learning` → `Generative Learning` → `Time-series Foundation`). The other two
+sectors then read top-to-bottom and bottom-to-top respectively, which is unavoidable once the three
+sectors are 120° apart on one ring.
+
+**Renderer.** The figure is generated by matplotlib, not by rasterising hand-written SVG. This is
+deliberate: ImageMagick's internal SVG renderer silently **drops rotated text** — both the
+`rotate(a cx cy)` form (the whole element disappears) and `translate + rotate` (mislocated and
+clipped) — which is what forced the previous cover to drop its axis labels. matplotlib rasterises
+glyphs itself, so rotated text is reliable. The equal-aspect coordinate frame (`XR = W/H`, with
+`ax.set_aspect("equal")`) is required: on a 16 × 10 canvas with `xlim`/`ylim` both spanning 0–1, the
+rings render as ellipses.
+
+**Label fitting.** A label on an arc is rotated, so its footprint is `w·|sin θ| + h·|cos θ|` radially
+and `w·|cos θ| + h·|sin θ|` tangentially — a long line on a steeply-rotated wedge pokes straight out
+of the annulus. Rather than guessing a character-width constant, the generator **measures** each
+candidate string with `Renderer.get_text_width_height_descent` (device px → pt → data units) and
+picks the largest size, over 1–3 balanced lines, that satisfies both bounds. Rotation is normalised
+into `(-90°, 90°]` so no label is ever upside down. The generator prints the chosen size and line
+count per family, which is the cheapest regression check.
+
+**Ring-clearance guard.** The outward regions taper to nothing at the ring, so a block that clears
+the canvas edge can still sit on top of the outer ring — the right-hand block did, until its rows
+were moved down and its head shortened. The generator now measures the real ink extents of every row
+(the eyebrow and each body line are centred, so their true edges are inboard of the block box) and
+prints a `WARN … intrudes into ring` line for any point closer than `R_OUT1 + 0.004` to the centre.
+A clean run prints no warnings; that is the regression check for this class of overlap.
+
+**Why the outer ring has no icons.** A per-family icon needs a reserved strip on the outer edge, and
+that strip comes straight out of the label's radial budget: measured across the three strip widths,
+family labels fall from 10.8–13.0 pt to 7.0–12.5 pt. Legibility of the taxonomy itself outranks
+decoration, so the family wedges stay icon-free and the icons live in the core, the inner ring, and
+the outward regions instead.
 
 To regenerate after an edit:
 
-```bash
-python3 assets/cover.svg -- > assets/cover.png     # or any SVG→PNG renderer
+```python
+import matplotlib; matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+fig = plt.figure(figsize=(13.4, 11.0), dpi=200, facecolor="#FCFBF9")
+ax  = fig.add_axes([0, 0, 1, 1])
+ax.set_xlim(0, 13.4 / 11.0); ax.set_ylim(0, 1.0); ax.set_aspect("equal"); ax.axis("off")
+# ... Wedge(...) / Circle(...) for the rings, ax.text(...) for every label ...
+fig.savefig("assets/cover.png", dpi=200, facecolor="#FCFBF9")
+fig.savefig("assets/cover.svg", facecolor="#FCFBF9")
 ```
+
+Palette: FTSE `#1F3B73`, FTSI `#186B4B`, FTSS `#8A5318`, core `#1D2126`, paper `#FCFBF9`.
 
 ### `assets/Survey_00.png` — legacy, no longer referenced
 
@@ -361,9 +458,38 @@ Two entries in S2 are the closest *methodological* siblings rather than competit
 `Cabral-Nonstationarity` (also a taxonomy-based survey, but of drift handling) and
 `Arsenault-XAI-FinTS` (paradigm-scoped, and cited by the paper itself).
 
-Every survey entry carries a **Scope vs. this survey** line stating both what it covers and where it
-stops. That is the comparison the repository promises, and it is derived from each survey's own
-title, venue and abstract — never from an assumed reading of its contents.
+Every survey entry carries exactly two editorial lines and no abstract:
+
+| Field | Content |
+|---|---|
+| **Scope** | what the survey is *about* — its topic, focus and the problems it studies, drawn from the publisher abstract |
+| **Scope vs. this survey** | where it stops relative to this survey's task × technique taxonomy |
+
+Full abstracts are deliberately omitted: the comparison is the point of the section, and a pasted
+abstract crowds out the sentence that carries it. Abstract-derived claims (study counts, findings,
+method families) are still quoted inside the Scope line where they matter.
+
+### Where the Scope lines came from
+
+| Source | Entries |
+|---|---|
+| Crossref deposited abstract | 14 |
+| arXiv abs page | 2 (*New Money*, *FinSurvey-LLM*) |
+| OpenAlex `abstract_inverted_index` | 7 — used only after Crossref returned none |
+| original repository's own translated description | 1 (*GAN-Fin-Review*) |
+| **title only — flagged in the entry itself** | **3** |
+
+Semantic Scholar was used as a last resort for the three that failed every other channel, and
+returned `"The following paper fields have been elided by the publisher: {'abstract'}"` for two of
+them, confirming the absence is upstream rather than a retrieval failure. Those three Scope lines
+are marked in the README:
+
+- `Tang-ML-FinTS` — no abstract retrievable
+- `Behera-HONN-FinTS` — no abstract retrievable
+- `LLM4TS-Survey` — IJCAI proceedings record deposits none
+
+For a survey the title is itself a scope statement, so restating it is defensible — but it is
+labelled as such rather than passed off as abstract-derived.
 
 ### Year convention
 
