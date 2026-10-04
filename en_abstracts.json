@@ -1,0 +1,242 @@
+[
+ {
+  "i": 0,
+  "task_en": "Quantitative trading strategy development",
+  "abstract_en": "To address the lack of interpretability, insufficient memory capability, and inability to adapt to market changes when traditional financial trading agents process multi-source heterogeneous financial data, this paper proposes FINMEM, an autonomous trading agent framework based on a large language model (LLM). Through a layered memory module that simulates the structure of human working memory and long-term memory, combined with dynamic role configuration (e.g., adaptive risk preference) and a multi-layer information processing mechanism, it efficiently integrates and prioritizes time-series financial data such as news and financial reports, significantly improving trading returns and decision robustness."
+ },
+ {
+  "i": 1,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the poor forecasting performance of the base time series model TimesFM caused by the non-stationarity and extreme volatility of financial price data, this paper proposes continued pre-training of TimesFM on financial data. By applying a log transformation to the price data to stabilize the loss function and optimizing the masking strategy, the model significantly improves forecasting accuracy across multiple financial markets, and achieves returns, Sharpe ratio, and maximum drawdown performance superior to baseline models in simulated trading."
+ },
+ {
+  "i": 2,
+  "task_en": "State-level financial aid funding forecasting",
+  "abstract_en": "To address the poor performance of traditional deep learning models in the financial aid domain caused by data scarcity, this paper proposes using pretrained large language models (LLMs) as foundation models to make annual forecasts of state-level financial aid funding using only a small amount of training data (few-shot) or without any fine-tuning at all (zero-shot). Experiments show that TimeLLM and PatchTST perform best in the few-shot setting, while GPT4TS performs relatively well in the zero-shot setting, but the overall zero-shot performance remains limited."
+ },
+ {
+  "i": 3,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the overfitting and long training time problems of LSTM and GRU models in short-term stock market forecasting, this paper proposes a method based on the PEC-W preprocessing framework. It enhances time-series features and reduces data dimensionality through rolling window mean aggregation, mean-subtraction normalization, and discrete wavelet transform (DWT), and simultaneously combines SHAP interpretability analysis to verify model effectiveness, significantly improving forecasting accuracy and greatly shortening training time."
+ },
+ {
+  "i": 4,
+  "task_en": "Stock return forecasting",
+  "abstract_en": "To address the problem that traditional models ignore investor sentiment and feature diversity in stock return forecasting, this paper proposes a semi-heterogeneous ensemble forecasting method based on sentiment analysis. It builds an attention-PCA sentiment index through supervised data augmentation, generates diverse base models (MLR and BPNN) by combining them with variable perturbation, and adopts a weighted ensemble strategy to fuse heterogeneous and homogeneous strengths, significantly improving the accuracy and generalization ability of S&P 500 return forecasting."
+ },
+ {
+  "i": 5,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the decline in forecasting performance on financial markets caused by data heterogeneity, missing values, and market crashes, this paper proposes a stock price forecasting framework based on an adversarial learning network (ALN). It builds a heterogeneous knowledge base by fusing stock prices, tweets, and global macroeconomic indicators, adopts an improved Newton interpolation polynomial (NDDP) for missing value imputation, uses LSTM to extract time-series features, and designs HDFM Q-learning (critic) and adversarial Q-learning (actor) networks for adversarial training, significantly improving forecasting accuracy under market volatility and crash scenarios, with accuracy improved by more than 5.58% over existing methods."
+ },
+ {
+  "i": 6,
+  "task_en": "Cross-sectional stock return forecasting",
+  "abstract_en": "To address weak feature engineering and insufficient accuracy of traditional deep learning models in cross-sectional return forecasting in the Chinese stock market, this paper proposes a hybrid model combining symbolic genetic programming (SGP) with long short-term memory networks (LSTM). SGP automatically generates and optimizes nonlinear features that fuse fundamental and technical indicators, which are then fed into LSTM for time-series pattern learning, significantly improving forecasting accuracy and risk-adjusted returns. Rank IC and ICIR are improved by 1128% and 5360% respectively (fundamental) and by 20% and 2752% (technical), and annualized excess returns surpass CSI 300 by 31.00%."
+ },
+ {
+  "i": 7,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the problems that traditional financial large language models (FinLLMs) ignore time-series features, rely on redundant textual information, and are inefficient in stock price prediction, this paper proposes StockTime, an LLM architecture specifically designed for stock price time-series data. It chunks stock prices into tokens, extracts textual information such as their correlations and statistical trends, fuses them in the embedding space with time-series features extracted by an autoregressive encoder, and uses a frozen LLM for next-token prediction, thereby achieving higher-accuracy, lower-resource multi-period stock price prediction without fine-tuning the LLM."
+ },
+ {
+  "i": 8,
+  "task_en": "Stock price trend forecasting",
+  "abstract_en": "To address the difficulty of traditional retrieval methods in capturing complex temporal dependencies and latent market signals in financial time-series data, this paper proposes the FinSrag framework. It introduces FinSeer, a domain-specific retriever trained on LLM feedback, to retrieve the most predictive historical sequences from an augmented dataset containing 28 financial indicators and injects them into a fine-tuned StockLLM for stock price rise/fall prediction, significantly improving forecasting accuracy and outperforming existing text-based and distance-based retrieval methods."
+ },
+ {
+  "i": 9,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the decline in performance of traditional neural networks caused by missing values in sequence data, this paper proposes a hierarchical LSTM architecture. It partitions the input space into multiple regions according to the presence pattern of historical inputs and assigns an independent LSTM expert network to each pattern, making predictions using only the inputs that actually exist and avoiding the error accumulation brought by data imputation, thereby significantly improving forecasting accuracy on financial and real-world datasets while keeping computational complexity comparable to that of a traditional LSTM."
+ },
+ {
+  "i": 10,
+  "task_en": "Quantitative trading strategy development",
+  "abstract_en": "To address the difficulty of traditional models in identifying weak market inefficiencies in financial time series forecasting, this paper proposes using the pretrained and fine-tuned LLM model Chronos to make daily forecasts of residual returns for individual US stocks, and builds long-short portfolios through zero-shot and online fine-tuning. Empirical results show that Chronos can identify profitable trading signals without relying on pre-training on financial data and achieves a Sharpe ratio of up to 4.21. Although still lower than dedicated models, this demonstrates the potential of LLMs to extract Alpha from noisy financial data."
+ },
+ {
+  "i": 11,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the low forecasting accuracy for nonlinear and non-stationary time series in stock markets, this paper proposes a wavelet-transform-based generative adversarial network (Wavelet-GAN). It decomposes the original stock price series into multi-scale frequency-domain components through wavelet decomposition, builds ARMA models for each component to forecast its coefficients, and then feeds the predicted coefficients into a Wasserstein GAN framework for generative adversarial training to reconstruct high-accuracy stock price series. Experiments show that this method is significantly more accurate in forecasting than GRU, LSTM, and conventional GAN models."
+ },
+ {
+  "i": 12,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the inaccurate forecasts caused by traditional models in financial time series forecasting ignoring event-driven non-numerical factors, this paper proposes the Text2TimeSeries method. It uses a large language model (LLM) to predict the multi-step trend of stock price changes caused by events (discrete labels), computes the stock state through gated recurrent units to generate price amplification/decay values, and dynamically updates the predictions of the time series model, thereby significantly reducing forecasting errors (RMSE and MAE) for small-cap, mid-cap, and large-cap stocks."
+ },
+ {
+  "i": 13,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the poor generalization of traditional time series models on financial data and their dependence on large amounts of labeled data, this paper evaluates the performance of several large language models (LLMs), including Time-LLM, in stock price prediction. The basic idea is to convert continuous time series into discrete textual representations that language models can process through patch reprogramming and Prompt-as-Prefix, enabling zero-shot or few-shot prediction without fine-tuning the base LLM. Experiments show that Time-LLM, PatchTST, and KAN can surpass traditional models such as NBEATS and NHITS in both stable and volatile markets."
+ },
+ {
+  "i": 14,
+  "task_en": "Multi-step return simulation and fuzzy portfolio optimization",
+  "abstract_en": "To address the low accuracy and poor training efficiency of multi-step financial time series forecasting and the computational time cost of fuzzy portfolio optimization, this paper proposes AssetGANs, a distributed generative adversarial network based on WGAN-GP. It jointly trains a convolutional neural network generator and discriminator to simulate future multi-day asset returns, and combines fuzzy simulation with an MPI-parallelized genetic algorithm to optimize a fuzzy Mean-CVaR portfolio model, achieving a lower RMSE than LSTM (0.4615 vs 0.6638) and a 573x training speedup on 8 GPU, while the parallel efficiency of fuzzy portfolio optimization reaches 96.3%."
+ },
+ {
+  "i": 15,
+  "task_en": "Revenue and EBITDA forecasting",
+  "abstract_en": "To address the poor generalization of models in financial time series forecasting caused by distribution shift, this paper proposes a multi-faceted unified model based on relaxed invariant risk minimization. By introducing an optimization-driven regularization term that relaxes the strict constraints of conventional IRM, it jointly trains linear/nonlinear models on multi-industry S&P 500 data, significantly improving prediction accuracy for both seen and zero-shot industries, with EBITDA prediction error reduced by 27.87% on average."
+ },
+ {
+  "i": 16,
+  "task_en": "Stock return forecasting",
+  "abstract_en": "To address the difficulty of modeling the low signal-to-noise ratio and multi-scale patterns in financial time series, this paper proposes the LLM4FTS framework. It identifies scale-invariant patterns through DTW-based K-means++ clustering, preserves pattern integrity with an adaptive segmentation strategy, and extracts multi-scale time-frequency features with a dynamic wavelet convolution module. Combined with two-stage pre-training and fine-tuning, it achieves stock return forecasting accuracy and risk-adjusted returns that surpass existing SOTA methods on four real financial market datasets, and is successfully deployed in a live trading system to obtain sustained excess returns."
+ },
+ {
+  "i": 17,
+  "task_en": "Credit risk assessment",
+  "abstract_en": "To address the extreme class imbalance and insufficient modeling of nonlinear borrower relationships in credit risk prediction, this paper proposes a hybrid method combining a conditional tabular generative adversarial network (CTGAN) with a graph sampling and aggregation graph neural network (GraphSAGE). It first uses CTGAN to generate synthetic default samples to balance the data distribution, then constructs a borrower similarity graph and uses GraphSAGE for inductive relational learning, ultimately significantly improving accuracy, F1 score, and AUC on the GMSC and GC datasets, while also using SHAP to enhance model interpretability."
+ },
+ {
+  "i": 18,
+  "task_en": "Financial volatility trend classification",
+  "abstract_en": "To address the multi-class prediction of short-term, neutral, and long-term volatility trends in financial time series, this paper proposes a method based on an ordinal regression generative adversarial network (ORGAN-FVT). A ConvLSTM generator learns the distribution of time series data and is combined with an MLP discriminator that introduces an ordinal regression penalty, optimizing the sensitivity of the predictions to the direction of misclassification (e.g., misclassifying short-term as long-term). It significantly improves AUC and F1 scores on the MSFT, TSLA, and PAICC stock datasets, with improvements of up to 20.81%."
+ },
+ {
+  "i": 19,
+  "task_en": "Treasury bond yield forecasting",
+  "abstract_en": "To address the insufficient accuracy of traditional models caused by the high noise, nonlinearity, and multicollinearity of multivariate time series in Treasury bond yield forecasting, this paper proposes a deep learning model framework combining LASSO-SMLR-PCA dimensionality reduction with a Bayesian-optimized LSTM. It screens and reduces the dimensionality of the input variables step by step, and then uses Bayesian optimization to adjust LSTM hyperparameters, achieving high-accuracy rolling forecasts of Treasury bond yields and significantly improving model fitting performance and stability in practical application."
+ },
+ {
+  "i": 20,
+  "task_en": "Foreign exchange rate forecasting",
+  "abstract_en": "To address overfitting and low forecasting accuracy in low-frequency financial time series data, this paper proposes a hybrid deep learning model named MVO-BiGRU. The method uses variational mode decomposition (VMD) to decompose the exchange rate series into multiple subseries, employs a Prevention module that randomly combines subseries for data augmentation, and combines a Prediction module that models all subseries, while optimizing hyperparameters with Optuna. It finally fuses the outputs of the two modules to predict exchange rates through a fully connected network, achieving forecasting accuracy and generalization significantly better than baseline models."
+ },
+ {
+  "i": 21,
+  "task_en": "Foreign exchange rate forecasting",
+  "abstract_en": "To address overfitting and low forecasting accuracy in low-frequency financial time series data, this paper proposes a hybrid deep learning model named MVO-BiGRU. It uses variational mode decomposition (VMD) to decompose the exchange rate series into multiple subseries, employs a prevention module that randomly combines subseries for data augmentation in order to improve generalization, then combines a prediction module that models all subseries and optimizes hyperparameters with Optuna, ultimately achieving forecasting accuracy and stability significantly better than baseline models for EUR/SAR and EUR/CNY exchange rate forecasting."
+ },
+ {
+  "i": 22,
+  "task_en": "Risk-free discount curve estimation",
+  "abstract_en": "To address the insufficient robustness and flexibility of risk-free discount curve estimation in the Swiss government bond market, this paper proposes a method based on kernel ridge regression (KR). By minimizing a weighted sum of pricing error and curve smoothness in a reproducing kernel Hilbert space, it achieves data-driven, interpretable curve fitting and extrapolation that outperforms conventional methods such as Smith–Wilson, SST, and SNB."
+ },
+ {
+  "i": 23,
+  "task_en": "Financial data missing value imputation",
+  "abstract_en": "To address the missing value imputation of highly sparse tensors in financial data, this paper proposes a regularized nonlinear coupled tensor completion algorithm named RegTensor. It introduces a multilayer perceptron (MLP) to model nonlinear interactions between embedding vectors and combines orthogonal regularization to suppress overfitting and feature redundancy, while coupling an auxiliary tensor to strengthen embedding learning, achieving imputation accuracy significantly better than linear and existing nonlinear models on financial datasets such as bond features and analyst earnings forecasts (improvements of 2%-52%)."
+ },
+ {
+  "i": 24,
+  "task_en": "Financial time series imputation",
+  "abstract_en": "To address the missing value imputation of highly sparse data in financial time series, this paper proposes the NMTucker method, which recursively decomposes the Tucker core tensor and introduces multi-layer nonlinear activation functions to simulate complex nonlinear interactions, substantially reducing overfitting and improving imputation accuracy, and lowering RMSE by up to 53.91% compared with existing models on multiple real financial datasets."
+ },
+ {
+  "i": 25,
+  "task_en": "Financial distress prediction",
+  "abstract_en": "To address the impact of missing value imputation and feature normalization on model performance in financial distress prediction, this paper compares several imputation methods including KNN, random forest, MICE, and deep neural networks, and evaluates the effect of min-max normalization on the predictive performance of different classifiers (SVM, RF, DNN). It finds that random forest imputation performs best, and that normalization significantly improves the performance of SVM and DNN but yields no significant gain for RF."
+ },
+ {
+  "i": 26,
+  "task_en": "Order flow generation",
+  "abstract_en": "To address the lack of controllability and high fidelity in order flow generation on financial markets, this paper proposes the Diffusion Guided meta Agent (DiGA) model. It models the time-varying distribution of market states (such as mid-price return and order arrival rate) through a conditional diffusion model, and combines a meta-agent with financial and economic priors to sample orders according to that distribution, realizing precise control over market scenarios (such as returns and volatility) and high-fidelity order flow generation."
+ },
+ {
+  "i": 27,
+  "task_en": "High-fidelity financial market simulation",
+  "abstract_en": "To address the lack of order-level granularity, controllability, and interactivity in conventional financial market simulators, this paper proposes the MarS simulation engine based on the generative foundation model LMM. Through dual-scale modeling of order sequences and order batches, combined with a conditional generation mechanism and a simulated matching engine, it realizes high-fidelity, controllable, and interactive simulation of market behavior, significantly improving the performance and practicality of financial tasks such as forecasting, risk detection, market impact analysis, and agent training."
+ },
+ {
+  "i": 28,
+  "task_en": "Limit order book market simulation",
+  "abstract_en": "To address the scarcity of real limit order book (LOB) data on financial markets and the lack of realism, responsiveness, and usefulness in existing generative models, this paper proposes TRADES, a Transformer-based denoising diffusion probabilistic model. It generates high-fidelity, responsive order flow time series by conditioning on historical orders and LOB snapshots, significantly surpassing existing methods with a 3.27–3.48x improvement in prediction scores, and it can reproduce the typical statistical features of financial markets (stylized facts)."
+ },
+ {
+  "i": 29,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the generation of financial time-series data on edge devices under privacy preservation and data scarcity, this paper proposes a synthetic time series generation method based on LSTM-GAN. By deploying a generator that has been pruned and quantization-optimized on the edge device iBUG, it achieves low-resource real-time generation while preserving the statistical properties of real data. Experiments show that the synthetic data is highly similar to the real data in PCA and t-SNE analyses, and that the parameter trends closely match."
+ },
+ {
+  "i": 30,
+  "task_en": "Financial risk assessment",
+  "abstract_en": "To address model overfitting and insufficient generalization in anomaly detection for financial multivariate time series, this paper proposes an innovative method combining contrastive learning with a generative adversarial network (GAN). It performs data augmentation through geometric distribution masking, uses a Transformer autoencoder to learn the distribution of normal patterns, and introduces a contrastive loss into the discriminator to enhance the ability to discriminate normal patterns. Experiments show that this method significantly outperforms existing mainstream methods on four real financial datasets, effectively improving the accuracy and robustness of anomaly detection."
+ },
+ {
+  "i": 31,
+  "task_en": "Financial risk assessment",
+  "abstract_en": "To address the difficulty of risk assessment for financial time series caused by data scarcity and non-stationarity under rare regimes such as market crises, this paper proposes a conditional generative adversarial network named RSQGAN. It identifies market regimes through a structural break algorithm (greedy Gaussian segmentation) and uses them as conditional labels, generates synthetic asset return data matching the characteristics of specific regimes with a temporal convolutional network (TCN), and introduces a Z-clipping hyperparameter to control the fidelity and diversity of the synthetic data. Experiments show that its synthetic data quality under crisis regimes is significantly better than that of unconditional GAN models."
+ },
+ {
+  "i": 32,
+  "task_en": "Cross-market stock return ranking prediction",
+  "abstract_en": "To address the insufficient accuracy of traditional deep learning models in cross-market stock return ranking prediction caused by a limited number of features and overfitting, this paper proposes a hybrid model fusing symbolic genetic programming (SGP) with long short-term memory networks (LSTM). SGP automatically generates high-quality financial factors and performs data augmentation, which are then fed into LSTM for cross-sectional stock return ranking prediction, achieving Rank IC improvements of 588.03% and 194.27% in the Chinese and Japanese markets respectively, and obtaining significant excess returns."
+ },
+ {
+  "i": 33,
+  "task_en": "Stock execution price prediction",
+  "abstract_en": "To address the insufficiency of training data for prediction models caused by the non-stationarity of high-frequency financial data, this paper proposes a synthetic data augmentation method based on Wasserstein GAN. It uses a generator combining LSTM and 1D-CNN to simulate real order event sequences, and uses the discriminator to optimize the distributional similarity of the generated data, ultimately generating execution price data in an artificial market simulation, so that the accuracy of stock price rise/fall prediction is significantly higher than that of baseline models without data augmentation."
+ },
+ {
+  "i": 34,
+  "task_en": "Deep hedging strategy training",
+  "abstract_en": "To address the insufficient simulation of extreme events and the poor controllability of synthetic data in the financial domain caused by the scarcity of real data, this paper proposes CoFinDiff, a financial time series generation method based on a conditional diffusion model. It converts log return series into Haar wavelet images and injects trend and realized volatility as conditions into the diffusion model through a cross-attention mechanism, thereby generating diverse synthetic data that conforms to financial stylized facts (such as heavy tails and volatility clustering) and precisely satisfies the specified trend and volatility conditions, significantly improving model performance for the deep hedging task."
+ },
+ {
+  "i": 35,
+  "task_en": "Quantitative trading strategy development",
+  "abstract_en": "To address the overfitting of trading strategies caused by scarce financial time series data, this paper proposes a generative adversarial network (GAN) method based on a temporal convolutional network (TCN). It augments the training data by generating multi-dimensional stock log return series with realistic statistical properties, thereby supporting the backtesting and hyperparameter tuning of momentum effect strategies. Experiments show that this method can effectively simulate inter-stock correlations but fails to fully capture the complex dependencies of the momentum effect."
+ },
+ {
+  "i": 36,
+  "task_en": "Stock price generation and trend forecasting",
+  "abstract_en": "To address the scarcity of financial time series data and the difficulty of acquiring it quickly, this paper proposes a synthetic financial time series generation framework based on multiple generative models (such as GANs, VAEs, and GMMNs). By introducing a cross-stock correlation capture mechanism, a fixed-to-variable-length sequence conversion strategy, and a log-return-based preprocessing method, it generates synthetic data with realistic market statistical properties (such as heavy-tailed distributions and volatility clustering), and validates its effectiveness through quantitative metrics and a stock trend prediction task, significantly improving the accuracy of prediction models."
+ },
+ {
+  "i": 37,
+  "task_en": "Green finance growth forecasting",
+  "abstract_en": "To address the insufficient forecasting accuracy caused by the scarcity and non-stationarity of global green finance data, this paper proposes a hybrid model based on conditional generative adversarial network (CT-GAN) data augmentation and nonlinear autoregressive neural network (NAR-NN) prediction. It first confirms data non-stationarity through the ADF test, then uses CT-GAN to generate high-quality synthetic data to expand the training set, and finally uses NAR-NN for time series forecasting, achieving R² prediction accuracy of 98.8%, 96.6%, and 99% in Europe, Asia, and other regions respectively, significantly outperforming the baseline model without augmentation."
+ },
+ {
+  "i": 38,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the insufficient performance of prediction models caused by the scarcity of extreme event samples in financial time series, this paper proposes a quantum-enhanced Wasserstein generative adversarial network (QWGAN-GP) method. A quantum generator and a classical discriminator jointly generate synthetic data that is highly consistent with the statistical properties of S&P 500 log returns, and an LSTM model is used to verify its effectiveness in improving prediction accuracy (especially extreme event prediction). Experiments show that the model incorporating synthetic data significantly outperforms the baseline model using only real data."
+ },
+ {
+  "i": 39,
+  "task_en": "Synthetic stock price generation",
+  "abstract_en": "To address the scarcity of financial time series data and the low fidelity of synthetic data under privacy preservation, this paper proposes a hybrid architecture fusing a variational autoencoder (VAE) with Markov chain Monte Carlo (MCMC) sampling. It captures long-term temporal dependencies through GRU and uses MCMC to generate correlated sample sequences in the latent space, significantly improving the fidelity of the synthetic data in terms of statistical properties, temporal patterns, and robustness to missing data."
+ },
+ {
+  "i": 40,
+  "task_en": "Investment portfolio diversification",
+  "abstract_en": "To address the poor performance of portfolio models caused by insufficient financial time series data and missing uncertainty in historical data, this paper proposes a variational encoder-decoder (FED) data augmentation method based on financial time series decomposition. It decomposes the time series into three latent components, trend, dispersion, and residual, and reconstructs synthetic data carrying historical uncertainty, and then builds the FED2Port reinforcement learning portfolio model, significantly improving the return-risk ratio and robustness of the portfolio."
+ },
+ {
+  "i": 41,
+  "task_en": "Financial data generation and market modeling",
+  "abstract_en": "To address the privacy restrictions and scarcity of financial data and the difficulty of conventional models in capturing complex market dynamics, this paper systematically reviews 30 publications from 2019–2024 and analyzes the applications of various GAN architectures (such as CTGAN, WGAN, TGAN, and TTGAN) in generating high-fidelity synthetic financial data. It finds that they can effectively enhance data privacy and improve the performance of tasks such as stock prediction, risk assessment, and portfolio optimization, but they still face challenges such as mode collapse, training instability, and the lack of unified evaluation standards."
+ },
+ {
+  "i": 42,
+  "task_en": "Board member professional background extraction",
+  "abstract_en": "To address the limited performance of deep learning models caused by the scarcity of unstructured text data in the financial domain (such as director biographies in corporate governance reports), this paper proposes a new data augmentation method named Concatenation Augmentation (CA). It concatenates original text samples and performs convex additive fusion of labels based on the inverse transformation of the logistic activation function to generate semantically coherent new samples, significantly improving model accuracy (92.4%–99.7%) and robustness in low-data settings."
+ },
+ {
+  "i": 43,
+  "task_en": "Anti-money laundering detection",
+  "abstract_en": "To address the insufficient robustness of existing deep learning anti-money laundering models to data perturbations, this paper proposes a contrastive learning model based on the Fourier transform (FCLM). It maps transaction data from the time domain to the frequency domain to generate highly divergent augmented views, and uses contrastive learning to keep the model predictions consistent between the original transaction and its augmented views, thereby significantly improving detection robustness and generalization, and surpassing seven advanced baseline methods on both synthetic and real datasets."
+ },
+ {
+  "i": 44,
+  "task_en": "Stock price prediction",
+  "abstract_en": "To address the low prediction accuracy caused by scarce stock data for newly listed companies, this paper proposes the WGAN-BiLSTM model, which uses WGAN to generate augmented samples conforming to the heavy-tailed distribution of real data, and combines BiLSTM to bidirectionally extract time-series features for prediction, significantly improving prediction accuracy in small-sample scenarios."
+ },
+ {
+  "i": 45,
+  "task_en": "Credit risk assessment",
+  "abstract_en": "To address the extreme class imbalance and insufficient modeling of nonlinear borrower relationships in credit risk prediction, this paper proposes a hybrid method combining a conditional tabular generative adversarial network (CTGAN) with a graph sampling and aggregation graph neural network (GraphSAGE). It first uses CTGAN to generate synthetic default samples to balance the data distribution, then constructs a borrower similarity graph and uses GraphSAGE for inductive relational learning, ultimately significantly improving accuracy, F1 score, and AUC on the GMSC and GC datasets, while also using SHAP to enhance model interpretability."
+ },
+ {
+  "i": 46,
+  "task_en": "Aspect-based sentiment analysis",
+  "abstract_en": "To address the limited model performance caused by scarce training data in aspect-based sentiment analysis (ABSA), this paper proposes introducing several BERT-based data augmentation methods into the HAABSA++ model. It generates semantically consistent augmented samples through masked language modeling (MLM), and combines label-aware BERTprepend and BERTexpand strategies to preserve sentiment label information, significantly improving test accuracy on the SemEval 2015 and 2016 datasets, with gains of up to 1.85 percentage points."
+ },
+ {
+  "i": 47,
+  "task_en": "Financial data privacy preservation and augmentation",
+  "abstract_en": "To address the difficulty of training deep learning models caused by the high sensitivity of financial data and the small number of usable samples, this paper proposes the NVF-DPGAN model. It achieves differential privacy protection by introducing Gaussian noise during the discriminator training of the generative adversarial network (GAN), and combines a noise visibility function (NVF) to adaptively adjust the noise strength in order to preserve the key features of the data, thereby generating synthetic data highly consistent with the statistical properties of real financial data, achieving the dual goals of data augmentation and privacy preservation."
+ }
+]

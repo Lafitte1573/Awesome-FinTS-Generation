@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="752" viewBox="0 0 1240 752">
+<rect width="1240" height="752" fill="#FCFCFA"/>
+<text x="620" y="80" text-anchor="middle" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="42" font-weight="600" fill="#16202C" letter-spacing="0.4">Financial Time-Series Generation</text>
+<text x="620" y="112" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#5A6572" letter-spacing="3.2">A TWO-LEVEL TAXONOMY OF TASK AND TECHNIQUE</text>
+<line x1="360" y1="138" x2="880" y2="138" stroke="#D8D4CC" stroke-width="1"/>
+<rect x="96.0" y="172" width="324.0" height="120" fill="#2E5A7D" fill-opacity="0.09"/>
+<rect x="96.0" y="172" width="3.5" height="120" fill="#2E5A7D"/>
+<text x="118.0" y="236" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="33" font-weight="700" fill="#2E5A7D" letter-spacing="2">FTSE</text>
+<text x="118.0" y="268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14.5" fill="#16202C" letter-spacing="0.6">Extrapolation</text>
+<text x="118.0" y="198" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#5A6572" letter-spacing="1.4">FINANCIAL TIME SERIES</text>
+<line x1="96.0" y1="328" x2="420.0" y2="328" stroke="#D8D4CC" stroke-width="1" stroke-opacity="0.7"/>
+<rect x="98.0" y="375.0" width="9" height="9" fill="#2E5A7D" fill-opacity="0.85"/>
+<text x="118.0" y="385.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Deep Learning</text>
+<text x="118.0" y="405.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Models</text>
+<text x="118.0" y="426.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">RNN · CNN · attention</text>
+<line x1="98.0" y1="448.0" x2="398.0" y2="448.0" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.55"/>
+<rect x="98.0" y="479.0" width="9" height="9" fill="#2E5A7D" fill-opacity="0.85"/>
+<text x="118.0" y="489.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Time-Series</text>
+<text x="118.0" y="509.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Foundation Models</text>
+<text x="118.0" y="530.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">pre-trained TSFMs</text>
+<line x1="98.0" y1="552.0" x2="398.0" y2="552.0" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.55"/>
+<rect x="98.0" y="583.0" width="9" height="9" fill="#2E5A7D" fill-opacity="0.85"/>
+<text x="118.0" y="593.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">LLM Adaptation</text>
+<text x="118.0" y="613.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">&amp; Editing</text>
+<text x="118.0" y="634.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">reprogramming · LoRA</text>
+<rect x="458.0" y="172" width="324.0" height="120" fill="#3F7A63" fill-opacity="0.09"/>
+<rect x="458.0" y="172" width="3.5" height="120" fill="#3F7A63"/>
+<text x="480.0" y="236" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="33" font-weight="700" fill="#3F7A63" letter-spacing="2">FTSI</text>
+<text x="480.0" y="268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14.5" fill="#16202C" letter-spacing="0.6">Imputation</text>
+<text x="480.0" y="198" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#5A6572" letter-spacing="1.4">FINANCIAL TIME SERIES</text>
+<line x1="458.0" y1="328" x2="782.0" y2="328" stroke="#D8D4CC" stroke-width="1" stroke-opacity="0.7"/>
+<rect x="460.0" y="375.0" width="9" height="9" fill="#3F7A63" fill-opacity="0.85"/>
+<text x="480.0" y="385.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Statistical</text>
+<text x="480.0" y="405.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Imputation</text>
+<text x="480.0" y="426.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">interpolation · Kalman</text>
+<line x1="460.0" y1="448.0" x2="760.0" y2="448.0" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.55"/>
+<rect x="460.0" y="479.0" width="9" height="9" fill="#3F7A63" fill-opacity="0.85"/>
+<text x="480.0" y="489.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Machine</text>
+<text x="480.0" y="509.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Learning</text>
+<text x="480.0" y="530.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">kNN · trees · tensor completion</text>
+<line x1="460.0" y1="552.0" x2="760.0" y2="552.0" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.55"/>
+<rect x="460.0" y="583.0" width="9" height="9" fill="#3F7A63" fill-opacity="0.85"/>
+<text x="480.0" y="593.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Generative</text>
+<text x="480.0" y="613.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Imputation</text>
+<text x="480.0" y="634.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">GAN · diffusion · flow</text>
+<rect x="820.0" y="172" width="324.0" height="120" fill="#8A5636" fill-opacity="0.09"/>
+<rect x="820.0" y="172" width="3.5" height="120" fill="#8A5636"/>
+<text x="842.0" y="236" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="33" font-weight="700" fill="#8A5636" letter-spacing="2">FTSS</text>
+<text x="842.0" y="268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14.5" fill="#16202C" letter-spacing="0.6">Synthesis</text>
+<text x="842.0" y="198" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#5A6572" letter-spacing="1.4">FINANCIAL TIME SERIES</text>
+<line x1="820.0" y1="328" x2="1144.0" y2="328" stroke="#D8D4CC" stroke-width="1" stroke-opacity="0.7"/>
+<rect x="822.0" y="375.0" width="9" height="9" fill="#8A5636" fill-opacity="0.85"/>
+<text x="842.0" y="385.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">GAN-based</text>
+<text x="842.0" y="405.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Generation</text>
+<text x="842.0" y="426.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">WGAN · CTGAN · time-series GAN</text>
+<line x1="822.0" y1="448.0" x2="1122.0" y2="448.0" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.55"/>
+<rect x="822.0" y="479.0" width="9" height="9" fill="#8A5636" fill-opacity="0.85"/>
+<text x="842.0" y="489.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Diffusion</text>
+<text x="842.0" y="509.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Models</text>
+<text x="842.0" y="530.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">DDPM · score-based · DiT</text>
+<line x1="822.0" y1="552.0" x2="1122.0" y2="552.0" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.55"/>
+<rect x="822.0" y="583.0" width="9" height="9" fill="#8A5636" fill-opacity="0.85"/>
+<text x="842.0" y="593.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Market</text>
+<text x="842.0" y="613.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#16202C">Simulation</text>
+<text x="842.0" y="634.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A6572">order flow · agent-based</text>
+<line x1="439.0" y1="172" x2="439.0" y2="648" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.8"/>
+<line x1="801.0" y1="172" x2="801.0" y2="648" stroke="#D8D4CC" stroke-width="0.75" stroke-opacity="0.8"/>
+<line x1="96" y1="672" x2="1144" y2="672" stroke="#D8D4CC" stroke-width="1"/>
+<text x="96" y="702" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12.5" fill="#5A6572" letter-spacing="0.3">63 works across the three FTSG tasks  ·  every record carries a verified DOI or arXiv identifier</text>
+<text x="1144" y="702" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12.5" fill="#5A6572" letter-spacing="0.3">IJCAI-ECAI 2026</text>
+</svg>

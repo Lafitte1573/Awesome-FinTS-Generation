@@ -1,0 +1,116 @@
+section,family,leaf,nick_name,doi,arxiv
+FTSE,A1,A1.1  Hybrid LSTM and recurrent architectures,PEC-W,10.1109/cifer64978.2025.10975740,
+FTSE,A1,A1.1  Hybrid LSTM and recurrent architectures,SGP-LSTM,10.1038/s41598-023-50783-0,
+FTSE,A1,A1.1  Hybrid LSTM and recurrent architectures,SGP-LSTM-CX,10.54364/aaiml.2024.44173,
+FTSE,A1,A1.1  Hybrid LSTM and recurrent architectures,Hierarchical-LSTM,10.1109/tai.2024.3404414,
+FTSE,A1,A1.1  Hybrid LSTM and recurrent architectures,MVO-BiGRU,10.3390/risks12090139,
+FTSE,A1,A1.1  Hybrid LSTM and recurrent architectures,BiLSTM-ARIMA,10.3390/a18080517,
+FTSE,A1,A1.1  Hybrid LSTM and recurrent architectures,CEEMDAN-Informer-LSTM,10.1016/j.asoc.2025.113241,
+FTSE,A1,"A1.2  Ensemble, multi-source and feature-engineered forecasters",SemiHetero-Ensemble,10.1016/j.ins.2025.122655,
+FTSE,A1,"A1.2  Ensemble, multi-source and feature-engineered forecasters",ALN,10.1109/jiot.2021.3100742,
+FTSE,A1,"A1.2  Ensemble, multi-source and feature-engineered forecasters",LASSO-SMLR-PCA-LSTM,10.1109/access.2024.3519438,
+FTSE,A1,"A1.2  Ensemble, multi-source and feature-engineered forecasters",IRM-MultiFaceted,10.1145/3604237.3626868,
+FTSE,A1,A1.3  Other deep-learning forecasters,ORGAN-FVT,10.1007/s44196-023-00212-x,
+FTSE,A2,A2.1  GAN-based models,Wavelet-GAN,10.1109/bigdia63733.2024.10808510,
+FTSE,A2,A2.1  GAN-based models,N-BEATS-GAN,10.1016/j.asoc.2025.114235,
+FTSE,A2,A2.1  GAN-based models,AssetGANs,10.1007/978-981-97-0859-8_14,
+FTSE,A2,A2.2  Diffusion models,TimeGrad,,2101.12072
+FTSE,A2,A2.2  Diffusion models,TimeDiT,,2409.02322
+FTSE,A3,A3.1  Fine-tuned LLM / foundation model,Chronos,,2403.07815
+FTSE,A3,A3.1  Fine-tuned LLM / foundation model,OneFitsAll,10.52202/075280-1877,
+FTSE,A3,A3.1  Fine-tuned LLM / foundation model,Financial TimesFM,10.1109/cifer64978.2025.10975735,
+FTSE,A3,A3.1  Fine-tuned LLM / foundation model,Chronos-Arbitrage,,2412.09394
+FTSE,A3,A3.2  Edited / adapted LLM,StockTime,,2409.08281
+FTSE,A3,A3.2  Edited / adapted LLM,GPT4FTS,,2505.02880
+FTSE,A3,A3.2  Edited / adapted LLM,LLM-PS,10.1109/icdm65498.2025.00081,2503.09656
+FTSE,A3,A3.2  Edited / adapted LLM,Time-LLM,,2310.01728
+FTSE,A3,A3.2  Edited / adapted LLM,CALF,10.1609/aaai.v39i18.34082,
+FTSE,A3,A3.2  Edited / adapted LLM,FinSrag,,2502.05878
+FTSE,A3,A3.2  Edited / adapted LLM,FinMem,10.1609/aaaiss.v3i1.31290,2311.13743
+FTSE,A3,A3.2  Edited / adapted LLM,LLM-Financial-Aid,10.1109/bigdata62323.2024.10824953,
+FTSE,A3,A3.2  Edited / adapted LLM,LLM-TS-Benchmark,,2606.27100
+FTSE,A3,A3.2  Edited / adapted LLM,TimeS,,2407.03689
+FTSE,A3,A3.3  Emerging foundation models,TimeHF,,2501.15942
+FTSE,A3,A3.3  Emerging foundation models,FinCast,10.1145/3746252.3761261,
+FTSI,B1,B1.1  Factorization methods,FCI,10.1515/snde-2022-0115,
+FTSI,B1,B1.1  Factorization methods,RegTensor,10.1145/3604237.3626899,
+FTSI,B1,B1.1  Factorization methods,NMTucker,10.1145/3604237.3626909,
+FTSI,B2,B2.1  GAN-based models,AttnWGAIN,10.1109/tce.2025.3600559,
+FTSI,B2,B2.1  GAN-based models,ImputeGAN,10.3390/e25010137,
+FTSI,B2,B2.1  GAN-based models,CWGAIN-GP,10.1016/j.knosys.2023.111215,
+FTSI,B2,B2.2  Score-based diffusion models,CSDI,,2107.03502
+FTSI,B2,B2.2  Score-based diffusion models,SaSDim,10.24963/ijcai.2024/283,
+FTSI,B2,B2.2  Score-based diffusion models,MTSCI,10.1145/3627673.3679532,
+FTSI,B2,B2.2  Score-based diffusion models,LSCD,,2506.17039
+FTSI,B2,B2.2  Score-based diffusion models,SPDM,10.1109/cscwd64889.2025.11033512,
+FTSI,B2,B2.2  Score-based diffusion models,Score-CDM,10.24963/ijcai.2024/282,
+FTSI,B2,B2.2  Score-based diffusion models,LSSDM,10.1109/icassp49660.2025.10888912,
+FTSS,C1,C1.1  GAN-based models,WGAN-HF-Aug,10.1109/wiiat50758.2020.00097,
+FTSS,C1,C1.1  GAN-based models,QWGAN-GP,10.3390/electronics13112158,
+FTSS,C1,C1.1  GAN-based models,QuantGAN,10.1080/14697688.2020.1730426,1907.06673
+FTSS,C1,C1.1  GAN-based models,RSQGAN,10.3390/app131910639,
+FTSS,C1,C1.1  GAN-based models,Tail-GAN,10.1287/mnsc.2023.00936,
+FTSS,C1,C1.1  GAN-based models,PhysicaA-GAN,10.1016/j.physa.2023.128899,
+FTSS,C1,C1.1  GAN-based models,NVF-DPGAN,10.26599/bdma.2024.9020047,
+FTSS,C1,C1.1  GAN-based models,Edge-GAN,10.1109/icnc59896.2024.10556140,
+FTSS,C1,C1.2  Diffusion models,GBMDiff,,2507.19003
+FTSS,C1,C1.2  Diffusion models,DM-Denoiser,10.1145/3677052.3698649,
+FTSS,C1,C1.2  Diffusion models,CoFinDiff,10.24963/ijcai.2025/1040,
+FTSS,C1,C1.2  Diffusion models,T2S,10.24963/ijcai.2025/580,
+FTSS,C1,C1.3  Combined / VAE-based models,VAE-GRU-MCMC,10.3390/fi17020095,
+FTSS,C1,C1.3  Combined / VAE-based models,FED2Port,10.3390/sym16030283,
+FTSS,C1,C1.3  Combined / VAE-based models,Dogariu-Synth,10.1145/3501305,
+FTSS,C1,C1.3  Combined / VAE-based models,WGAN-BiLSTM,10.1007/s10614-024-10639-9,
+FTSS,C1,C1.4  Stylized-fact evaluation of synthetic series,style-facts,10.1145/3677052.3698661,
+FTSS,C1,C1.4  Stylized-fact evaluation of synthetic series,stylized-facts,,2504.08611
+FTSS,C2,C2.1  Conditional GANs,CoMeTS-GAN,10.1145/3604237.3626895,
+FTSS,C2,C2.1  Conditional GANs,CTS-GAN,10.1145/3677052.3698638,
+FTSS,C2,C2.1  Conditional GANs,Market-GAN,10.1609/aaai.v38i14.29531,
+FTSS,C2,C2.1  Conditional GANs,MC-TE-GAN,10.1145/3677052.3698606,
+FTSS,C2,C2.1  Conditional GANs,GAN-MoEx,10.1109/cifer62890.2024.10772763,
+FTSS,C2,C2.2  Conditional diffusion models,TRADES,10.3233/faia251249,2502.07071
+FTSS,C2,C2.2  Conditional diffusion models,DiGA,10.1609/aaai.v40i1.37009,
+FTSS,C2,C2.3  Large market models,MarS,,2409.07486
+COMPARATOR,,General-purpose comparator,N-BEATS,,1905.10437
+COMPARATOR,,General-purpose comparator,Informer,,2012.07436
+COMPARATOR,,General-purpose comparator,Autoformer,,2106.13008
+COMPARATOR,,General-purpose comparator,PatchTST,,2211.14730
+COMPARATOR,,General-purpose comparator,DLinear,,2205.13504
+COMPARATOR,,General-purpose comparator,TimesNet,,2210.02186
+COMPARATOR,,General-purpose comparator,TimesFM,,2310.10688
+COMPARATOR,,General-purpose comparator,TimeMixer,,2405.14616
+COMPARATOR,,General-purpose comparator,MOMENT,,2402.03885
+SURVEY,S1,Related survey,New-Money-SDR,,2510.26076
+SURVEY,S1,Related survey,FinTech-GA-Review,10.3390/fintech3030025,
+SURVEY,S1,Related survey,GAN-Fin-Review,10.5829/ije.2026.39.02b.09,
+SURVEY,S2,Related survey,Cabral-Nonstationarity,10.1016/j.neucom.2026.134647,
+SURVEY,S2,Related survey,Tang-ML-FinTS,10.1016/j.neucom.2022.09.003,
+SURVEY,S2,Related survey,Zhang-DL-Price,10.1002/widm.1519,
+SURVEY,S2,Related survey,Olorunnimbe-StockDL,10.1007/s10462-022-10226-0,
+SURVEY,S2,Related survey,Kumbure-StockML,10.1016/j.eswa.2022.116659,
+SURVEY,S2,Related survey,Behera-HONN-FinTS,10.1007/s11831-023-09942-9,
+SURVEY,S2,Related survey,Blasco-UQ-FinTS,10.1016/j.neucom.2024.127339,
+SURVEY,S2,Related survey,Arsenault-XAI-FinTS,10.1145/3729531,
+SURVEY,S2,Related survey,AI-FinStock-Survey,10.1063/5.0322804,
+SURVEY,S2,Related survey,Yeo-FinXAI,10.1007/s10462-024-11077-7,
+SURVEY,S3,Related survey,LLM4TS-Survey,,
+SURVEY,S3,Related survey,FinSurvey-LLM,,2406.11903
+SURVEY,S3,Related survey,Jin-LargeModels-TS,10.1145/3821637,
+SURVEY,S4,Related survey,Stenger-Eval-SynthTS,10.1186/s40537-024-00924-7,
+SURVEY,S4,Related survey,Iglesias-TSAug,10.1007/s00521-023-08459-3,
+SURVEY,S4,Related survey,Hu-TSGen-IoT,10.3390/s23156976,
+SURVEY,S4,Related survey,Lin-DiffTS,10.1631/fitee.2300310,
+SURVEY,S4,Related survey,Yang-DiffTS-STM,10.1145/3783986,
+SURVEY,S4,Related survey,Gao-GAN-SpatioTemporal,10.1145/3474838,
+SURVEY,S4,Related survey,Eigenschink-DeepGen,10.1109/access.2023.3275134,
+SURVEY,S5,Related survey,Kim-DL-TSF,10.1007/s10462-025-11223-9,
+SURVEY,S5,Related survey,Kong-DL-TSF,10.1007/s13042-025-02560-w,
+SURVEY,S5,Related survey,Benidis-DL-TSF,10.1145/3533382,
+ADJACENT,,Adjacent work,Interpretable-GenAI,10.2139/ssrn.4877007,
+ADJACENT,,Adjacent work,GraphSAGE-CTGAN,10.1007/s10614-025-11114-9,
+ADJACENT,,Adjacent work,Swiss-Discount-Curve,10.2139/ssrn.4611310,
+ADJACENT,,Adjacent work,Distress-Imputation,10.1080/0952813x.2022.2153278,
+ADJACENT,,Adjacent work,MTS-Anomaly,10.4018/joeuc.342094,
+ADJACENT,,Adjacent work,FinanceNLP-CA,10.3390/electronics14112289,
+ADJACENT,,Adjacent work,FCLM,10.1007/978-981-97-2259-4_25,
+ADJACENT,,Adjacent work,BERT-ABSA,10.1007/978-3-031-62362-2_8,

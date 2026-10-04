@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this collection, please cite the survey below."
+title: "Awesome Financial Time-Series Generation"
+abstract: >-
+  Curated paper collection accompanying the survey "Recent Advanced
+  Technologies in Financial Time-Series Generation: A Survey".
+type: software
+license: MIT
+repository-code: "https://github.com/Lafitte1573/Awesome-FinTS-Generation"
+url: "https://github.com/Lafitte1573/Awesome-FinTS-Generation"
+keywords:
+  - financial time series
+  - time series generation
+  - survey
+  - awesome list
+  - extrapolation
+  - imputation
+  - synthesis
+
+preferred-citation:
+  type: conference-paper
+  title: "Recent Advanced Technologies in Financial Time-Series Generation: A Survey"
+  authors:
+    - family-names: Duan
+      given-names: Jiaxin
+    - family-names: Zhang
+      given-names: Yingxiao
+    - family-names: Zhang
+      given-names: Junfu
+    - family-names: Zou
+      given-names: Yue
+    - family-names: Feng
+      given-names: Ke
+  collection-title: >-
+    Proceedings of the Thirty-Fourth International Joint Conference on
+    Artificial Intelligence (IJCAI)
+  year: 2026

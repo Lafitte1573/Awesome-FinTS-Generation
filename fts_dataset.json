@@ -1,0 +1,1609 @@
+{
+ "_comment": "Two-level taxonomy restructured from the survey's Figure 1; see README 'Literature Review' for the task x technique hierarchy.",
+ "TAXONOMY": {
+  "FTSE": {
+   "__fams__": [
+    {
+     "id": "A1",
+     "family": "Deep Learning Models",
+     "subs": [
+      {
+       "id": "A1.1",
+       "name": "A1.1  Hybrid LSTM and recurrent architectures",
+       "extra": false,
+       "items": [
+        {
+         "nick": "PEC-W",
+         "title": "Enhancing Recurrent Neural Networks for Stock Market Forecasts through PEC-W Framework",
+         "venue": "IEEE CiFer",
+         "year": 2025,
+         "authors": "Busra Caliskan",
+         "doi": "10.1109/cifer64978.2025.10975740",
+         "task": "Stock price prediction",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "SGP-LSTM",
+         "title": "Forecasting stock prices changes using long-short term memory neural network with symbolic genetic programming",
+         "venue": "Scientific Reports",
+         "year": 2024,
+         "authors": "Qi Li, Norshaliza Kamaruddin, Siti Sophiayati Yuhaniz, Hamdan Amer Ali Al-Jaif",
+         "doi": "10.1038/s41598-023-50783-0",
+         "task": "Cross-sectional return prediction",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "SGP-LSTM-CX",
+         "title": "Integrating Symbolic Genetic Programming With LSTM for Forecasting Cross-Sectional Price Returns: A Comparative Analysis of Chinese and Japanese Stock Markets",
+         "venue": "Advances in Artificial Intelligence and Machine Learning / Applied Mathematics",
+         "year": 2024,
+         "authors": "Qi Li, Norshaliza Kamaruddin, Xun Gong, Peng Chen",
+         "doi": "10.54364/aaiml.2024.44173",
+         "task": "Cross-market return ranking",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "Hierarchical-LSTM",
+         "title": "Nonlinear Regression With Hierarchical Recurrent Neural Networks Under Missing Data",
+         "venue": "IEEE Transactions on Artificial Intelligence",
+         "year": 2024,
+         "authors": "S. Onur Sahin, Suleyman S. Kozat",
+         "doi": "10.1109/tai.2024.3404414",
+         "task": "Stock price prediction",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "MVO-BiGRU",
+         "title": "A Novel Hybrid Deep Learning Method for Accurate Exchange Rate Prediction",
+         "venue": "Risks (MDPI)",
+         "year": 2024,
+         "authors": "Farhat Iqbal, Dimitrios Koutmos, Eman A. Ahmed, Lulwah M. Al-Essa",
+         "doi": "10.3390/risks12090139",
+         "task": "Foreign exchange rate prediction",
+         "src": "crossref",
+         "note": "The old README had this entry twice, both with truncated titles.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "BiLSTM-ARIMA",
+         "title": "Hybrid BiLSTM-ARIMA Architecture with Whale-Driven Optimization for Financial Time Series Forecasting",
+         "venue": "Algorithms (MDPI)",
+         "year": 2025,
+         "authors": "Panke Qin, Bo Ye, Ya Li, Zhongqi Cai, Zhenlun Gao, Haoran Qi, Yongjie Ding",
+         "doi": "10.3390/a18080517",
+         "arxiv": null,
+         "src": "crossref",
+         "task": "Hybrid forecasting baseline",
+         "abstract_en": "A hybrid BiLSTM-ARIMA architecture whose hyperparameters are tuned by a whale optimisation algorithm.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "CEEMDAN-Informer-LSTM",
+         "title": "Enhancing Financial Time Series Forecasting with Hybrid Deep Learning: CEEMDAN-Informer-LSTM Model",
+         "venue": "Applied Soft Computing",
+         "year": 2025,
+         "authors": "Jiang-Cheng Li, Li-Ping Sun, Xiao Wu, Chen Tao",
+         "doi": "10.1016/j.asoc.2025.113241",
+         "arxiv": null,
+         "src": "crossref",
+         "task": "Hybrid forecasting baseline",
+         "abstract_en": "Decomposes financial series with CEEMDAN, then models the components with an Informer-LSTM stack.",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "A1.2",
+       "name": "A1.2  Ensemble, multi-source and feature-engineered forecasters",
+       "extra": true,
+       "items": [
+        {
+         "nick": "SemiHetero-Ensemble",
+         "title": "A semi-heterogeneous ensemble forecasting method for stock returns based on sentiment analysis",
+         "venue": "Information Sciences",
+         "year": 2026,
+         "authors": "Xiao Zhang, Peide Liu, Jing Feng",
+         "doi": "10.1016/j.ins.2025.122655",
+         "task": "Stock return prediction",
+         "src": "crossref",
+         "extra_leaf": true
+        },
+        {
+         "nick": "ALN",
+         "title": "Adversarial Learning Networks for FinTech Applications Using Heterogeneous Data Sources",
+         "venue": "IEEE Internet of Things Journal",
+         "year": 2023,
+         "authors": "Parus Khuwaja, Sunder Ali Khowaja, Kapal Dev",
+         "doi": "10.1109/jiot.2021.3100742",
+         "task": "Stock price prediction",
+         "src": "crossref",
+         "extra_leaf": true
+        },
+        {
+         "nick": "LASSO-SMLR-PCA-LSTM",
+         "title": "Price Forecast of Treasury Bond Market Yield: Optimize Method Based on Deep Learning Model",
+         "venue": "IEEE Access",
+         "year": 2024,
+         "authors": "Weiying Ping, Yuwen Hu, Liangqing Luo",
+         "doi": "10.1109/access.2024.3519438",
+         "task": "Treasury yield forecasting",
+         "src": "crossref",
+         "extra_leaf": true
+        },
+        {
+         "nick": "IRM-MultiFaceted",
+         "see_also": "IRM-MultiFaceted",
+         "title": "Large Scale Financial Time Series Forecasting with Multi-faceted Model",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2023,
+         "authors": "Defu Cao, Yixiang Zheng, Parisa Hassanzadeh, Simran Lamba, Xiaomo Liu, Yan Liu",
+         "doi": "10.1145/3604237.3626868",
+         "src": "crossref",
+         "task": "Distribution-shift baseline",
+         "crossref_entry": true,
+         "abstract_en": "Relaxes the strict invariance constraint of invariant risk minimisation with an optimisation-driven regulariser and trains linear and non-linear models jointly across S\\&P 500 industries, improving both in-domain and zero-shot industry forecasting.",
+         "extra_leaf": true
+        }
+       ]
+      },
+      {
+       "id": "A1.3",
+       "name": "A1.3  Other deep-learning forecasters",
+       "extra": true,
+       "items": [
+        {
+         "nick": "ORGAN-FVT",
+         "title": "An Efficient GAN-Based Multi-Classification Approach for Financial Time Series Volatility Trend Prediction",
+         "venue": "International Journal of Computational Intelligence Systems",
+         "year": 2023,
+         "authors": "Lei Liu, Zheng Pei, Peng Chen, Hang Luo, Zhisheng Gao, Kang Feng, Zhihao Gan",
+         "doi": "10.1007/s44196-023-00212-x",
+         "task": "Volatility trend classification",
+         "src": "crossref",
+         "extra_leaf": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "A2",
+     "family": "Generative Learning Models",
+     "subs": [
+      {
+       "id": "A2.1",
+       "name": "A2.1  GAN-based models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "Wavelet-GAN",
+         "title": "A Novel Wavelet Based Generative Model for Time Series Prediction",
+         "venue": "IEEE BigDIA",
+         "year": 2024,
+         "authors": "Chaofan Dai, Xiaoguang Yuan, Zongkai Tian, Xinyue Hu, Zhen Luan, Youchen Wang",
+         "doi": "10.1109/bigdia63733.2024.10808510",
+         "task": "Stock price prediction",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "N-BEATS-GAN",
+         "title": "N-BEATS-GAN: A risk-aware financial time series forecasting with generative adversarial networks",
+         "venue": "Applied Soft Computing",
+         "year": 2026,
+         "authors": "Manna Dai, Mao Yu Seow, Ricardo Shirota Filho, Alex Sclip, Kavilash Chawla, Rick Siow Mong Goh, Joyjit Chattoraj",
+         "doi": "10.1016/j.asoc.2025.114235",
+         "task": "Risk-aware forecasting and augmentation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "AssetGANs",
+         "title": "Distributed Generative Adversarial Networks for Fuzzy Portfolio Optimization",
+         "venue": "Lecture Notes in Computer Science",
+         "year": 2024,
+         "authors": "Xueying Yang, Chen Li, Zidong Han, Zhonghua Lu",
+         "doi": "10.1007/978-981-97-0859-8_14",
+         "task": "Multi-step return simulation and fuzzy portfolio optimization",
+         "src": "crossref",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "A2.2",
+       "name": "A2.2  Diffusion models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "TimeGrad",
+         "title": "Autoregressive Denoising Diffusion Models for Multivariate Probabilistic Time Series Forecasting",
+         "venue": "ICML",
+         "year": 2021,
+         "authors": "Kashif Rasul, Calvin Seward, Ingmar Schuster, Roland Vollgraf",
+         "doi": null,
+         "arxiv": "2101.12072",
+         "src": "arxiv-abs",
+         "task": "Diffusion forecasting baseline",
+         "abstract_en": "An autoregressive model for multivariate probabilistic forecasting that samples the data distribution at each time step by estimating its gradient. Gradients are learned by optimising a variational bound on the data likelihood, and at inference white noise is converted into a sample of the target distribution through a Markov chain of Langevin updates. Evaluated on datasets with thousands of correlated dimensions.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "TimeDiT",
+         "title": "TimeDiT: General-purpose Diffusion Transformers for Time Series Foundation Model",
+         "venue": "ICML Workshop on Foundation Models in the Wild",
+         "year": 2024,
+         "authors": "Defu Cao, Wen Ye, Yizhou Zhang, Yan Liu",
+         "doi": null,
+         "arxiv": "2409.02322",
+         "src": "arxiv-abs",
+         "task": "Diffusion foundation model",
+         "abstract_en": "Replaces the temporal auto-regressive decoding used by most time-series foundation models with a denoising diffusion process, while keeping a transformer to capture temporal dependencies. A unified masking mechanism harmonises training and inference across tasks, and a finetuning-free model-editing strategy injects external knowledge during sampling without updating any weights. Evaluated on forecasting, imputation, anomaly detection and data generation.",
+         "extra_leaf": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "A3",
+     "family": "Time-series Foundation Models",
+     "subs": [
+      {
+       "id": "A3.1",
+       "name": "A3.1  Fine-tuned LLM / foundation model",
+       "extra": false,
+       "items": [
+        {
+         "nick": "Chronos",
+         "title": "Chronos: Learning the Language of Time Series",
+         "venue": "Transactions on Machine Learning Research",
+         "year": 2024,
+         "authors": "Abdul Fatir Ansari, Lorenzo Stella, Caner Turkmen, Xiyuan Zhang, Pedro Mercado, Huibin Shen, Oleksandr Shchur, Syama Sundar Rangapuram, Sebastian Pineda Arango, Shubham Kapoor, Jasper Zschiegner, Danielle C. Maddix, Hao Wang, Michael W. Mahoney, Kari Torkkola, Andrew Gordon Wilson, Michael Bohlke-Schneider, Yuyang Wang",
+         "doi": null,
+         "arxiv": "2403.07815",
+         "task": "Zero-shot forecasting foundation model",
+         "src": "arxiv-abs",
+         "abstract_en": "Tokenizes real-valued time series by scaling and quantization into a fixed vocabulary and trains T5-family transformers (20M-710M parameters) with cross-entropy, augmented by a Gaussian-process synthetic dataset. Benchmarked on 42 datasets, the models beat classical statistical baselines in-domain and are competitive zero-shot out-of-domain.",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "OneFitsAll",
+         "title": "One Fits All: Power General Time Series Analysis by Pretrained LM",
+         "venue": "NeurIPS",
+         "year": 2023,
+         "authors": "Tian Zhou, Peisong Niu, Xue Wang, Liang Sun, Rong Jin",
+         "doi": "10.52202/075280-1877",
+         "arxiv": null,
+         "src": "crossref",
+         "task": "Unified forecasting framework",
+         "abstract_en": "Formulates time-series analysis as a language-modelling problem: a single pretrained T5 backbone handles forecasting, imputation and classification without task-specific heads, by expressing each as text generation. A lightweight task-specific normalisation and patching layer adapts the numerical input to the frozen language model, so one model serves every downstream task.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "Financial TimesFM",
+         "title": "Financial Fine-Tuning a Large Time Series Model",
+         "venue": "IEEE CiFer",
+         "year": 2025,
+         "authors": "Xinghong Fu, Masanori Hirano, Kentaro Imajo",
+         "doi": "10.1109/cifer64978.2025.10975735",
+         "task": "Stock price prediction",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "Chronos-Arbitrage",
+         "title": "LLMs for Time Series: an Application for Single Stocks and Statistical Arbitrage",
+         "venue": "arXiv preprint",
+         "year": 2024,
+         "authors": "Sebastien Valeyre, Sofiane Aboura",
+         "doi": null,
+         "arxiv": "2412.09394",
+         "task": "Statistical arbitrage",
+         "src": "arxiv-abs",
+         "note": "Previously mislabelled as the Chronos model paper. This is Valeyre & Aboura; the Chronos TSF model is Ansari et al. (arXiv:2403.07815).",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "A3.2",
+       "name": "A3.2  Edited / adapted LLM",
+       "extra": false,
+       "items": [
+        {
+         "nick": "StockTime",
+         "title": "StockTime: A Time Series Specialized Large Language Model Architecture for Stock Price Prediction",
+         "venue": "arXiv preprint",
+         "year": 2024,
+         "authors": "Shengkun Wang, Taoran Ji, Linhan Wang, Yanshen Sun, Shang-Ching Liu, Amit Kumar, Chang-Tien Lu",
+         "doi": null,
+         "arxiv": "2409.08281",
+         "task": "Stock price prediction",
+         "src": "arxiv-abs",
+         "extra_leaf": false
+        },
+        {
+         "nick": "GPT4FTS",
+         "title": "Beyond Fixed Patches: Enhancing GPTs for Financial Prediction with Adaptive Segmentation and Learnable Wavelets",
+         "venue": "arXiv preprint",
+         "year": 2025,
+         "authors": "Renjun Jia, Zian Liu, Peng Zhu, Dawei Cheng, Yuqi Liang",
+         "doi": null,
+         "arxiv": "2505.02880",
+         "task": "Stock return prediction",
+         "src": "arxiv-abs",
+         "note": "The method is GPT4FTS, not LLM4FTS. The old README carried the wrong method name, title and year (2024).",
+         "abstract_en": "Replaces fixed-length patch tokenization with pattern-aware segmentation: K-means++ clustering on DTW distance identifies scale-invariant motifs, an adaptive patcher then cuts the sequence along those boundaries, and a learnable wavelet module emulates a discrete wavelet transform with trainable filters. Evaluated on four real financial markets.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "LLM-PS",
+         "title": "Empowering Large Language Models for Time Series Forecasting with Patterns and Semantics",
+         "venue": "IEEE ICDM",
+         "year": 2025,
+         "authors": "Jialiang Tang, Shuo Chen, Chen Gong, Jing Zhang, Dacheng Tao",
+         "doi": "10.1109/icdm65498.2025.00081",
+         "arxiv": "2503.09656",
+         "src": "crossref",
+         "task": "LLM forecasting",
+         "abstract_en": "Feeds an LLM two complementary views of the same series: recurrent patterns extracted by a dedicated pattern learner, and the raw semantics of the values themselves, letting the two routes interact so that the model exploits structure the numeric view alone cannot express.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "Time-LLM",
+         "title": "Time-LLM: Time Series Forecasting by Reprogramming Large Language Models",
+         "venue": "ICLR",
+         "year": 2024,
+         "authors": "Ming Jin, Shiyu Wang, Lintao Ma, Zhixuan Chu, James Y. Zhang, Xiaoming Shi, Pin-Yu Chen, Yuxuan Liang, Yuan-Fang Li, Shirui Pan, Qingsong Wen",
+         "doi": null,
+         "arxiv": "2310.01728",
+         "task": "Zero-shot forecasting",
+         "src": "arxiv-abs",
+         "abstract_en": "Repurposes a frozen language model for forecasting without touching its weights: the input series is first reprogrammed into text prototypes so the two modalities can be aligned, and a Prompt-as-Prefix mechanism enriches the context to steer how the reprogrammed patches are transformed. The resulting patches are projected back to produce forecasts, with strong few-shot and zero-shot results.",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "CALF",
+         "title": "CALF: Aligning LLMs for Time Series Forecasting via Cross-modal Fine-Tuning",
+         "venue": "AAAI Conference on Artificial Intelligence",
+         "year": 2025,
+         "authors": "Peiyuan Liu, Hang Guo, Tao Dai, Naiqi Li, Jigang Bao, Xudong Ren, Yong Jiang, Shu-Tao Xia",
+         "doi": "10.1609/aaai.v39i18.34082",
+         "arxiv": null,
+         "src": "crossref",
+         "task": "LLM forecasting",
+         "abstract_en": "A context-aware patch embedding replaces the linear input projection of an LLM so that time-series semantics are injected at every layer rather than only at the input, with a parameter-efficient fine-tuning scheme applied jointly to the embedding and the LLM backbone.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "FinSrag",
+         "title": "Retrieval-augmented Large Language Models for Financial Time Series Forecasting",
+         "venue": "arXiv preprint",
+         "year": 2025,
+         "authors": "Mengxi Xiao, Zihao Jiang, Lingfei Qian, Zhengyu Chen, Yueru He, Yijing Xu, Yuecheng Jiang, Dong Li, Ruey-Ling Weng, Min Peng, Jimin Huang, Sophia Ananiadou, Qianqian Xie",
+         "doi": null,
+         "arxiv": "2502.05878",
+         "task": "Stock movement prediction",
+         "src": "arxiv-abs",
+         "abstract_en": "Introduces FinSrag, the first RAG framework for financial time-series forecasting, built on FinSeer, a domain-specific retriever trained with LLM-guided relevance feedback rather than embedding or DTW similarity. The retrieval corpus is expanded from price series to segments of 28 expert-selected financial indicators, which are injected into a 1B-parameter StockLLM for up/down prediction.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "FinMem",
+         "title": "FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design",
+         "venue": "AAAI Symposium Series on AI, Finance, and Econometrics",
+         "year": 2024,
+         "authors": "Yangyang Yu, Haohang Li, Zhi Chen, Yuechen Jiang, Yang Li, Denghui Zhang, Rong Liu, Jordan W. Suchow, Khaldoun Khashanah",
+         "doi": "10.1609/aaaiss.v3i1.31290",
+         "arxiv": "2311.13743",
+         "task": "Quantitative trading",
+         "src": "crossref+arxiv",
+         "extra_leaf": false
+        },
+        {
+         "nick": "LLM-Financial-Aid",
+         "title": "Large Language Models for Financial Aid in Financial Time-series Forecasting",
+         "venue": "IEEE BigData",
+         "year": 2024,
+         "authors": "Md Khairul Islam, Ayush Karmacharya, Timothy Sue, Judy Fox",
+         "doi": "10.1109/bigdata62323.2024.10824953",
+         "task": "Financial aid forecasting",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "LLM-TS-Benchmark",
+         "title": "Pretrained Time-Series Foundation Models for Financial Return Forecasting",
+         "venue": "arXiv preprint",
+         "year": 2026,
+         "authors": "Miquel Noguer I Alonso, Rodolfo Pereira Franklin",
+         "doi": null,
+         "arxiv": "2606.27100",
+         "task": "Return forecasting benchmark",
+         "src": "web",
+         "note": "The old README listed this under the title 'Large Language Models for Financial Time Series Forecasting' and labelled it Time-LLM. Both were wrong; the arXiv preprint has since been retitled and extended. The abstract stored in the old repo predates the current version and was dropped rather than reused.",
+         "abstract_en": "Benchmarks pretrained time-series foundation models (TimeGPT, TimesFM-2.5, Moirai-2.0, Chronos, Chronos-2) against from-scratch neural baselines on five liquid US equities under an equalized context budget and a rolling-origin protocol. Pretrained models win 8 of 10 task-level comparisons, but a one-sided Diebold-Mariano test rejects the random-walk null in only two cases, so the ranking gains carry little economic significance.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "TimeS",
+         "title": "Text2TimeSeries: Enhancing Financial Forecasting through Time Series Prediction Updates with Event-Driven Insights from Large Language Models",
+         "venue": "arXiv preprint",
+         "year": 2024,
+         "authors": "Litton Jose Kurisinkel, Pruthwik Mishra, Yue Zhang",
+         "doi": null,
+         "arxiv": "2407.03689",
+         "task": "Event-driven stock forecasting",
+         "src": "arxiv-abs",
+         "abstract_en": "A collaborative framework in which a time-series backbone (PatchTST+W or D-Linear+W) produces baseline forecasts while an LLM reads a news event and predicts a real-valued multi-step price-change signal. A gated recurrent unit then applies that event impact as an amplification factor that updates the time-series prediction.",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "A3.3",
+       "name": "A3.3  Emerging foundation models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "TimeHF",
+         "title": "TimeHF: Billion-Scale Time Series Models Guided by Human Feedback",
+         "venue": "arXiv preprint",
+         "year": 2025,
+         "authors": "Yongzhi Qi, Hao Hu, Dazhou Lei, Jianshen Zhang, Zhengxin Shi, Yulin Huang, Zhengyu Chen, Xiaoming Lin, Zuo-Jun Max Shen",
+         "doi": null,
+         "arxiv": "2501.15942",
+         "src": "arxiv-abs",
+         "task": "RLHF for time series",
+         "abstract_en": "A pipeline for building 6-billion-parameter large time series models, using patch-convolutional embeddings for long series and a human-feedback mechanism called time-series policy optimization. Deployed in JD.com's supply chain for automated replenishment of over 20,000 products, reporting a 33.21% accuracy improvement over existing methods.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "FinCast",
+         "title": "FinCast: A Foundation Model for Financial Time-Series Forecasting",
+         "venue": "ACM CIKM",
+         "year": 2025,
+         "authors": "Zhuohang Zhu, Haodong Chen, Qiang Qu, Vera Chung",
+         "doi": "10.1145/3746252.3761261",
+         "arxiv": null,
+         "src": "crossref",
+         "task": "Financial foundation model",
+         "abstract_en": "A domain-specific time-series foundation model for financial forecasting, pre-trained on market data and evaluated across horizons and assets. Included here because the survey cites it as the emerging-financial-foundation-model counterpart to the FTSG methods.",
+         "extra_leaf": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "FTSI": {
+   "__fams__": [
+    {
+     "id": "B1",
+     "family": "Machine Learning Models",
+     "subs": [
+      {
+       "id": "B1.1",
+       "name": "B1.1  Factorization methods",
+       "extra": false,
+       "items": [
+        {
+         "nick": "FCI",
+         "title": "Financial Condition Indices in an Incomplete Data Environment",
+         "venue": "Studies in Nonlinear Dynamics & Econometrics",
+         "year": 2025,
+         "authors": "Miguel C. Herculano, Punnoose Jacob",
+         "doi": "10.1515/snde-2022-0115",
+         "task": "Index construction under missing data",
+         "src": "crossref",
+         "new": true,
+         "note": "Print issue 2025, vol. 29(1):19-38; first published online 2023.",
+         "abstract_en": "We construct a Financial Conditions Index (FCI) for the United States using a dataset that features many missing observations. The novel combination of probabilistic principal component techniques and a Bayesian factor-augmented VAR model resolves the challenges posed by data points being unavailable within a high-frequency dataset. Even with up to 62 % of the data missing, the new approach yields a less noisy FCI that tracks the movement of 22 underlying financial variables more accurately both in-sample and out-of-sample.",
+         "abstract_src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "RegTensor",
+         "title": "A Fast Non-Linear Coupled Tensor Completion Algorithm for Financial Data Integration and Imputation",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2023,
+         "authors": "Dan Zhou, Ajim Uddin, Zuofeng Shang, Cheickna Sylla, Xinyuan Tao, Dantong Yu",
+         "doi": "10.1145/3604237.3626899",
+         "task": "Financial data imputation",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "NMTucker",
+         "title": "NMTucker: Non-linear Matryoshka Tucker Decomposition for Financial Time Series Imputation",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2023,
+         "authors": "Uras Varolgunes, Dan Zhou, Dantong Yu, Ajim Uddin",
+         "doi": "10.1145/3604237.3626909",
+         "task": "Financial time series imputation",
+         "src": "crossref",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "B1.2",
+       "name": "B1.2  Polynomial interpolation",
+       "extra": false,
+       "items": []
+      }
+     ]
+    },
+    {
+     "id": "B2",
+     "family": "Generative Learning Models",
+     "subs": [
+      {
+       "id": "B2.1",
+       "name": "B2.1  GAN-based models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "AttnWGAIN",
+         "title": "AttnWGAIN: Attention-Based Wasserstein Generative Adversarial Imputation Network for IoT Multivariate Time Series with Missing Values",
+         "venue": "IEEE Transactions on Consumer Electronics",
+         "year": 2025,
+         "authors": "Zhaoqin Wang, Qian Ma, Defu Cui, Shikai Guo, Hui Li, Qiao Ning",
+         "doi": "10.1109/tce.2025.3600559",
+         "task": "Multivariate time series imputation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "ImputeGAN",
+         "title": "ImputeGAN: Generative Adversarial Network for Multivariate Time Series Imputation",
+         "venue": "Entropy (MDPI)",
+         "year": 2023,
+         "authors": "Rui Qin, Yong Wang",
+         "doi": "10.3390/e25010137",
+         "task": "Multivariate time series imputation",
+         "src": "crossref",
+         "new": true,
+         "abstract_en": "Since missing values in multivariate time series data are inevitable, many researchers have come up with methods to deal with the missing data. These include case deletion methods, statistics-based imputation methods, and machine learning-based imputation methods. However, these methods cannot handle temporal information, or the complementation results are unstable. We propose a model based on generative adversarial networks (GANs) and an iterative strategy based on the gradient of the complementary results to solve these problems. This ensures the generalizability of the model and the reasonableness of the complementation results. We conducted experiments on three large-scale datasets and compare them with traditional complementation methods. The experimental results show that imputeGAN outperforms traditional complementation methods in terms of accuracy of complementation.",
+         "abstract_src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "CWGAIN-GP",
+         "title": "A time series continuous missing values imputation method based on generative adversarial networks",
+         "venue": "Knowledge-Based Systems",
+         "year": 2024,
+         "authors": "Yunsheng Wang, Xinghan Xu, Lei Hu, Jianchao Fan, Min Han",
+         "doi": "10.1016/j.knosys.2023.111215",
+         "task": "Continuous missing-value imputation",
+         "src": "crossref",
+         "new": true,
+         "abstract_en": "A conditional Wasserstein GAN for imputing blocks of continuously missing values in multivariate time series, paired with a Gaussian-process module that models the local structure of the gaps so the generator can produce coherent fills rather than point estimates.",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "B2.2",
+       "name": "B2.2  Score-based diffusion models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "CSDI",
+         "title": "CSDI: Conditional Score-based Diffusion Models for Probabilistic Time Series Imputation",
+         "venue": "NeurIPS",
+         "year": 2021,
+         "authors": "Yusuke Tashiro, Jiaming Song, Yang Song, Stefano Ermon",
+         "doi": null,
+         "arxiv": "2107.03502",
+         "task": "Probabilistic time series imputation",
+         "src": "arxiv-abs",
+         "new": true,
+         "code": "https://github.com/ermongroup/CSDI",
+         "abstract_en": "A score-based diffusion model conditioned on the observed values of a time series, using cross-attention so the imputation exploits correlations among observed features. Reports a 40-65% improvement over prior probabilistic imputers and a 5-20% error reduction over deterministic methods on healthcare and environmental data.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "SaSDim",
+         "title": "SaSDim: Self-Adaptive Noise Scaling Diffusion Model for Spatial Time Series Imputation",
+         "venue": "IJCAI",
+         "year": 2024,
+         "authors": "Shunyang Zhang, Senzhang Wang, Xianzhen Tan, Renzhi Wang, Ruochen Liu, Jian Zhang, Jianxin Wang",
+         "doi": "10.24963/ijcai.2024/283",
+         "task": "Spatial time series imputation",
+         "src": "crossref",
+         "new": true,
+         "abstract_en": "Spatial time series imputation is of great importance to various real-world applications. As the state-of-the-art generative models, diffusion models (e.g. CSDI) have outperformed statistical and autoregressive based models in time series imputation. However, diffusion models may introduce unstable noise owing to the inherent uncertainty in sampling, leading to the generated noise deviating from the intended Gaussian distribution. Consequently, the imputed data may deviate from the real data. To this end, we propose a Self-adaptive noise Scaling Diffusion Model named SaSDim for spatial time series imputation. Specifically, we introduce a novel Probabilistic High-Order SDE Solver Module to scale the noise following the standard Gaussian distribution. The noise scaling operation helps the noise prediction module of the diffusion model to more accurately estimate the variance of noise. To effectively learn the spatial and temporal features, a Spatial guided Global Convolution Module (SgGConv) for multi-periodic temporal dependencies learning with the Fast Fourier Transformation and dynamic spatial dependencies learning with dynamic graph convolution is also proposed. Extensive experiments conducted on three real-world spatial time series datasets verify the effectiveness of SaSDim.",
+         "abstract_src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "MTSCI",
+         "title": "MTSCI: A Conditional Diffusion Model for Multivariate Time Series Consistent Imputation",
+         "venue": "ACM CIKM",
+         "year": 2024,
+         "authors": "Jianping Zhou, Junhao Li, Guanjie Zheng, Xinbing Wang, Chenghu Zhou",
+         "doi": "10.1145/3627673.3679532",
+         "task": "Consistent multivariate imputation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "LSCD",
+         "title": "LSCD: Lomb-Scargle Conditioned Diffusion for Time series Imputation",
+         "venue": "ICML (PMLR v267)",
+         "year": 2025,
+         "authors": "Elizabeth Fons, Alejandro Sztrajman, Yousef El-Laham, Luciana Ferrer, Svitlana Vyetrenko, Manuela Veloso",
+         "doi": null,
+         "arxiv": "2506.17039",
+         "task": "Irregular-sampling time series imputation",
+         "src": "arxiv-abs",
+         "new": true,
+         "abstract_en": "Introduces a differentiable Lomb-Scargle layer that estimates the power spectrum of irregularly sampled data without the interpolation or zero-filling that FFT pipelines require, then conditions a score-based diffusion model on that spectrum. A consistency loss aligns the imputed time-domain signal with its spectral representation, improving both imputation error and frequency recovery.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "SPDM",
+         "title": "SPDM: Spatiotemporal-Periodic Diffusion Model for Multivariate Time Series Imputation",
+         "venue": "IEEE CSCWD",
+         "year": 2025,
+         "authors": "Qia Zhang, Renfang Wang, Hong Qiu, Xiufeng Liu, Xu Cheng",
+         "doi": "10.1109/cscwd64889.2025.11033512",
+         "task": "Multivariate time series imputation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "Score-CDM",
+         "title": "Score-CDM: Score-Weighted Convolutional Diffusion Model for Multivariate Time Series Imputation",
+         "venue": "IJCAI",
+         "year": 2024,
+         "authors": "Shunyang Zhang, Senzhang Wang, Hao Miao, Hao Chen, Changjun Fan, Jian Zhang",
+         "doi": "10.24963/ijcai.2024/282",
+         "task": "Multivariate time series imputation",
+         "src": "crossref",
+         "new": true,
+         "abstract_en": "Multivariant time series (MTS) data are usually incomplete in real scenarios, and imputing the incomplete MTS is practically important to facilitate various time series mining tasks. Recently, diffusion model-based MTS imputation methods have achieved promising results by utilizing CNN or attention mechanisms for temporal features learning. However, it is hard to adaptively trade off the diverse effects of local and global temporal features by simply combining CNN and attention. To address this issue, we propose a Score-weighted Convolutional Diffusion Model (Score-CDM for short), whose backbone consists of a Score-weighted Convolution Module (SCM) and an Adaptive Reception Module (ARM). SCM adopts a score map to capture the global temporal features in the time domain, while ARM uses a Spectral2Time Window Block (S2TWB) to convolve the local time series data in the spectral domain. Benefiting from the time convolution properties of Fast Fourier Transformation, ARM can adaptively change the receptive field of the score map, and thus effectively balance the local and global temporal features. We conduct extensive evaluations on three real MTS datasets of different domains, and the result verifies the effectiveness of the proposed Score-CDM.",
+         "abstract_src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "LSSDM",
+         "title": "Latent Space Score-based Diffusion Model for Probabilistic Multivariate Time Series Imputation",
+         "venue": "IEEE ICASSP",
+         "year": 2025,
+         "authors": "Guojun Liang, Najmeh Abiri, Atiye Sadat Hashemi, Jens Lundstrom, Stefan Byttner, Prayag Tiwari",
+         "doi": "10.1109/icassp49660.2025.10888912",
+         "task": "Probabilistic multivariate imputation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "FTSS": {
+   "__fams__": [
+    {
+     "id": "C1",
+     "family": "Micro-level Synthesis",
+     "subs": [
+      {
+       "id": "C1.1",
+       "name": "C1.1  GAN-based models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "WGAN-HF-Aug",
+         "title": "Data Augmentation of High Frequency Financial Data Using Generative Adversarial Network",
+         "venue": "IEEE/WIC/ACM WI-IAT",
+         "year": 2020,
+         "authors": "Yusuke Naritomi, Takanori Adachi",
+         "doi": "10.1109/wiiat50758.2020.00097",
+         "task": "High-frequency data augmentation",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "QWGAN-GP",
+         "title": "Enhancing Financial Time Series Prediction with Quantum-Enhanced Synthetic Data Generation: A Case Study on the S&P 500 Using a Quantum Wasserstein Generative Adversarial Network Approach with a Gradient Penalty",
+         "venue": "Electronics (MDPI)",
+         "year": 2024,
+         "authors": "Filippo Orlandi, Enrico Barbierato, Alice Gatti",
+         "doi": "10.3390/electronics13112158",
+         "task": "Quantum-enhanced data augmentation",
+         "src": "crossref",
+         "note": "Title was prefixed with a stray 'Article ' in the old README.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "QuantGAN",
+         "title": "Quant GANs: deep generation of financial time series",
+         "venue": "Quantitative Finance",
+         "year": 2020,
+         "authors": "Magnus Wiese, Robert Knobloch, Ralf Korn, Peter Kretschmer",
+         "doi": "10.1080/14697688.2020.1730426",
+         "arxiv": "1907.06673",
+         "task": "Financial time series generation",
+         "src": "crossref",
+         "new": true,
+         "abstract_en": "Modeling financial time series by stochastic processes is a challenging task and a central area of research in financial mathematics. As an alternative, we introduce Quant GANs, a data-driven model which is inspired by the recent success of generative adversarial networks (GANs). Quant GANs consist of a generator and discriminator function, which utilize temporal convolutional networks (TCNs) and thereby achieve to capture long-range dependencies such as the presence of volatility clusters. The generator function is explicitly constructed such that the induced stochastic process allows a transition to its risk-neutral distribution. Our numerical results highlight that distributional properties for small and large lags are in an excellent agreement and dependence properties such as volatility clusters, leverage effects, and serial autocorrelations can be generated by the generator function of Quant GANs, demonstrably in high fidelity.",
+         "abstract_src": "arxiv",
+         "extra_leaf": false
+        },
+        {
+         "nick": "RSQGAN",
+         "title": "Regime-Specific Quant Generative Adversarial Network: A Conditional Generative Adversarial Network for Regime-Specific Deepfakes of Financial Time Series",
+         "venue": "Applied Sciences (MDPI)",
+         "year": 2023,
+         "authors": "Andrew Huang, Matloob Khushi, Basem Suleiman",
+         "doi": "10.3390/app131910639",
+         "task": "Regime-conditional synthesis",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "Tail-GAN",
+         "title": "Tail-GAN: Learning to Simulate Tail Risk Scenarios",
+         "venue": "Management Science",
+         "year": 2026,
+         "authors": "Rama Cont, Mihai Cucuringu, Renyuan Xu, Chao Zhang",
+         "doi": "10.1287/mnsc.2023.00936",
+         "task": "Tail risk scenario simulation",
+         "src": "crossref",
+         "new": true,
+         "note": "Print issue 2026, vol. 72(4):2917-2936. The survey's own bib lists it as 2025.",
+         "abstract_en": "The estimation of loss distributions for dynamic portfolios requires the simulation of scenarios representing realistic joint dynamics of their components. We propose a novel data-driven approach for simulating realistic, high-dimensional multiasset scenarios, focusing on accurately representing tail risk for a class of static and dynamic trading strategies. We exploit the joint elicitability property of Value-at-Risk and Expected Shortfall to design a Generative Adversarial Network that learns to simulate price scenarios preserving these tail risk features. We demonstrate the performance of our algorithm on synthetic and market data sets through detailed numerical experiments. In contrast to previously proposed data-driven scenario generators, our proposed method correctly captures tail risk for a broad class of trading strategies and demonstrates strong generalization capabilities. In addition, combining our method with principal component analysis of the input data enhances its scalability to large-dimensional multiasset time series, setting our framework apart from the univariate settings commonly considered in the literature. This paper was accepted by Kay Giesecke, finance. Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.00936 .",
+         "abstract_src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "PhysicaA-GAN",
+         "title": "Generative Adversarial Networks applied to synthetic financial scenarios generation",
+         "venue": "Physica A: Statistical Mechanics and its Applications",
+         "year": 2023,
+         "authors": "Matteo Rizzato, Julien Wallart, Christophe Geissler, Nicolas Morizet, Noureddine Boumlaik",
+         "doi": "10.1016/j.physa.2023.128899",
+         "task": "Synthetic financial scenarios",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "NVF-DPGAN",
+         "title": "Desensitized Financial Data Generation Based on Generative Adversarial Network and Differential Privacy",
+         "venue": "Big Data Mining and Analytics",
+         "year": 2025,
+         "authors": "Fan Zhang, Luyao Wang, Xinhong Zhang",
+         "doi": "10.26599/bdma.2024.9020047",
+         "task": "Privacy-preserving data generation",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "Edge-GAN",
+         "title": "Generating Synthetic Time-Series Data on Edge Devices Using Generative Adversarial Networks",
+         "venue": "IEEE ICNC",
+         "year": 2024,
+         "authors": "Md Faishal Yousuf, Md Shaad Mahmud",
+         "doi": "10.1109/icnc59896.2024.10556140",
+         "task": "On-device synthetic data generation",
+         "src": "crossref",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "C1.2",
+       "name": "C1.2  Diffusion models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "GBMDiff",
+         "title": "A diffusion-based generative model for financial time series via geometric Brownian motion",
+         "venue": "arXiv preprint",
+         "year": 2025,
+         "authors": "Gihun Kim, Sunyong Choi, Yeoneung Kim",
+         "doi": null,
+         "arxiv": "2507.19003",
+         "task": "Diffusion-based financial synthesis",
+         "src": "crossref-arxiv",
+         "new": true,
+         "abstract_en": "We propose a novel diffusion-based generative framework for financial time series that incorporates geometric Brownian motion (GBM), the foundation of the Black--Scholes theory, into the forward noising process. Unlike standard score-based models that treat price trajectories as generic numerical sequences, our method injects noise proportionally to asset prices at each time step, reflecting the heteroskedasticity observed in financial time series. By accurately balancing the drift and diffusion terms, we show that the resulting log-price process reduces to a variance-exploding stochastic differential equation, aligning with the formulation in score-based generative models. The reverse-time generative process is trained via denoising score matching using a Transformer-based architecture adapted from the Conditional Score-based Diffusion Imputation (CSDI) framework. Empirical evaluations on historical stock data demonstrate that our model reproduces key stylized facts heavy-tailed return distributions, volatility clustering, and the leverage effect more realistically than conventional diffusion models.",
+         "abstract_src": "arxiv",
+         "extra_leaf": false
+        },
+        {
+         "nick": "DM-Denoiser",
+         "title": "A Financial Time Series Denoiser Based on Diffusion Models",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2024,
+         "authors": "Zhuohan Wang, Carmine Ventre",
+         "doi": "10.1145/3677052.3698649",
+         "task": "Diffusion denoising for financial series",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "CoFinDiff",
+         "title": "CoFinDiff: Controllable Financial Diffusion Model for Time Series Generation",
+         "venue": "IJCAI",
+         "year": 2025,
+         "authors": "Yuki Tanaka, Ryuji Hashimoto, Takehiro Takayanagi, Zhe Piao, Yuri Murayama, Kiyoshi Izumi",
+         "doi": "10.24963/ijcai.2025/1040",
+         "task": "Controllable financial synthesis",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "T2S",
+         "title": "T2S: High-resolution Time Series Generation with Text-to-Series Diffusion Models",
+         "venue": "IJCAI",
+         "year": 2025,
+         "authors": "Yunfeng Ge, Jiawei Li, Yiji Zhao, Haomin Wen, Zhao Li, Meikang Qiu, Hongyan Li, Ming Jin",
+         "doi": "10.24963/ijcai.2025/580",
+         "task": "Text-conditioned generation",
+         "src": "crossref",
+         "new": true,
+         "abstract_en": "Text-to-Time Series generation holds significant potential to address challenges such as data sparsity, imbalance, and limited availability of multimodal time series data across domains. While diffusion models have achieved remarkable success in Text-to-X (e.g., vision and audio data) generation, their use in time series generation remains limit. Existing approaches face two critical limitations: (1) reliance on domain-specific captions that generalize poorly, and (2) inability to generate time series of arbitrary length, limiting real-world use. In this work, we first introduce a new multimodal dataset containing over 600,000 high-resolution text-time series pairs. Second, we propose Text-to-Series (T2S), a diffusion-based framework that bridges the gap between natural language and time series in a domain-agnostic manner. It employs a length-adaptive VAE to encode time series of varying lengths into consistent latent embeddings. On top of that, T2S effectively aligns textual representations with latent embeddings by utilizing Flow Matching and employing DiT as the denoiser. We train T2S in an interleaved paradigm across multiple lengths, allowing it to generate sequences of arbitrary lengths. Extensive evaluations demonstrate that T2S achieves state-of-the-art performance across 13 datasets spanning 12 domains.",
+         "abstract_src": "crossref",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "C1.3",
+       "name": "C1.3  Combined / VAE-based models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "VAE-GRU-MCMC",
+         "title": "Robust Synthetic Data Generation for Sequential Financial Models Using Hybrid VAE-GRU-MCMC",
+         "venue": "Future Internet (MDPI)",
+         "year": 2025,
+         "authors": "Francesco Bruni Prenestino, Enrico Barbierato, Alice Gatti",
+         "doi": "10.3390/fi17020095",
+         "task": "Synthetic financial series generation",
+         "src": "crossref",
+         "note": "Title was truncated to 'Robust Synthetic Data Generation for Sequentia' in the old README.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "FED2Port",
+         "title": "Enhancing Portfolio Performance through Financial Time-Series Decomposition-Based Variational Encoder-Decoder Data Augmentation",
+         "venue": "Symmetry (MDPI)",
+         "year": 2024,
+         "authors": "Kalina Bayartsetseg, Ju-Hong Lee, Kwang-Tek Na",
+         "doi": "10.3390/sym16030283",
+         "task": "Portfolio diversification",
+         "src": "crossref",
+         "note": "Title was prefixed with a stray 'Article ' in the old README.",
+         "extra_leaf": false
+        },
+        {
+         "nick": "Dogariu-Synth",
+         "title": "Generation of Realistic Synthetic Financial Time-series",
+         "venue": "ACM Transactions on Multimedia Computing, Communications, and Applications",
+         "year": 2022,
+         "authors": "Mihai Dogariu, Liviu-Daniel Stefan, Bogdan Andrei Boteanu, Claudiu Lamba, Bomi Kim, Bogdan Ionescu",
+         "doi": "10.1145/3501305",
+         "task": "Synthetic financial series generation",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "WGAN-BiLSTM",
+         "title": "Stock Price Prediction with Heavy-Tailed Distribution Time-Series Generation Based on WGAN-BiLSTM",
+         "venue": "Computational Economics",
+         "year": 2024,
+         "authors": "Ming Kang",
+         "doi": "10.1007/s10614-024-10639-9",
+         "task": "Stock price prediction",
+         "src": "crossref",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "C1.4",
+       "name": "C1.4  Stylized-fact evaluation of synthetic series",
+       "extra": true,
+       "items": [
+        {
+         "nick": "style-facts",
+         "title": "Can GANs Learn the Stylized Facts of Financial Time Series?",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2024,
+         "authors": "Sohyeon Kwon, Yongjae Lee",
+         "doi": "10.1145/3677052.3698661",
+         "task": "Stylized-fact evaluation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": true
+        },
+        {
+         "nick": "stylized-facts",
+         "title": "International Financial Markets Through 150 Years: Evaluating Stylized Facts",
+         "venue": "arXiv preprint",
+         "year": 2025,
+         "authors": "Sara A. Safari, Maximilian Janisch, Thomas Hericy",
+         "doi": null,
+         "arxiv": "2504.08611",
+         "task": "Stylized-fact evaluation",
+         "src": "bib-arxiv",
+         "new": true,
+         "abstract_en": "In the theory of financial markets, a stylized fact is a qualitative summary of a pattern in financial market data that is observed across multiple assets, asset classes and time horizons. In this article, we test a set of eleven stylized facts for financial market data. Our main contribution is to consider a broad range of geographical regions across Asia, continental Europe, and the US over a time period of 150 years, as well as two of the most traded cryptocurrencies, thus providing insights into the robustness and generalizability of commonly known stylized facts.",
+         "abstract_src": "arxiv",
+         "extra_leaf": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "family": "Macro-level Simulation",
+     "subs": [
+      {
+       "id": "C2.1",
+       "name": "C2.1  Conditional GANs",
+       "extra": false,
+       "items": [
+        {
+         "nick": "CoMeTS-GAN",
+         "title": "On Correlated Stock Market Time Series Generation",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2023,
+         "authors": "Giuseppe Masi, Matteo Prata, Michele Conti, Novella Bartolini, Svitlana Vyetrenko",
+         "doi": "10.1145/3604237.3626895",
+         "task": "Correlated multi-series generation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "CTS-GAN",
+         "title": "Simulating Asset Prices using Conditional Time-Series GAN",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2024,
+         "authors": "Riasat Ali Istiaque, Chi Seng Pun, Yuli Song",
+         "doi": "10.1145/3677052.3698638",
+         "task": "Conditional asset price simulation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "Market-GAN",
+         "title": "Market-GAN: Adding Control to Financial Market Data Generation with Semantic Context",
+         "venue": "AAAI Conference on Artificial Intelligence",
+         "year": 2024,
+         "authors": "Haochong Xia, Shuo Sun, Xinrun Wang, Bo An",
+         "doi": "10.1609/aaai.v38i14.29531",
+         "task": "Semantically controlled market generation",
+         "src": "crossref",
+         "new": true,
+         "abstract_en": "Financial simulators play an important role in enhancing forecasting accuracy, managing risks, and fostering strategic financial decision-making. Despite the development of financial market simulation methodologies, existing frameworks often struggle with adapting to specialized simulation context. We pinpoint the challenges as i) current financial datasets do not contain context labels; ii) current techniques are not designed to generate financial data with context as control, which demands greater precision compared to other modalities; iii) the inherent difficulties in generating context-aligned, high-fidelity data given the non-stationary, noisy nature of financial data. To address these challenges, our contributions are: i) we proposed the Contextual Market Dataset with market dynamics, stock ticker, and history state as context, leveraging a market dynamics modeling method that combines linear regression and clustering to extract market dynamics; ii) we present Market-GAN, a novel architecture incorporating a Generative Adversarial Networks (GAN) for the controllable generation with context, an autoencoder for learning low-dimension features, and supervisors for knowledge transfer; iii) we introduce a two-stage training scheme to ensure that Market-GAN captures the intrinsic market distribution with multiple objectives. In the pertaining stage, with the use of the autoencoder and supervisors, we prepare the generator with a better initialization for the adversarial training stage. We propose a set of holistic evaluation metrics that consider alignment, fidelity, data usability on downstream tasks, and market facts. We evaluate Market-GAN with the Dow Jones Industrial Average data from 2000 to 2023 and showcase superior performance in comparison to 4 state-of-the-art time-series generative models.",
+         "abstract_src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "MC-TE-GAN",
+         "title": "Macroeconomic Conditioned Synthetic Financial Markets",
+         "venue": "ACM International Conference on AI in Finance (ICAIF)",
+         "year": 2024,
+         "authors": "Alexander Michael Rusnak, Stephane Daul",
+         "doi": "10.1145/3677052.3698606",
+         "task": "Macro-conditioned market synthesis",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        },
+        {
+         "nick": "GAN-MoEx",
+         "title": "Time Series Generation with GANs for Momentum Effect Simulation on Moscow Stock Exchange",
+         "venue": "IEEE CiFer",
+         "year": 2024,
+         "authors": "Maksim Kazadaev, Vitaliy Pozdnyakov, Ilya Makarov",
+         "doi": "10.1109/cifer62890.2024.10772763",
+         "task": "Momentum effect simulation",
+         "src": "crossref",
+         "new": true,
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "C2.2",
+       "name": "C2.2  Conditional diffusion models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "TRADES",
+         "title": "TRADES: Generating Realistic Market Simulations with Diffusion Models",
+         "venue": "Frontiers in Artificial Intelligence and Applications (IOS Press)",
+         "year": 2025,
+         "authors": "Leonardo Berti, Bardh Prenkaj, Paola Velardi",
+         "doi": "10.3233/faia251249",
+         "arxiv": "2502.07071",
+         "task": "Limit order book simulation",
+         "src": "crossref",
+         "extra_leaf": false
+        },
+        {
+         "nick": "DiGA",
+         "title": "Controllable Financial Market Generation with Diffusion Guided Meta Agent",
+         "venue": "AAAI Conference on Artificial Intelligence",
+         "year": 2026,
+         "authors": "Yu-Hao Huang, Chang Xu, Yang Liu, Weiqing Liu, Wu-Jun Li, Jiang Bian",
+         "doi": "10.1609/aaai.v40i1.37009",
+         "task": "Order-flow generation",
+         "src": "crossref",
+         "note": "Old README said 2023; the proceedings record is AAAI vol. 40 (2026).",
+         "extra_leaf": false
+        }
+       ]
+      },
+      {
+       "id": "C2.3",
+       "name": "C2.3  Large market models",
+       "extra": false,
+       "items": [
+        {
+         "nick": "MarS",
+         "title": "MarS: a Financial Market Simulation Engine Powered by Generative Foundation Model",
+         "venue": "ICLR",
+         "year": 2025,
+         "authors": "Junjie Li, Yang Liu, Weiqing Liu, Shikai Fang, Lewen Wang, Chang Xu, Jiang Bian",
+         "doi": null,
+         "arxiv": "2409.07486",
+         "task": "Market simulation",
+         "src": "crossref+web",
+         "new_venue_note": "arXiv 2024; published at ICLR 2025.",
+         "code": "https://github.com/microsoft/MarS",
+         "abstract_en": "A market simulation engine powered by a Large Market Model (LMM), an order-level generative foundation model trained on historical order flow. Orders are generated conditionally on scenario descriptions, user-submitted orders and recent history, then matched in a simulated exchange to produce market trajectories. Validated against 11 stylized facts and used for forecasting, risk detection, market-impact analysis and agent training.",
+         "extra_leaf": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BASELINES": [
+  {
+   "nick": "N-BEATS",
+   "title": "N-BEATS: Neural basis expansion analysis for interpretable time series forecasting",
+   "authors": "Boris N. Oreshkin, Dmitri Carpov, Nicolas Chapados, Yoshua Bengio",
+   "venue": "arXiv preprint",
+   "year": 2019,
+   "arxiv": "1905.10437",
+   "task": "Interpretable deep forecaster"
+  },
+  {
+   "nick": "Informer",
+   "title": "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
+   "authors": "Haoyi Zhou, Shanghang Zhang, Jieqi Peng, Shuai Zhang, Jianxin Li, Hui Xiong, Wancai Zhang",
+   "venue": "arXiv preprint",
+   "year": 2020,
+   "arxiv": "2012.07436",
+   "task": "Long-sequence forecaster (AAAI 2021)"
+  },
+  {
+   "nick": "Autoformer",
+   "title": "Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting",
+   "authors": "Haixu Wu, Jiehui Xu, Jianmin Wang, Mingsheng Long",
+   "venue": "arXiv preprint",
+   "year": 2021,
+   "arxiv": "2106.13008",
+   "task": "Decomposition forecaster"
+  },
+  {
+   "nick": "PatchTST",
+   "title": "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+   "authors": "Yuqi Nie, Nam H. Nguyen, Phanwadee Sinthong, Jayant Kalagnanam",
+   "venue": "arXiv preprint",
+   "year": 2022,
+   "arxiv": "2211.14730",
+   "task": "Patch-based transformer forecaster (ICLR 2023)"
+  },
+  {
+   "nick": "DLinear",
+   "title": "Are Transformers Effective for Time Series Forecasting?",
+   "authors": "Ailing Zeng, Muxi Chen, Lei Zhang, Qiang Xu",
+   "venue": "arXiv preprint",
+   "year": 2022,
+   "arxiv": "2205.13504",
+   "task": "Linear forecaster"
+  },
+  {
+   "nick": "TimesNet",
+   "title": "TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis",
+   "authors": "Haixu Wu, Tengge Hu, Yong Liu, Hang Zhou, Jianmin Wang, Mingsheng Long",
+   "venue": "arXiv preprint",
+   "year": 2022,
+   "arxiv": "2210.02186",
+   "task": "General time series analysis (ICLR 2023)"
+  },
+  {
+   "nick": "TimesFM",
+   "title": "A decoder-only foundation model for time-series forecasting",
+   "authors": "Abhimanyu Das, Weihao Kong, Rajat Sen, Yichen Zhou",
+   "venue": "arXiv preprint",
+   "year": 2023,
+   "arxiv": "2310.10688",
+   "task": "Time series foundation model"
+  },
+  {
+   "nick": "TimeMixer",
+   "title": "TimeMixer: Decomposable Multiscale Mixing for Time Series Forecasting",
+   "authors": "Shiyu Wang, Haixu Wu, Xiaoming Shi, Tengge Hu, Huakun Luo, Lintao Ma, James Y. Zhang, Jun Zhou",
+   "venue": "arXiv preprint",
+   "year": 2024,
+   "arxiv": "2405.14616",
+   "task": "Multiscale forecaster"
+  },
+  {
+   "nick": "MOMENT",
+   "title": "MOMENT: A Family of Open Time-series Foundation Models",
+   "authors": "Mononito Goswami, Konrad Szafer, Arjun Choudhry, Yifu Cai, Shuo Li, Artur Dubrawski",
+   "venue": "arXiv preprint",
+   "year": 2024,
+   "arxiv": "2402.03885",
+   "task": "Time series foundation model (ICML 2024)"
+  }
+ ],
+ "SURVEYS": [
+  {
+   "nick": "New-Money-SDR",
+   "title": "New Money: A Systematic Review of Synthetic Data Generation for Finance",
+   "authors": "James Meldrum, Basem Suleiman, Fethi Rabhi, Muhammad Johan Alibasa",
+   "venue": "arXiv preprint",
+   "year": 2025,
+   "arxiv": "2510.26076",
+   "group": "S1",
+   "scope": "**Closest overlap in the literature.** A PRISMA-style systematic review of synthetic data generation for finance, motivated by privacy and regulatory constraints and centred on GANs and VAEs. It does not separate the three FTSG tasks, and it stops short of score-based diffusion models and time-series foundation models.",
+   "task": "Systematic review of synthetic data generation in finance"
+  },
+  {
+   "nick": "FinTech-GA-Review",
+   "title": "A Comprehensive Review of Generative AI in Finance",
+   "authors": "David Kuo Chuen Lee, Chong Guan, Yinghui Yu, Qinxu Ding",
+   "venue": "FinTech",
+   "year": 2024,
+   "doi": "10.3390/fintech3030025",
+   "volume": "3",
+   "issue": "3",
+   "page": "460-478",
+   "group": "S1",
+   "scope": "Generative AI across the whole financial sector - text, assistants, compliance, advisory. Time-series generation is one application among many and the review builds no task taxonomy.",
+   "task": "Review of generative AI in finance"
+  },
+  {
+   "nick": "GAN-Fin-Review",
+   "title": "Generative Adversarial Networks: A Systematic Review of Characteristics, Applications, and Challenges in Financial Data Generation and Market Modeling: 2019-2024",
+   "authors": "D. Wilson, A. Azmani",
+   "venue": "International Journal of Engineering",
+   "year": 2026,
+   "doi": "10.5829/ije.2026.39.02b.09",
+   "volume": "39",
+   "issue": "2",
+   "page": "395-406",
+   "group": "S1",
+   "scope": "Systematic review of GANs in financial data generation and market modelling, 2019-2024. Single-paradigm and pre-diffusion: no score-based generative models, no foundation models, no task axis.",
+   "task": "Systematic review of GANs in finance"
+  },
+  {
+   "nick": "Cabral-Nonstationarity",
+   "title": "Non-stationarity in financial time series: A taxonomy-based survey of drift detection, adaptation, and evaluation",
+   "authors": "Davi M. Cabral, Adriano M. A. Lima, Gustavo H. F. M. Oliveira, Adriano L. I. Oliveira",
+   "venue": "Neurocomputing",
+   "year": 2026,
+   "doi": "10.1016/j.neucom.2026.134647",
+   "volume": "703",
+   "page": "134647",
+   "group": "S2",
+   "scope": "The closest methodological sibling: also a taxonomy-based survey of financial time series, but of non-stationarity handling - drift detection, adaptation and evaluation - rather than of generative modelling.",
+   "task": "Non-stationarity, drift and adaptation"
+  },
+  {
+   "nick": "Tang-ML-FinTS",
+   "title": "A survey on machine learning models for financial time series forecasting",
+   "authors": "Yajiao Tang, Zhenyu Song, Yulin Zhu, Huaiyu Yuan, Maozhang Hou, Junkai Ji, et al.",
+   "venue": "Neurocomputing",
+   "year": 2022,
+   "doi": "10.1016/j.neucom.2022.09.003",
+   "volume": "512",
+   "page": "363-380",
+   "group": "S2",
+   "scope": "Machine-learning models for financial time-series forecasting. Same data domain, different task: prediction rather than generation.",
+   "task": "Financial time series forecasting"
+  },
+  {
+   "nick": "Zhang-DL-Price",
+   "title": "Deep learning models for price forecasting of financial time series: A review of recent advancements: 2020-2022",
+   "authors": "Cheng Zhang, Nilam Nur Amir Sjarif, Roslina Ibrahim",
+   "venue": "WIREs Data Mining and Knowledge Discovery",
+   "year": 2024,
+   "doi": "10.1002/widm.1519",
+   "volume": "14",
+   "issue": "1",
+   "group": "S2",
+   "scope": "Deep learning for price forecasting, covering 2020-2022. Forecasting-only and closed by its time window, so it predates the current wave of financial diffusion and LLM work.",
+   "task": "Financial price forecasting"
+  },
+  {
+   "nick": "Olorunnimbe-StockDL",
+   "title": "Deep learning in the stock market - a systematic survey of practice, backtesting, and applications",
+   "authors": "Kenniy Olorunnimbe, Herna Viktor",
+   "venue": "Artificial Intelligence Review",
+   "year": 2023,
+   "doi": "10.1007/s10462-022-10226-0",
+   "volume": "56",
+   "issue": "3",
+   "page": "2057-2109",
+   "group": "S2",
+   "scope": "Systematic survey of deep learning in the stock market covering practice, backtesting and applications. Generation is not the organising axis.",
+   "task": "Deep learning in the stock market"
+  },
+  {
+   "nick": "Kumbure-StockML",
+   "title": "Machine learning techniques and data for stock market forecasting: A literature review",
+   "authors": "Mahinda Mailagaha Kumbure, Christoph Lohrmann, Pasi Luukka, Jari Porras",
+   "venue": "Expert Systems with Applications",
+   "year": 2022,
+   "doi": "10.1016/j.eswa.2022.116659",
+   "volume": "197",
+   "page": "116659",
+   "group": "S2",
+   "scope": "Literature review of machine-learning techniques and of the data sources used for stock-market forecasting.",
+   "task": "Stock market forecasting"
+  },
+  {
+   "nick": "Behera-HONN-FinTS",
+   "title": "A Comprehensive Survey on Higher Order Neural Networks and Evolutionary Optimization Learning Algorithms in Financial Time Series Forecasting",
+   "authors": "Sudersan Behera, Sarat Chandra Nayak, A. V. S. Pavan Kumar",
+   "venue": "Archives of Computational Methods in Engineering",
+   "year": 2023,
+   "doi": "10.1007/s11831-023-09942-9",
+   "volume": "30",
+   "issue": "7",
+   "page": "4401-4448",
+   "group": "S2",
+   "scope": "Higher-order neural networks and evolutionary optimisation for financial forecasting - a narrow architectural slice rather than a generative survey.",
+   "task": "Financial time series forecasting"
+  },
+  {
+   "nick": "Blasco-UQ-FinTS",
+   "title": "A survey on uncertainty quantification in deep learning for financial time series prediction",
+   "authors": "Txus Blasco, J. Salvador Sanchez, Vicente Garcia",
+   "venue": "Neurocomputing",
+   "year": 2024,
+   "doi": "10.1016/j.neucom.2024.127339",
+   "volume": "576",
+   "page": "127339",
+   "group": "S2",
+   "scope": "Uncertainty quantification for financial prediction. A cross-cutting concern that overlaps with the survey's evaluation chapter but is not a generation taxonomy.",
+   "task": "Uncertainty quantification in financial forecasting"
+  },
+  {
+   "nick": "Arsenault-XAI-FinTS",
+   "title": "A Survey of Explainable Artificial Intelligence (XAI) in Financial Time Series Forecasting",
+   "authors": "Pierre-Daniel Arsenault, Shengrui Wang, Jean-Marc Patenaude",
+   "venue": "ACM Computing Surveys",
+   "year": 2025,
+   "doi": "10.1145/3729531",
+   "volume": "57",
+   "issue": "10",
+   "page": "1-37",
+   "group": "S2",
+   "scope": "Explainability for financial forecasting. Cited by the FTSG survey as an example of a survey narrowed to a single technical paradigm.",
+   "task": "Explainable AI in financial forecasting"
+  },
+  {
+   "nick": "AI-FinStock-Survey",
+   "title": "AI-empowered financial stock: A survey",
+   "authors": "Wenjun Qi, Xiangwen Xue, Xinmin Tian",
+   "venue": "AIP Advances",
+   "year": 2026,
+   "doi": "10.1063/5.0322804",
+   "volume": "16",
+   "issue": "2",
+   "group": "S2",
+   "scope": "AI across the financial-stock pipeline - quantitative trading, risk assessment, investment decision-making. Broader in pipeline coverage, thinner on generation itself.",
+   "task": "AI in financial stock markets"
+  },
+  {
+   "nick": "Yeo-FinXAI",
+   "title": "A comprehensive review on financial explainable AI",
+   "authors": "Wei Jie Yeo, Wihan Van Der Heever, Rui Mao, Erik Cambria, Ranjan Satapathy, Gianmarco Mengaldo",
+   "venue": "Artificial Intelligence Review",
+   "year": 2025,
+   "doi": "10.1007/s10462-024-11077-7",
+   "volume": "58",
+   "issue": "6",
+   "group": "S2",
+   "scope": "Financial explainable AI across tasks and modalities; interpretability rather than generation is the organising principle.",
+   "task": "Explainable AI in finance"
+  },
+  {
+   "nick": "LLM4TS-Survey",
+   "title": "Large Language Models for Time Series: A Survey",
+   "authors": "Xiyuan Zhang, Ranak Roy Chowdhury, Rajesh K. Gupta, Jingbo Shang",
+   "venue": "IJCAI",
+   "year": 2024,
+   "url": "https://www.ijcai.org/proceedings/2024/921",
+   "group": "S3",
+   "scope": "Task-level view of LLMs for time series - forecasting, anomaly detection, classification, imputation and generation - but domain-general, so financial constraints such as non-stationarity and low signal-to-noise are not addressed.",
+   "task": "LLMs for time series"
+  },
+  {
+   "nick": "FinSurvey-LLM",
+   "title": "A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges",
+   "authors": "Yuxuan Nie, X. Dong, S. Zohren",
+   "venue": "arXiv preprint",
+   "year": 2024,
+   "arxiv": "2406.11903",
+   "group": "S3",
+   "scope": "LLM applications across finance. Generation appears as one item inside a much wider task list, and the treatment is language-centric rather than time-series-centric. Cited by the FTSG survey as a paradigm-scoped review.",
+   "task": "LLMs in financial applications"
+  },
+  {
+   "nick": "Jin-LargeModels-TS",
+   "title": "Large Models for Time Series and Spatio-Temporal Data: A Survey and Outlook",
+   "authors": "Ming Jin, Yaxuan Kong, Yuxuan Liang, Chaoli Zhang, Siqiao Xue, Xue Wang, et al.",
+   "venue": "ACM Computing Surveys",
+   "year": 2026,
+   "doi": "10.1145/3821637",
+   "volume": "58",
+   "issue": "14",
+   "page": "1-38",
+   "group": "S3",
+   "scope": "Large and foundation models for time series and spatio-temporal data. Covers the model families the FTSG survey places under FTSE, but not the financial generative tasks themselves.",
+   "task": "Large models for time series"
+  },
+  {
+   "nick": "Stenger-Eval-SynthTS",
+   "title": "Evaluation is key: a survey on evaluation measures for synthetic time series",
+   "authors": "Michael Stenger, Robert Leppich, Ian T. Foster, Samuel Kounev, Andre Bauer",
+   "venue": "Journal of Big Data",
+   "year": 2024,
+   "doi": "10.1186/s40537-024-00924-7",
+   "volume": "11",
+   "issue": "1",
+   "group": "S4",
+   "scope": "Directly on how synthesized time series should be measured - the problem the FTSG survey's benchmark chapter addresses. Domain-general, and organised around measures rather than around generation tasks.",
+   "task": "Evaluation of synthetic time series"
+  },
+  {
+   "nick": "Iglesias-TSAug",
+   "title": "Data Augmentation techniques in time series domain: a survey and taxonomy",
+   "authors": "Guillermo Iglesias, Edgar Talavera, Angel Gonzalez-Prieto, Alberto Mozo, Sandra Gomez-Canaval",
+   "venue": "Neural Computing and Applications",
+   "year": 2023,
+   "doi": "10.1007/s00521-023-08459-3",
+   "volume": "35",
+   "issue": "14",
+   "page": "10123-10145",
+   "group": "S4",
+   "scope": "Taxonomy of time-series data augmentation, i.e. augmentation treated as generation, but without a financial setting and without the extrapolation / imputation / synthesis split.",
+   "task": "Time series data augmentation"
+  },
+  {
+   "nick": "Hu-TSGen-IoT",
+   "title": "Survey of Time Series Data Generation in IoT",
+   "authors": "Chaochen Hu, Zihan Sun, Chao Li, Yong Zhang, Chunxiao Xing",
+   "venue": "Sensors",
+   "year": 2023,
+   "doi": "10.3390/s23156976",
+   "volume": "23",
+   "issue": "15",
+   "page": "6976",
+   "group": "S4",
+   "scope": "Time-series data generation in IoT. Domain-general and predating the foundation-model wave; useful for method families rather than for the financial task structure.",
+   "task": "Time series generation in IoT"
+  },
+  {
+   "nick": "Lin-DiffTS",
+   "title": "Diffusion models for time-series applications: a survey",
+   "authors": "Lequan Lin, Zhengkun Li, Ruikun Li, Xuliang Li, Junbin Gao",
+   "venue": "Frontiers of Information Technology & Electronic Engineering",
+   "year": 2024,
+   "doi": "10.1631/fitee.2300310",
+   "volume": "25",
+   "issue": "1",
+   "page": "19-41",
+   "group": "S4",
+   "scope": "Diffusion models across time-series applications. This is the technique axis that the FTSG survey maps onto FTSE, FTSI and FTSS separately.",
+   "task": "Diffusion models for time series"
+  },
+  {
+   "nick": "Yang-DiffTS-STM",
+   "title": "A Survey on Diffusion Models for Time Series and Spatio-Temporal Data",
+   "authors": "Yiyuan Yang, Ming Jin, Haomin Wen, Chaoli Zhang, Yuxuan Liang, Lintao Ma, et al.",
+   "venue": "ACM Computing Surveys",
+   "year": 2026,
+   "doi": "10.1145/3783986",
+   "volume": "58",
+   "issue": "8",
+   "page": "1-39",
+   "group": "S4",
+   "scope": "Diffusion models for time series and spatio-temporal data; complements the score-based diffusion leaves the FTSG survey places under FTSI and FTSS.",
+   "task": "Diffusion models for time series"
+  },
+  {
+   "nick": "Gao-GAN-SpatioTemporal",
+   "title": "Generative Adversarial Networks for Spatio-temporal Data: A Survey",
+   "authors": "Nan Gao, Hao Xue, Wei Shao, Sichen Zhao, Kyle Kai Qin, Arian Prabowo, et al.",
+   "venue": "ACM Transactions on Intelligent Systems and Technology",
+   "year": 2022,
+   "doi": "10.1145/3474838",
+   "volume": "13",
+   "issue": "2",
+   "page": "1-25",
+   "group": "S4",
+   "scope": "GANs for spatio-temporal data. Predates the diffusion wave and is not finance-specific, but its model taxonomy lines up with the FTSS micro-level branch.",
+   "task": "GANs for spatio-temporal data"
+  },
+  {
+   "nick": "Eigenschink-DeepGen",
+   "title": "Deep Generative Models for Synthetic Data: A Survey",
+   "authors": "Peter Eigenschink, Thomas Reutterer, Stefan Vamosi, Ralf Vamosi, Chang Sun, Klaudius Kalcher",
+   "venue": "IEEE Access",
+   "year": 2023,
+   "doi": "10.1109/access.2023.3275134",
+   "volume": "11",
+   "page": "47304-47320",
+   "group": "S4",
+   "scope": "Deep generative models for synthetic data across domains, with a domain-classification framework rather than a task taxonomy.",
+   "task": "Deep generative models for synthetic data"
+  },
+  {
+   "nick": "Kim-DL-TSF",
+   "title": "A comprehensive survey of deep learning for time series forecasting: architectural diversity and open challenges",
+   "authors": "Jongseon Kim, Hyungjoon Kim, HyunGi Kim, Dongjun Lee, Sungroh Yoon",
+   "venue": "Artificial Intelligence Review",
+   "year": 2025,
+   "doi": "10.1007/s10462-025-11223-9",
+   "volume": "58",
+   "issue": "7",
+   "group": "S5",
+   "scope": "One of the two forecasting surveys the FTSG survey positions itself against: thorough on forecasting architectures, silent on the generative formulation of the problem.",
+   "task": "Deep learning for time series forecasting"
+  },
+  {
+   "nick": "Kong-DL-TSF",
+   "title": "Deep learning for time series forecasting: a survey",
+   "authors": "Xiangjie Kong, Zhenghao Chen, Weiyao Liu, Kaili Ning, Lechao Zhang, Syauqie Muhammad Marier, et al.",
+   "venue": "International Journal of Machine Learning and Cybernetics",
+   "year": 2025,
+   "doi": "10.1007/s13042-025-02560-w",
+   "volume": "16",
+   "issue": "7-8",
+   "page": "5079-5112",
+   "group": "S5",
+   "scope": "The second forecasting survey used as a positioning anchor; same gap, different slice of the architecture space.",
+   "task": "Deep learning for time series forecasting"
+  },
+  {
+   "nick": "Benidis-DL-TSF",
+   "title": "Deep Learning for Time Series Forecasting: Tutorial and Literature Survey",
+   "authors": "Konstantinos Benidis, Syama Sundar Rangapuram, Valentin Flunkert, Bernie Wang, Danielle C. Maddix, Caner Turkmen, et al.",
+   "venue": "ACM Computing Surveys",
+   "year": 2023,
+   "doi": "10.1145/3533382",
+   "volume": "55",
+   "issue": "6",
+   "page": "1-36",
+   "group": "S5",
+   "scope": "Tutorial-style survey of deep forecasting and the pre-LLM baseline for the forecasting branch of the taxonomy.",
+   "task": "Deep learning for time series forecasting"
+  }
+ ],
+ "ADJACENT": [
+  {
+   "nick": "Interpretable-GenAI",
+   "title": "Interpretable GenAI: Synthetic Financial Time Series Generation with Probabilistic LSTM",
+   "authors": "Christian Schwarz",
+   "venue": "SSRN preprint (not peer reviewed)",
+   "year": 2024,
+   "doi": "10.2139/ssrn.4877007",
+   "task": "Synthetic financial time series generation - preprint, not a review"
+  },
+  {
+   "nick": "GraphSAGE-CTGAN",
+   "title": "Graph-Based Inductive Learning for Credit Risk Prediction with Imbalance Mitigation",
+   "venue": "Computational Economics",
+   "year": 2025,
+   "authors": "Sogand Pourkhoshgoftar, Asadollah Shahbahrami, Nima Esmi",
+   "doi": "10.1007/s10614-025-11114-9",
+   "task": "Credit risk",
+   "src": "crossref",
+   "note": "CTGAN over tabular borrower data, not a time-series generator. Was duplicated twice in the old README."
+  },
+  {
+   "nick": "Swiss-Discount-Curve",
+   "title": "Stripping the Swiss Discount Curve using Kernel Ridge Regression",
+   "venue": "SSRN working paper",
+   "year": 2023,
+   "authors": "Nicolas Camenzind, Damir Filipovic",
+   "doi": "10.2139/ssrn.4611310",
+   "task": "Yield curve estimation",
+   "src": "crossref",
+   "flag": "no journal version located; only an SSRN preprint exists",
+   "note": "Yield-curve fitting by kernel ridge regression, not a time-series generator."
+  },
+  {
+   "nick": "Distress-Imputation",
+   "title": "Missing value imputation and the effect of feature normalisation on financial distress prediction",
+   "venue": "Journal of Experimental & Theoretical Artificial Intelligence",
+   "year": 2022,
+   "authors": "Kuen-Liang Sue, Chih-Fong Tsai, Hau-Min Tsau",
+   "doi": "10.1080/0952813x.2022.2153278",
+   "task": "Tabular imputation",
+   "src": "crossref",
+   "note": "Tabular feature imputation, not time-series imputation. Old README said 2024."
+  },
+  {
+   "nick": "MTS-Anomaly",
+   "title": "Management Analysis Method of Multivariate Time Series Anomaly Detection in Financial Risk Assessment",
+   "venue": "Journal of Organizational and End User Computing",
+   "year": 2024,
+   "authors": "Yongshan Zhang, Zhiyun Jiang, Cong Peng, Xiumei Zhu, Gang Wang",
+   "doi": "10.4018/joeuc.342094",
+   "task": "Anomaly detection",
+   "src": "crossref",
+   "note": "Uses GAN augmentation for detection, not for generation."
+  },
+  {
+   "nick": "FinanceNLP-CA",
+   "title": "Concatenation Augmentation for Improving Deep Learning Models in Finance NLP with Scarce Data",
+   "venue": "Electronics (MDPI)",
+   "year": 2025,
+   "authors": "Cesar Vaca, Jesus-Angel Roman-Gallego, Veronica Barroso-Garcia, Fernando Tejerina, Benjamin Sahelices",
+   "doi": "10.3390/electronics14112289",
+   "task": "Text augmentation",
+   "src": "crossref",
+   "note": "Text data augmentation for board-bio extraction, not time series."
+  },
+  {
+   "nick": "FCLM",
+   "title": "Improving Anti-money Laundering via Fourier-Based Contrastive Learning",
+   "venue": "Lecture Notes in Computer Science",
+   "year": 2024,
+   "authors": "Meihan Tong, Shuai Wang, Xinyu Chen, Jinsong Bei",
+   "doi": "10.1007/978-981-97-2259-4_25",
+   "task": "Anti-money laundering",
+   "src": "crossref",
+   "note": "Tabular transaction classification, not time-series generation."
+  },
+  {
+   "nick": "BERT-ABSA",
+   "title": "Data Augmentation Using BERT-Based Models for Aspect-Based Sentiment Analysis",
+   "venue": "Lecture Notes in Computer Science",
+   "year": 2024,
+   "authors": "Bron Hollander, Flavius Frasincar, Finn van der Knaap",
+   "doi": "10.1007/978-3-031-62362-2_8",
+   "task": "Text augmentation",
+   "src": "crossref",
+   "note": "Not a time-series paper; recommend dropping from the list entirely."
+  }
+ ]
+}

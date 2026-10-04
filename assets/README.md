@@ -1,24 +1,61 @@
-## 数据资产
+## Data Assets
 
-`asserts` 目录下包含用于构建数据库所需的基本文献资料：
-- `asserts/markdowns`：存放原始 PDF 文档经 OCR 解析后转换而成的 Markdown 文档
-  - **功能**：构建领域知识库，做基于 SQL 的检索或基于 LLM 的问答、生成
-- `asserts/notes`：LLM 生成的标签
-  - **schema**:
+The `assets/` directory holds the literature corpus used to build the local database and the
+survey's literature review. It contains **metadata, notes and images only** — no paper full text.
+
+### Layout
+
+| Path | Contents |
+|---|---|
+| `assets/index.csv` | Placement index: section → taxonomy family → leaf → entry, with DOI / arXiv id |
+| `assets/markdowns/` | Papers converted from PDF to Markdown by OCR |
+| `assets/notes/` | LLM-generated structured labels, one JSON per paper |
+| `assets/tech-notes/` | LLM-generated reading notes, intended for quick review |
+| `assets/nick_names.csv` | Legacy method-nickname assignments from the original repository |
+| `assets/cover.png` / `assets/cover.svg` | Cover figure and its vector source |
+| `assets/taxonomy.png` | Figure 1 of the survey, exported from the compiled PDF |
+| `assets/Survey_00.png` | Legacy cover, superseded by `cover.png` |
+
+### `assets/index.csv`
+
+Header: `section,family,leaf,nick_name,doi,arxiv`.
+
+`section` is one of `FTSE` / `FTSI` / `FTSS` / `COMPARATOR` / `SURVEY` / `ADJACENT`. `family` and
+`leaf` follow the two-level taxonomy of Figure 1 of the survey; for `SURVEY` rows, `family` holds the
+comparison group (`S1`–`S5`). Rows with an empty `doi` carry an `arxiv` identifier instead.
+
+This file is the machine-readable projection of the README's Literature Review and Related Surveys
+chapters. Where the two disagree, the README wins.
+
+### `assets/notes/` schema
+
+Each file is a single JSON object. All values are plain JSON types — the bracketed annotations
+below describe the type, they are not part of the data.
+
 ```json
-{    
-    "authors": [作者列表, List],
-    "year": [提出年份, Int],
-    "research_directions": [研究方向, List[String]],
-    "specific_task": [细分任务, List[String]],
-    "summary": [一句话概括文章内容, String],
-    "techniques": [主要技术, List[String]],
-    "method": [方法简介, String]
-    "title": [文章标题, String]
+{
+  "authors": ["string"],
+  "year": 2024,
+  "research_directions": ["string"],
+  "specific_task": ["string"],
+  "summary": "string",
+  "techniques": ["string"],
+  "method": "string",
+  "title": "string"
 }
 ```
-- `asserts/tech-notes`：LLM 生成的论文阅读笔记
-  - **功能**：方便快速阅读和学习论文
-- `asserts/nick-name`：LLM 自动标注文章所提方法的别名
 
-> **Note**：以上数据的获取依赖 LLM 支持，使用模型为 Qwen3-Next-80B-A3B-Instruct
+| Field | Type | Meaning |
+|---|---|---|
+| `authors` | `string[]` | Author list |
+| `year` | `int` | Year of first publication |
+| `research_directions` | `string[]` | Research directions |
+| `specific_task` | `string[]` | Sub-task(s) |
+| `summary` | `string` | One-line summary of the paper |
+| `techniques` | `string[]` | Main techniques used |
+| `method` | `string` | Method description |
+| `title` | `string` | Paper title |
+
+> **Note** — These fields were generated with LLM assistance and are **not** authoritative. The
+> verified bibliographic records live in the root [`README.md`](../README.md) and
+> [`fts_dataset.json`](../fts_dataset.json); where the two disagree, those win.
