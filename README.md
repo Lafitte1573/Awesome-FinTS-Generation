@@ -3,6 +3,7 @@
 > Curated paper collection accompanying the survey **"Recent Advanced Technologies in
 > Financial Time-Series Generation: A Survey"** (IJCAI-ECAI 2026).
 
+[![alphaXiv](https://img.shields.io/badge/alphaXiv-preprint-blue)](https://www.alphaxiv.org/abs/2610.financial-time-series-generation-survey)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
