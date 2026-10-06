@@ -1153,12 +1153,10 @@ extended deliberately rather than case by case.
 If you use this collection, please cite the survey:
 
 ```bibtex
-@inproceedings{duan2026ftsgsurvey,
-  title     = {Recent Advanced Technologies in Financial Time-Series Generation: A Survey},
-  author    = {Duan, Jiaxin and Zhang, Yingxiao and Zhang, Junfu and Zou, Yue and Feng, Ke},
-  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
-               Artificial Intelligence (IJCAI)},
-  year      = {2026}
+@misc{duan-financial-time-series-generation-survey,
+  author = {Duan, Jiaxin and Zhang, Yingxiao and Zhang, Junfu and Zou, Yue and Feng, Ke},
+  keywords = {Machine Learning (cs.LG), Statistical Finance (q-fin.ST), Financial Time-Series Generation, Time-Series Modeling, Generative AI, Synthetic Financial Data},
+  title = {Recent Advanced Technologies in Financial Time-Series Generation: A Survey}
 }
 ```
 
