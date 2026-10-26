@@ -1,13 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this collection, please cite the survey below."
+message: "If you use this collection, please cite the survey below. A preprint version of the survey, submitted to IJCAI-ECAI 2026, is archived on alphaXiv."
 title: "Awesome Financial Time-Series Generation"
 abstract: >-
-  Curated paper collection accompanying the survey "Recent Advanced
-  Technologies in Financial Time-Series Generation: A Survey".
+  Curated paper collection accompanying the survey "Financial time-series
+  generation: a systematic survey of taxonomy, evaluation, datasets, and open
+  challenges" (npj Artificial Intelligence, 2026).
 type: software
 license: MIT
 repository-code: "https://github.com/Lafitte1573/Awesome-FinTS-Generation"
 url: "https://github.com/Lafitte1573/Awesome-FinTS-Generation"
+authors:
+  - alias: Lafitte1573
 keywords:
   - financial time series
   - time series generation
@@ -18,20 +21,20 @@ keywords:
   - synthesis
 
 preferred-citation:
-  type: conference-paper
-  title: "Recent Advanced Technologies in Financial Time-Series Generation: A Survey"
+  type: article
+  title: "Financial time-series generation: a systematic survey of taxonomy, evaluation, datasets, and open challenges"
   authors:
-    - family-names: Duan
-      given-names: Jiaxin
     - family-names: Zhang
       given-names: Yingxiao
-    - family-names: Zhang
-      given-names: Junfu
+    - family-names: Duan
+      given-names: Jiaxin
     - family-names: Zou
       given-names: Yue
     - family-names: Feng
       given-names: Ke
-  collection-title: >-
-    Proceedings of the Thirty-Fourth International Joint Conference on
-    Artificial Intelligence (IJCAI)
+    - family-names: Xiao
+      given-names: Jing
+  journal: "npj Artificial Intelligence"
   year: 2026
+  doi: "10.1038/s44387-026-00166-3"
+  url: "https://www.nature.com/articles/s44387-026-00166-3"

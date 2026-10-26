@@ -1,7 +1,8 @@
 # Awesome Financial Time-Series Generation
 
-> Curated paper collection accompanying the survey **"Recent Advanced Technologies in
-> Financial Time-Series Generation: A Survey"** (IJCAI-ECAI 2026).
+> Curated paper collection accompanying the survey **"Financial time-series generation:
+> a systematic survey of taxonomy, evaluation, datasets, and open challenges"**
+> (*npj Artificial Intelligence*, 2026).
 
 [![alphaXiv](https://img.shields.io/badge/alphaXiv-preprint-blue)](https://www.alphaxiv.org/abs/2610.financial-time-series-generation-survey)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
@@ -1150,17 +1151,7 @@ extended deliberately rather than case by case.
 
 ## Citation
 
-If you use this collection, please cite the survey:
-
-```bibtex
-@misc{duan-financial-time-series-generation-survey,
-  author = {Duan, Jiaxin and Zhang, Yingxiao and Zhang, Junfu and Zou, Yue and Feng, Ke},
-  keywords = {Machine Learning (cs.LG), Statistical Finance (q-fin.ST), Financial Time-Series Generation, Time-Series Modeling, Generative AI, Synthetic Financial Data},
-  title = {Recent Advanced Technologies in Financial Time-Series Generation: A Survey}
-}
-```
-
-The peer-reviewed version of the survey has been published in *npj Artificial Intelligence*:
+If you use this collection, please cite the survey as published in *npj Artificial Intelligence*:
 
 ```bibtex
 @article{zhang2026financial,
@@ -1171,6 +1162,17 @@ The peer-reviewed version of the survey has been published in *npj Artificial In
   issn = {3005-1460},
   doi = {10.1038/s44387-026-00166-3},
   url = {https://www.nature.com/articles/s44387-026-00166-3}
+}
+```
+
+The preprint of the survey, submitted to IJCAI-ECAI 2026, is archived on alphaXiv:
+
+```bibtex
+@misc{duan-financial-time-series-generation-survey,
+  author = {Duan, Jiaxin and Zhang, Yingxiao and Zhang, Junfu and Zou, Yue and Feng, Ke},
+  keywords = {Machine Learning (cs.LG), Statistical Finance (q-fin.ST), Financial Time-Series Generation, Time-Series Modeling, Generative AI, Synthetic Financial Data},
+  title = {Recent Advanced Technologies in Financial Time-Series Generation: A Survey},
+  url = {https://www.alphaxiv.org/abs/2610.financial-time-series-generation-survey}
 }
 ```
 
