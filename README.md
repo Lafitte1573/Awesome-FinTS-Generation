@@ -1160,6 +1160,20 @@ If you use this collection, please cite the survey:
 }
 ```
 
+The peer-reviewed version of the survey has been published in *npj Artificial Intelligence*:
+
+```bibtex
+@article{zhang2026financial,
+  author = {Zhang, Yingxiao and Duan, Jiaxin and Zou, Yue and Feng, Ke and Xiao, Jing},
+  title = {Financial time-series generation: a systematic survey of taxonomy, evaluation, datasets, and open challenges},
+  journal = {npj Artificial Intelligence},
+  year = {2026},
+  issn = {3005-1460},
+  doi = {10.1038/s44387-026-00166-3},
+  url = {https://www.nature.com/articles/s44387-026-00166-3}
+}
+```
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
